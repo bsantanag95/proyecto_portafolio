@@ -1,10 +1,12 @@
+import type { SidebarKey } from "../types/i18n";
+
 export interface MenuItem {
-    label: string;
+    key: SidebarKey;
     path: string;
 }
 
 export const menuItems: MenuItem[] = [
-    { label: 'Inicio', path: '/' },
-    { label: 'Proyectos', path: '/proyectos' },
-    { label: 'Contacto', path: '/contacto' },
+    { key: 'home', path: '/' },
+    { key: 'projects', path: '/proyectos' },
+    { key: 'contact', path: '/contacto' },
 ];

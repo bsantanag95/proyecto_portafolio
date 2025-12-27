@@ -1,0 +1,1 @@
+export type SidebarKey = 'home' | 'projects' | 'contact';
