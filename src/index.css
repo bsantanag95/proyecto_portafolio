@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-zinc-100 text-zinc-900 transition-colors duration-300;
+  }
+
+  body[data-theme='dark'] {
+    @apply bg-zinc-900 text-zinc-100;
+  }
+}
