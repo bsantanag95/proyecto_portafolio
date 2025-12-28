@@ -1,7 +1,5 @@
 import SidebarItem from "./SidebarItem";
 import { menuItems } from "../../data/menu";
-import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-import LanguageToggle from "../LanguageToggle/LanguageToggle";
 import { useLanguage } from "../../hooks/useLanguage";
 
 const Sidebar = () => {
@@ -35,12 +33,6 @@ const Sidebar = () => {
           />
         ))}
       </nav>
-
-      {/* Footer sidebar */}
-      <div className="absolute bottom-6 left-4 flex gap-3">
-        <LanguageToggle />
-        <DarkModeToggle />
-      </div>
     </aside>
   );
 };
