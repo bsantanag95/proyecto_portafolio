@@ -1,7 +1,4 @@
-import Hero from "./Hero";
-import Techstack from "./Techstack";
-import Summary from "./Summary";
-import Highlights from "./Highlights";
+import { Hero, Techstack, Summary, Highlights } from "./";
 
 function Home() {
   return (
