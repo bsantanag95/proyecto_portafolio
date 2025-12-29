@@ -7,10 +7,17 @@ const MainLayout = () => {
   return (
     <div className="flex">
       <Header />
+
+      {/* Sidebar solo visible desde md */}
       <Sidebar />
 
-      <div className="ml-64 flex min-h-screen w-full flex-col">
-        <main className="flex-1 px-8 py-6">
+      <div
+        className="
+      flex min-h-screen w-full flex-col
+      md:ml-64
+    "
+      >
+        <main className="flex-1 px-4 py-6 md:px-8">
           <Outlet />
         </main>
 

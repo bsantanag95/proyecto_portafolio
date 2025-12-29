@@ -4,7 +4,13 @@ function Summary() {
   const { t } = useLanguage();
   return (
     <section className="max-w-2xl">
-      <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+      <p
+        className="
+      text-sm sm:text-base
+      leading-relaxed
+      text-zinc-700 dark:text-zinc-300
+    "
+      >
         {t.home.summary}
       </p>
     </section>

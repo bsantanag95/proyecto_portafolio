@@ -5,7 +5,7 @@ import Highlights from "./Highlights";
 
 function Home() {
   return (
-    <section className="space-y-20">
+    <section className="space-y-16 sm:space-y-20">
       <Hero />
       <Techstack />
       <Summary />

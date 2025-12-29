@@ -15,17 +15,21 @@ function Techstack() {
 
   return (
     <section>
-      <h3 className="text-lg font-semibold mb-4">{t.home.techStack}</h3>
+      <h3 className="text-base sm:text-lg font-semibold mb-4">
+        {t.home.techStack}
+      </h3>
 
-      <ul className="flex flex-wrap gap-3">
+      <ul className="flex flex-wrap gap-2 sm:gap-3">
         {stack.map((tech) => (
           <li
             key={tech}
             className="
-              rounded-full px-4 py-1
-              bg-zinc-200 dark:bg-zinc-800
-              text-sm
-            "
+          rounded-full
+          px-3 py-1 sm:px-4
+          text-xs sm:text-sm
+          bg-zinc-200 dark:bg-zinc-800
+          text-zinc-800 dark:text-zinc-200
+        "
           >
             {tech}
           </li>
