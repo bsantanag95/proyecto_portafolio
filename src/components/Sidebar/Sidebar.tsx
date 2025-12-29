@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useSidebar } from "../../context/ui";
 import SidebarItem from "./SidebarItem";
 import { menuItems } from "../../data/menu";
@@ -6,6 +7,56 @@ import { useLanguage } from "../../hooks/useLanguage";
 const Sidebar = () => {
   const { isOpen, close } = useSidebar();
   const { t } = useLanguage();
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        close();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, close]);
+
+  useEffect(() => {
+    if (!isOpen || !sidebarRef.current) return;
+
+    const focusableElements = sidebarRef.current.querySelectorAll<HTMLElement>(
+      'a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    );
+
+    const first = focusableElements[0];
+    const last = focusableElements[focusableElements.length - 1];
+
+    first?.focus();
+
+    const handleTab = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") return;
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      }
+
+      if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleTab);
+
+    return () => {
+      document.removeEventListener("keydown", handleTab);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -13,21 +64,34 @@ const Sidebar = () => {
       {isOpen && (
         <div
           onClick={close}
-          className="fixed inset-0 z-10 bg-black/40 md:hidden"
+          className="
+      fixed inset-0 z-10
+      bg-black/40
+      backdrop-blur-sm
+      transition-opacity
+      duration-300
+      md:hidden
+    "
         />
       )}
 
       <aside
+        ref={sidebarRef}
         className={`
-          fixed left-0 top-0 z-20
-          h-screen w-64
-          bg-zinc-100 dark:bg-zinc-900
-          border-r border-zinc-200 dark:border-zinc-800
-          px-4 py-6
-          transform transition-transform duration-300
-          ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0
-        `}
+    fixed left-0 top-0 z-20
+    h-screen w-64
+    bg-zinc-100 dark:bg-zinc-900
+    border-r border-zinc-200 dark:border-zinc-800
+    px-4 py-6
+
+    transform
+    transition-transform
+    duration-300
+    ease-in-out
+
+    ${isOpen ? "translate-x-0" : "-translate-x-full"}
+    md:translate-x-0
+  `}
       >
         {/* Header */}
         <div className="mb-8">
