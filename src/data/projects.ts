@@ -1,4 +1,6 @@
-export const projects = [
+import type { Project } from "../types/projects";
+
+export const projects: Project[] = [
   {
     slug: "pokedex",
     title: {
@@ -10,17 +12,17 @@ export const projects = [
       en: "Frontend application consuming an external API.",
     },
     description: {
-      es: "Proyecto React que consume la PokéAPI...",
-      en: "React project consuming the PokéAPI...",
+      es: "Aplicación desarrollada en React que consume la PokéAPI para mostrar información detallada de Pokémon, permitiendo búsqueda por nombre o número y visualización dinámica de datos.",
+      en: "React application that consumes the PokéAPI to display detailed Pokémon information, allowing search by name or number with dynamic data rendering.",
     },
-    stack: ["React", "TypeScript", "Tailwind", "API REST"],
-    backend: "API externa (PokéAPI)",
+    stack: ["React", "TypeScript", "Tailwind CSS", "REST API"],
+    backend: "PokéAPI (externa)",
     database: null,
     images: [
       "/projects/pokedex/1.png",
       "/projects/pokedex/2.png",
     ],
-    github: "...",
+    github: "https://github.com/tu-usuario/pokedex",
   },
 
   {
@@ -30,12 +32,12 @@ export const projects = [
       en: "GIS Construction Units Catalog",
     },
     summary: {
-      es: "Sistema de gestión con base de datos y mapas.",
-      en: "Management system with database and maps.",
+      es: "Sistema de gestión con mapas y base de datos.",
+      en: "Management system with maps and database.",
     },
     description: {
-      es: "Aplicación Laravel + Livewire con MySQL...",
-      en: "Laravel + Livewire app with MySQL...",
+      es: "Sistema desarrollado con Laravel y Livewire para la gestión de unidades constructivas, integrando información geoespacial y persistencia en MySQL.",
+      en: "System built with Laravel and Livewire for managing construction units, integrating geospatial data and MySQL persistence.",
     },
     stack: ["Laravel", "Livewire", "MySQL", "GIS"],
     backend: "Laravel",
@@ -44,7 +46,7 @@ export const projects = [
       "/projects/gis/1.png",
       "/projects/gis/2.png",
     ],
-    github: "...",
+    github: "https://github.com/tu-usuario/gis-catalogo",
   },
 
   {
@@ -58,16 +60,16 @@ export const projects = [
       en: "Platform for football players without a club.",
     },
     description: {
-      es: "Sistema fullstack con Laravel + Inertia + React...",
-      en: "Fullstack system with Laravel + Inertia + React...",
+      es: "Aplicación fullstack que permite a futbolistas sin club crear perfiles y ser visualizados por clubes, desarrollada con Laravel, Inertia y React.",
+      en: "Fullstack application allowing football players without a club to create profiles and be discovered by clubs, built with Laravel, Inertia and React.",
     },
-    stack: ["Laravel", "Inertia", "React", "MySQL"],
+    stack: ["Laravel", "Inertia.js", "React", "MySQL"],
     backend: "Laravel + Inertia",
     database: "MySQL",
     images: [
       "/projects/buscoclub/1.png",
       "/projects/buscoclub/2.png",
     ],
-    github: "...",
+    github: "https://github.com/tu-usuario/busco-club",
   },
 ];
