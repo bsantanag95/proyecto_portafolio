@@ -1,10 +1,22 @@
+import { motion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
+
 interface Props {
   images: string[];
 }
 
 const ProjectGallery = ({ images }: Props) => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.15,
+        duration: shouldReduceMotion ? 0 : 0.5,
+        ease: "easeInOut",
+      }}
       className="
     grid gap-4
     grid-cols-1
@@ -19,7 +31,7 @@ const ProjectGallery = ({ images }: Props) => {
           className="rounded-xl border border-zinc-200 dark:border-zinc-800"
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

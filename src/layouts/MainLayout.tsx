@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Footer from "../components/Footer/Footer";
@@ -18,7 +19,9 @@ const MainLayout = () => {
     "
       >
         <main className="flex-1 px-4 py-6 md:px-8">
-          <Outlet />
+          <AnimatePresence mode="wait">
+            <Outlet />
+          </AnimatePresence>
         </main>
 
         <Footer />
