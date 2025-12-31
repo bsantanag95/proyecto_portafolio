@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useParams, Navigate } from "react-router-dom";
 import { projects } from "../../data/projects";
 import { useLanguage } from "../../hooks/useLanguage";
-import { ProjectGallery, ProjectInfo } from "../../components/Projects";
+import { ProjectCarousel, ProjectInfo } from "../../components/Projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,7 +29,7 @@ const ProjectDetail = () => {
     space-y-12
   "
     >
-      <ProjectGallery images={project.images} />
+      <ProjectCarousel images={project.images} />
       <ProjectInfo project={project} language={language} />
     </motion.section>
   );
