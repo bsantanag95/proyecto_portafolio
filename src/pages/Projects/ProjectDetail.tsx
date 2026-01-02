@@ -34,15 +34,14 @@ const ProjectDetail = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: shouldReduceMotion ? 0 : 0.4, ease: "easeInOut" }}
       className="
-    mx-auto
-    w-full max-w-6xl
-    px-4 sm:px-6 lg:px-8
-    space-y-12
-  "
+  mx-auto
+  w-full max-w-6xl
+  px-4 sm:px-6 lg:px-8
+  space-y-8 sm:space-y-12
+"
     >
       <ProjectBreadcrumb title={project.title[language]} />
       <div className="relative">
-        {/* Skeleton */}
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: loaded ? 0 : 1 }}
@@ -52,7 +51,6 @@ const ProjectDetail = () => {
           <ProjectCarouselSkeleton />
         </motion.div>
 
-        {/* Carousel real (siempre montado) */}
         <ProjectCarousel
           images={project.images}
           onImageLoad={handleImageLoad}

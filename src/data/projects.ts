@@ -7,6 +7,26 @@ export const projects: Project[] = [
       es: "Pokédex con API de Pokémon",
       en: "Pokédex with Pokémon API",
     },
+    intro: {
+      es: "Simple Pokedex que consume la PokéAPI y muestra funciones de búsqueda y detalles en forma de cartas.",
+      en: "Simple Pokedex that consumes the PokéAPI and displays search and detail features in card format.",
+    },
+    role: {
+      es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
+      en: "End-to-end full-stack development, from architecture to user experience.",
+    },
+    highlights: {
+      es: [
+        "Autenticación y roles de usuario",
+        "Relaciones many-to-many entre jugadores y clubes",
+        "Frontend desacoplado con Inertia + React",
+      ],
+      en: [
+        "User authentication and roles",
+        "Many-to-many relationships between players and clubs",
+        "Decoupled frontend using Inertia + React",
+      ],
+    },
     summary: {
       es: "Aplicación frontend que consume una API externa.",
       en: "Frontend application consuming an external API.",
@@ -33,6 +53,26 @@ export const projects: Project[] = [
       es: "Catálogo GIS de Unidades Constructivas",
       en: "GIS Construction Units Catalog",
     },
+    intro: {
+      es: "Plataforma para gestionar unidades constructivas.",
+      en: "Platform to manage construction units.",
+    },
+    role: {
+      es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
+      en: "End-to-end full-stack development, from architecture to user experience.",
+    },
+    highlights: {
+      es: [
+        "Autenticación y roles de usuario",
+        "Relaciones many-to-many entre jugadores y clubes",
+        "Frontend desacoplado con Inertia + React",
+      ],
+      en: [
+        "User authentication and roles",
+        "Many-to-many relationships between players and clubs",
+        "Decoupled frontend using Inertia + React",
+      ],
+    },
     summary: {
       es: "Sistema de gestión con mapas y base de datos.",
       en: "Management system with maps and database.",
@@ -58,6 +98,26 @@ export const projects: Project[] = [
     title: {
       es: "Busco Club",
       en: "Looking for a Club",
+    },
+    intro: {
+      es: "Plataforma para conectar jugadores de fútbol sin club con equipos y representantes.",
+      en: "Platform to connect unsigned football players with clubs and agents.",
+    },
+    role: {
+      es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
+      en: "End-to-end full-stack development, from architecture to user experience.",
+    },
+    highlights: {
+      es: [
+        "Autenticación y roles de usuario",
+        "Relaciones many-to-many entre jugadores y clubes",
+        "Frontend desacoplado con Inertia + React",
+      ],
+      en: [
+        "User authentication and roles",
+        "Many-to-many relationships between players and clubs",
+        "Decoupled frontend using Inertia + React",
+      ],
     },
     summary: {
       es: "Plataforma para futbolistas sin club.",

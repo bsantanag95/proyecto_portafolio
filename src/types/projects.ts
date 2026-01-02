@@ -5,6 +5,22 @@ export interface Project {
     es: string;
     en: string;
   };
+
+  intro: {
+    es: string;
+    en: string;
+  };
+
+  role: {
+    es: string;
+    en: string;
+  };
+
+  highlights: {
+    es: string[];
+    en: string[];
+  };
+
   summary: {
     es: string;
     en: string;
