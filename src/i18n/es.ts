@@ -32,4 +32,11 @@ export const es = {
       'Apasionado por construir interfaces de usuario atractivas y funcionales.',
     ],
   },
+    projects: {
+    breadcrumb: "Proyectos",
+    backend: "Backend",
+    database: "Base de datos",
+    stack: "Tecnologías",
+    viewGithub: "Ver repositorio",
+  },
 }

@@ -9,3 +9,19 @@
     @apply bg-zinc-900 text-zinc-100;
   }
 }
+
+@theme {
+  --color-bg: theme(colors.zinc.50);
+  --color-bg-dark: theme(colors.zinc.950);
+
+  --color-surface: theme(colors.zinc.100);
+  --color-surface-dark: theme(colors.zinc.900);
+
+  --color-text: theme(colors.zinc.900);
+  --color-text-dark: theme(colors.zinc.100);
+
+  --color-muted: theme(colors.zinc.600);
+  --color-muted-dark: theme(colors.zinc.400);
+
+  --color-accent: theme(colors.emerald.500);
+}

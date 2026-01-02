@@ -3,9 +3,10 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 interface Props {
   images: string[];
+  onImageLoad?: () => void;
 }
 
-const ProjectCarousel = ({ images }: Props) => {
+const ProjectCarousel = ({ images, onImageLoad }: Props) => {
   const [index, setIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,12 @@ const ProjectCarousel = ({ images }: Props) => {
     return () => el?.removeEventListener("keydown", handler);
   }, [next, prev]);
 
+  useEffect(() => {
+    const nextIndex = (index + 1) % images.length;
+    const img = new Image();
+    img.src = images[nextIndex];
+  }, [index, images]);
+
   return (
     <div
       ref={containerRef}
@@ -43,6 +50,7 @@ const ProjectCarousel = ({ images }: Props) => {
           src={images[index]}
           alt={`Project screenshot ${index + 1}`}
           className="h-60 sm:h-90 w-full object-cover"
+          onLoad={onImageLoad}
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -50, opacity: 0 }}

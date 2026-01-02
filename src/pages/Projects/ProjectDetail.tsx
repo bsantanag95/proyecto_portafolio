@@ -1,13 +1,24 @@
+import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useParams, Navigate } from "react-router-dom";
 import { projects } from "../../data/projects";
 import { useLanguage } from "../../hooks/useLanguage";
-import { ProjectCarousel, ProjectInfo } from "../../components/Projects";
+import {
+  ProjectBreadcrumb,
+  ProjectCarousel,
+  ProjectCarouselSkeleton,
+  ProjectInfo,
+} from "../../components/Projects";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useLanguage();
   const shouldReduceMotion = useReducedMotion();
+  const [loaded, setLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setLoaded(true);
+  };
 
   const project = projects.find((p) => p.slug === slug);
 
@@ -29,7 +40,25 @@ const ProjectDetail = () => {
     space-y-12
   "
     >
-      <ProjectCarousel images={project.images} />
+      <ProjectBreadcrumb title={project.title[language]} />
+      <div className="relative">
+        {/* Skeleton */}
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: loaded ? 0 : 1 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="absolute inset-0 z-10 pointer-events-none"
+        >
+          <ProjectCarouselSkeleton />
+        </motion.div>
+
+        {/* Carousel real (siempre montado) */}
+        <ProjectCarousel
+          images={project.images}
+          onImageLoad={handleImageLoad}
+        />
+      </div>
+
       <ProjectInfo project={project} language={language} />
     </motion.section>
   );

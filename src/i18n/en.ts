@@ -32,4 +32,11 @@ export const en = {
       'Passionate about building attractive and functional user interfaces.',
     ],
   },
+    projects: {
+    breadcrumb: "Projects",
+    backend: "Backend",
+    database: "Database",
+    stack: "Tech stack",
+    viewGithub: "View repository",
+  },
 }
