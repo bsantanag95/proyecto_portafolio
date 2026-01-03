@@ -5,10 +5,22 @@
     @apply bg-zinc-100 text-zinc-900 transition-colors duration-300;
   }
 
-  body[data-theme='dark'] {
+  .dark body {
     @apply bg-zinc-900 text-zinc-100;
   }
+
+    body, header, main, aside, footer {
+    @apply transition-colors duration-300;
+  }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-bg: theme(colors.zinc.50);

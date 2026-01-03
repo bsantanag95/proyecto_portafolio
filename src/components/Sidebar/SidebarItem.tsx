@@ -13,13 +13,16 @@ const SidebarItem = ({ path, label, onClick }: Props) => {
       onClick={onClick}
       className={({ isActive }) =>
         `
-        block rounded px-3 py-2 transition
-        ${
-          isActive
-            ? "bg-zinc-300 dark:bg-zinc-800 font-medium"
-            : "hover:bg-zinc-200 dark:hover:bg-zinc-800"
-        }
-        `
+  block rounded-md px-4 py-2.5
+  text-sm font-medium
+  transition-colors duration-200
+
+  ${
+    isActive
+      ? "bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100"
+      : "text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
+  }
+  `
       }
     >
       {label}

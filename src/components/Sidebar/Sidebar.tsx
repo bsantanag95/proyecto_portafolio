@@ -66,7 +66,7 @@ const Sidebar = () => {
           onClick={close}
           className="
       fixed inset-0 z-10
-      bg-black/40
+      bg-zinc-50 dark:bg-zinc-900
       backdrop-blur-sm
       transition-opacity
       duration-300
@@ -76,33 +76,34 @@ const Sidebar = () => {
       )}
 
       <aside
-        ref={sidebarRef}
         className={`
     fixed left-0 top-0 z-20
     h-screen w-64
-    bg-zinc-100 dark:bg-zinc-900
+    bg-white dark:bg-zinc-900
     border-r border-zinc-200 dark:border-zinc-800
+    shadow-sm dark:shadow-none
     px-4 py-6
 
-    transform
-    transition-transform
-    duration-300
-    ease-in-out
+    transition-[background-color,border-color,box-shadow,transform]
+    duration-300 ease-in-out
 
     ${isOpen ? "translate-x-0" : "-translate-x-full"}
     md:translate-x-0
   `}
       >
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-xl font-bold">{t.sidebar.title}</h1>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <div className="mb-10 space-y-1">
+          <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+            {t.sidebar.title}
+          </h1>
+
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
             {t.sidebar.subtitle}
           </p>
         </div>
 
         {/* Navigation */}
-        <nav className="space-y-2">
+        <nav className="space-y-3 mt-2">
           {menuItems.map((item) => (
             <SidebarItem
               key={item.path}
