@@ -1,4 +1,6 @@
 import { useLanguage } from "../../hooks/useLanguage";
+import { Download } from "lucide-react";
+import GitHubIcon from "../../components/icons/GitHubIcon";
 
 function Hero() {
   const { t } = useLanguage();
@@ -18,17 +20,20 @@ function Hero() {
       </p>
 
       {/* CTA */}
-      <div className="mt-8 flex flex-col sm:flex-row gap-4">
+      <div className="mt-8 flex flex-wrap gap-4">
         <a
           href="/cv/Esteban_Santana_CV.pdf"
           download
           className="
-            rounded-lg px-6 py-3
-            bg-zinc-900 text-white
-            dark:bg-zinc-100 dark:text-zinc-900
-            hover:opacity-90 transition
-          "
+      inline-flex items-center gap-2
+      rounded-lg px-6 py-3
+      bg-zinc-900 text-white
+      dark:bg-zinc-100 dark:text-zinc-900
+      hover:opacity-90
+      transition
+    "
         >
+          <Download size={18} />
           {t.home.downloadCv}
         </a>
 
@@ -36,13 +41,9 @@ function Hero() {
           href="https://github.com/tu-usuario"
           target="_blank"
           rel="noopener noreferrer"
-          className="
-            rounded-lg px-6 py-3
-            border border-zinc-300 dark:border-zinc-700
-            hover:bg-zinc-100 dark:hover:bg-zinc-800
-            transition
-          "
+          className="inline-flex items-center gap-2"
         >
+          <GitHubIcon size={18} />
           {t.home.viewGithub}
         </a>
       </div>
