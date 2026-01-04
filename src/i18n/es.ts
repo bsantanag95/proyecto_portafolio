@@ -12,7 +12,7 @@ export const es = {
   home: {
     //HERO
     heading: 'Hola, soy Esteban',
-    role: 'Ingeniero en Informática\nDesarrollador Frontend & Full Stack',
+    role: 'Desarrollador Frontend · React & TypeScript',
     specialization: 'Especializado en React, TypeScript y Laravel.\nDesarrollo interfaces modernas y soluciones web mantenibles',
     description: 'Desarrollador frontend enfocado en crear experiencias modernas.',
 
@@ -21,16 +21,18 @@ export const es = {
     viewGithub: 'Ver GitHub',
 
     //TECH STACK
-    techStack: 'Stack Tecnológico',
+    techStack: 'Stack tecnológico',
 
     //SUMMARY
     summary: 'Soy un desarrollador frontend con experiencia en la creación de aplicaciones web modernas y eficientes. Me especializo en React y TypeScript, y disfruto construir interfaces de usuario atractivas y funcionales.',
+    summaryTitle: 'Resumen profesional',
 
     //HIGHLIGHTS
     highlights: [
       'Desarrollador frontend con experiencia en React y TypeScript.',
       'Apasionado por construir interfaces de usuario atractivas y funcionales.',
     ],
+    highlightsTitle: 'Puntos destacados',
   },
     projects: {
     breadcrumb: "Proyectos",

@@ -12,7 +12,7 @@ export const en = {
   home: {
     //HERO
     heading: 'Hi, I’m Esteban',
-    role: 'Computer Engineer\nFrontend & Full Stack Developer',
+    role: 'Frontend Developer · React & TypeScript',
     specialization: 'Specialized in React, TypeScript, and Laravel.\nI build modern interfaces and maintainable web solutions',
     description: 'Frontend developer focused on building modern experiences.',
 
@@ -25,12 +25,14 @@ export const en = {
 
     //SUMMARY
     summary: 'I am a frontend developer with experience in creating modern and efficient web applications. I specialize in React and TypeScript, and I enjoy building attractive and functional user interfaces.',
+    summaryTitle: 'Summary',
 
     //HIGHLIGHTS
     highlights: [
       'Frontend developer with experience in React and TypeScript.',
       'Passionate about building attractive and functional user interfaces.',
     ],
+    highlightsTitle: 'Highlights',
   },
     projects: {
     breadcrumb: "Projects",

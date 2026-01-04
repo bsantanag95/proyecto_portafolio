@@ -4,7 +4,7 @@ function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center">
+    <section className="max-w-3xl space-y-6 min-h-[80vh] flex flex-col justify-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
         Esteban Santana
       </h1>

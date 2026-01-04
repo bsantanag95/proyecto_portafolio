@@ -19,7 +19,7 @@ function Techstack() {
         {t.home.techStack}
       </h3>
 
-      <ul className="flex flex-wrap gap-2 sm:gap-3">
+      <ul className="flex flex-wrap gap-3 max-w-xl sm:gap-3">
         {stack.map((tech) => (
           <li
             key={tech}
