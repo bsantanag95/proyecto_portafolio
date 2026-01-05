@@ -4,6 +4,7 @@ import SidebarItem from "./SidebarItem";
 import { useLanguage } from "../../hooks/useLanguage";
 import { scrollToSection } from "../../utils/scrollToSection";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
+import { Home, Layers, Sparkles, Star, User } from "lucide-react";
 
 const Sidebar = () => {
   const { isOpen, close } = useSidebar();
@@ -96,7 +97,12 @@ const Sidebar = () => {
         {/* Navigation */}
         <nav className="space-y-6">
           {/* Inicio */}
-          <SidebarItem label={t.sidebar.home} path="/" onClick={close} />
+          <SidebarItem
+            label={t.sidebar.home}
+            path="/"
+            onClick={close}
+            icon={<Home size={16} />}
+          />
 
           {/* Secciones Home */}
           <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
@@ -105,18 +111,21 @@ const Sidebar = () => {
               action={() => scrollToSection("tech")}
               onClick={close}
               active={activeSection === "tech"}
+              icon={<Layers size={16} />}
             />
             <SidebarItem
               label={t.home.highlightsTitle}
               action={() => scrollToSection("highlights")}
               onClick={close}
               active={activeSection === "highlights"}
+              icon={<Star size={16} />}
             />
             <SidebarItem
               label={t.home.summaryTitle}
               action={() => scrollToSection("summary")}
               onClick={close}
               active={activeSection === "summary"}
+              icon={<User size={16} />}
             />
           </div>
 
@@ -125,6 +134,7 @@ const Sidebar = () => {
             label={t.sidebar.projects}
             path="/projects"
             onClick={close}
+            icon={<Sparkles size={16} />}
           />
         </nav>
       </aside>
