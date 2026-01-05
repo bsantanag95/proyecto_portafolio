@@ -5,6 +5,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { scrollToSection } from "../../utils/scrollToSection";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 import { Home, Layers, Sparkles, Star, User } from "lucide-react";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const Sidebar = () => {
   const { isOpen, close } = useSidebar();
@@ -55,34 +56,40 @@ const Sidebar = () => {
   }, [isOpen]);
 
   const activeSection = useScrollSpy(["tech", "highlights", "summary"]);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
     <>
       {/* Overlay */}
       {isOpen && (
         <div
+          aria-hidden="true"
           onClick={close}
           className="
-            fixed inset-0 z-10
-            bg-zinc-100/80 dark:bg-zinc-900/80
-            backdrop-blur-sm
-            md:hidden
-          "
+      fixed inset-0 z-10
+      bg-zinc-100/80 dark:bg-zinc-900/80
+      backdrop-blur-sm
+      md:hidden
+    "
         />
       )}
 
       <aside
         ref={sidebarRef}
+        role="navigation"
+        aria-label={t.sidebar.ariaLabel}
+        aria-hidden={!isDesktop && !isOpen}
+        inert={!isDesktop && !isOpen}
         className={`
-          fixed left-0 top-0 z-20
-          h-screen w-64
-          bg-white dark:bg-zinc-900
-          border-r border-zinc-200 dark:border-zinc-800
-          px-4 py-6
-          transition-transform duration-300 ease-in-out
-          ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0
-        `}
+    fixed left-0 top-0 z-20
+    h-screen w-64
+    bg-white dark:bg-zinc-900
+    border-r border-zinc-200 dark:border-zinc-800
+    px-4 py-6
+    transition-transform duration-300 ease-in-out
+    ${isOpen ? "translate-x-0" : "-translate-x-full"}
+    md:translate-x-0
+  `}
       >
         {/* Header */}
         <div className="mb-10">
@@ -101,7 +108,7 @@ const Sidebar = () => {
             label={t.sidebar.home}
             path="/"
             onClick={close}
-            icon={<Home size={16} />}
+            icon={<Home size={16} aria-hidden="true" />}
           />
 
           {/* Secciones Home */}
@@ -111,21 +118,21 @@ const Sidebar = () => {
               action={() => scrollToSection("tech")}
               onClick={close}
               active={activeSection === "tech"}
-              icon={<Layers size={16} />}
+              icon={<Layers size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.summaryTitle}
               action={() => scrollToSection("summary")}
               onClick={close}
               active={activeSection === "summary"}
-              icon={<User size={16} />}
+              icon={<User size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.highlightsTitle}
               action={() => scrollToSection("highlights")}
               onClick={close}
               active={activeSection === "highlights"}
-              icon={<Star size={16} />}
+              icon={<Star size={16} aria-hidden="true" />}
             />
           </div>
 
@@ -134,7 +141,7 @@ const Sidebar = () => {
             label={t.sidebar.projects}
             path="/projects"
             onClick={close}
-            icon={<Sparkles size={16} />}
+            icon={<Sparkles size={16} aria-hidden="true" />}
           />
         </nav>
       </aside>

@@ -24,16 +24,17 @@ const SidebarItem = ({ label, path, action, onClick, active, icon }: Props) => {
   const inactiveClasses =
     "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800";
 
+  /* 🔹 Scroll / acción */
   if (action) {
     return (
       <button
+        aria-current={active ? "true" : undefined}
         onClick={() => {
           action();
           onClick?.();
         }}
         className={`${baseClasses} ${active ? activeClasses : inactiveClasses}`}
       >
-        {/* 🔹 Indicador */}
         {active && (
           <motion.div
             layout
@@ -53,17 +54,16 @@ const SidebarItem = ({ label, path, action, onClick, active, icon }: Props) => {
     );
   }
 
+  /* 🔹 Rutas */
   return (
-    <NavLink
-      to={path!}
-      onClick={onClick}
-      className={({ isActive }) =>
-        `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
-      }
-    >
+    <NavLink to={path!} onClick={onClick}>
       {({ isActive }) => (
-        <>
-          {/* 🔹 Indicador */}
+        <span
+          aria-current={isActive ? "page" : undefined}
+          className={`${baseClasses} ${
+            isActive ? activeClasses : inactiveClasses
+          }`}
+        >
           {isActive && (
             <motion.div
               layout
@@ -79,7 +79,7 @@ const SidebarItem = ({ label, path, action, onClick, active, icon }: Props) => {
 
           {icon}
           {label}
-        </>
+        </span>
       )}
     </NavLink>
   );

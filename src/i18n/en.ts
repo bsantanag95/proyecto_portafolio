@@ -1,44 +1,48 @@
 export const en = {
   sidebar: {
-    title: 'Esteban',
-    subtitle: 'Frontend Developer',
-    home: 'Home',
-    projects: 'Projects',
-    contact: 'Contact',
+    title: "Esteban",
+    subtitle: "Frontend Developer",
+    home: "Home",
+    projects: "Projects",
+    contact: "Contact",
+    toggleSections: "Show sections",
+    ariaLabel: "Main navigation",
   },
   footer: {
-    text: 'Frontend Developer · React & TypeScript',
+    text: "Frontend Developer · React & TypeScript",
   },
   home: {
     //HERO
-    heading: 'Hi, I’m Esteban',
-    role: 'Frontend Developer · React & TypeScript',
-    specialization: 'Specialized in React, TypeScript, and Laravel.\nI build modern interfaces and maintainable web solutions',
-    description: 'Frontend developer focused on building modern experiences.',
+    heading: "Hi, I’m Esteban",
+    role: "Frontend Developer · React & TypeScript",
+    specialization:
+      "Specialized in React, TypeScript, and Laravel.\nI build modern interfaces and maintainable web solutions",
+    description: "Frontend developer focused on building modern experiences.",
 
     //CTA
-    downloadCv: 'Download CV',
-    viewGithub: 'View GitHub',
+    downloadCv: "Download CV",
+    viewGithub: "View GitHub",
 
     //TECH STACK
-    techStack: 'Tech Stack',
+    techStack: "Tech Stack",
 
     //SUMMARY
-    summary: 'I am a frontend developer with experience in creating modern and efficient web applications. I specialize in React and TypeScript, and I enjoy building attractive and functional user interfaces.',
-    summaryTitle: 'Summary',
+    summary:
+      "I am a frontend developer with experience in creating modern and efficient web applications. I specialize in React and TypeScript, and I enjoy building attractive and functional user interfaces.",
+    summaryTitle: "Summary",
 
     //HIGHLIGHTS
     highlights: [
-      'Frontend developer with experience in React and TypeScript.',
-      'Passionate about building attractive and functional user interfaces.',
+      "Frontend developer with experience in React and TypeScript.",
+      "Passionate about building attractive and functional user interfaces.",
     ],
-    highlightsTitle: 'Highlights',
+    highlightsTitle: "Highlights",
   },
-    projects: {
+  projects: {
     breadcrumb: "Projects",
     backend: "Backend",
     database: "Database",
     stack: "Tech stack",
     viewGithub: "View repository",
   },
-}
+};
