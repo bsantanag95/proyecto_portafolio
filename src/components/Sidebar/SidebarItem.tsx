@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 interface Props {
   label: string;
@@ -10,6 +11,19 @@ interface Props {
 }
 
 const SidebarItem = ({ label, path, action, onClick, active, icon }: Props) => {
+  const baseClasses = `
+    relative
+    flex w-full items-center gap-3
+    rounded-lg px-3 py-2 text-sm font-medium
+    transition
+  `;
+
+  const activeClasses =
+    "bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100";
+
+  const inactiveClasses =
+    "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800";
+
   if (action) {
     return (
       <button
@@ -17,17 +31,22 @@ const SidebarItem = ({ label, path, action, onClick, active, icon }: Props) => {
           action();
           onClick?.();
         }}
-        className={`
-          flex w-full items-center gap-3
-          rounded-lg px-3 py-2 text-sm font-medium
-          transition
-          ${
-            active
-              ? "bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
-              : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800"
-          }
-        `}
+        className={`${baseClasses} ${active ? activeClasses : inactiveClasses}`}
       >
+        {/* 🔹 Indicador */}
+        {active && (
+          <motion.div
+            layout
+            className="
+              absolute left-0 top-1/2
+              h-6 w-1
+              -translate-y-1/2
+              bg-zinc-900 dark:bg-zinc-100
+              rounded-full
+            "
+          />
+        )}
+
         {icon}
         {label}
       </button>
@@ -39,19 +58,29 @@ const SidebarItem = ({ label, path, action, onClick, active, icon }: Props) => {
       to={path!}
       onClick={onClick}
       className={({ isActive }) =>
-        `
-        flex items-center gap-3
-        rounded-lg px-3 py-2 text-sm font-medium transition
-        ${
-          isActive
-            ? "bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
-            : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800"
-        }
-      `
+        `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
       }
     >
-      {icon}
-      {label}
+      {({ isActive }) => (
+        <>
+          {/* 🔹 Indicador */}
+          {isActive && (
+            <motion.div
+              layout
+              className="
+                absolute left-0 top-1/2
+                h-6 w-1
+                -translate-y-1/2
+                bg-zinc-900 dark:bg-zinc-100
+                rounded-full
+              "
+            />
+          )}
+
+          {icon}
+          {label}
+        </>
+      )}
     </NavLink>
   );
 };
