@@ -114,18 +114,18 @@ const Sidebar = () => {
               icon={<Layers size={16} />}
             />
             <SidebarItem
-              label={t.home.highlightsTitle}
-              action={() => scrollToSection("highlights")}
-              onClick={close}
-              active={activeSection === "highlights"}
-              icon={<Star size={16} />}
-            />
-            <SidebarItem
               label={t.home.summaryTitle}
               action={() => scrollToSection("summary")}
               onClick={close}
               active={activeSection === "summary"}
               icon={<User size={16} />}
+            />
+            <SidebarItem
+              label={t.home.highlightsTitle}
+              action={() => scrollToSection("highlights")}
+              onClick={close}
+              active={activeSection === "highlights"}
+              icon={<Star size={16} />}
             />
           </div>
 

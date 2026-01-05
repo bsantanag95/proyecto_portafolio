@@ -6,7 +6,7 @@ function Home() {
       <section id="hero">
         <Hero />
       </section>
-      <section id="techstack">
+      <section id="tech">
         <Techstack />
       </section>
       <section id="summary">
