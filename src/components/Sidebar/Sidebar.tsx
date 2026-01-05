@@ -3,6 +3,7 @@ import { useSidebar } from "../../context/ui";
 import SidebarItem from "./SidebarItem";
 import { useLanguage } from "../../hooks/useLanguage";
 import { scrollToSection } from "../../utils/scrollToSection";
+import { useScrollSpy } from "../../hooks/useScrollSpy";
 
 const Sidebar = () => {
   const { isOpen, close } = useSidebar();
@@ -51,6 +52,8 @@ const Sidebar = () => {
     document.addEventListener("keydown", handleTab);
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen]);
+
+  const activeSection = useScrollSpy(["tech", "highlights", "summary"]);
 
   return (
     <>
@@ -101,16 +104,19 @@ const Sidebar = () => {
               label={t.home.techStack}
               action={() => scrollToSection("tech")}
               onClick={close}
+              active={activeSection === "tech"}
             />
             <SidebarItem
               label={t.home.highlightsTitle}
               action={() => scrollToSection("highlights")}
               onClick={close}
+              active={activeSection === "highlights"}
             />
             <SidebarItem
               label={t.home.summaryTitle}
               action={() => scrollToSection("summary")}
               onClick={close}
+              active={activeSection === "summary"}
             />
           </div>
 
