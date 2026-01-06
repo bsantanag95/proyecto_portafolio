@@ -24,6 +24,8 @@ export const en = {
 
     //CONTACT
     contact: "Contact",
+    copyEmail: "Copy email to clipboard",
+    copied: "Email copied!",
 
     //TECH STACK
     techStack: "Tech Stack",

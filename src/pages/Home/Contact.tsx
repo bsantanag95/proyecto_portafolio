@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useLanguage } from "../../hooks/useLanguage";
+import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Check } from "lucide-react";
 import GitHubIcon from "../../components/icons/GitHubIcon";
 import LinkedinIcon from "../../components/icons/LinkedinIcon";
@@ -6,6 +8,7 @@ import LinkedinIcon from "../../components/icons/LinkedinIcon";
 const EMAIL = "besantanag95@gmail.com";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -44,28 +47,43 @@ const Contact = () => {
             onClick={handleCopy}
             aria-live="polite"
             aria-label="Copiar correo electrónico"
-            className="
-              cursor-pointer
-              inline-flex items-center justify-center gap-2
-              rounded-lg px-5 py-3
-              text-sm font-medium
-              bg-zinc-900 text-white
-              hover:bg-zinc-800
-              dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200
-              transition
-            "
+            className="cursor-pointer
+    inline-flex items-center justify-center gap-2
+    rounded-lg px-5 py-3
+    text-sm font-medium
+    bg-zinc-900 text-white
+    hover:bg-zinc-800
+    dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200
+    transition
+  "
           >
-            {copied ? (
-              <>
-                <Check size={16} aria-hidden="true" />
-                Copiado
-              </>
-            ) : (
-              <>
-                <Mail size={16} aria-hidden="true" />
-                Copiar email
-              </>
-            )}
+            <AnimatePresence mode="wait">
+              {copied ? (
+                <motion.span
+                  key="copied"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="inline-flex items-center gap-2"
+                >
+                  <Check size={16} aria-hidden="true" />
+                  {t.home.copied}
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="copy"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="inline-flex items-center gap-2"
+                >
+                  <Mail size={16} aria-hidden="true" />
+                  {t.home.copyEmail}
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
 
           {/* LinkedIn */}
