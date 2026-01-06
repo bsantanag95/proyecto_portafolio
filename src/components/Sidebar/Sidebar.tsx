@@ -4,7 +4,7 @@ import SidebarItem from "./SidebarItem";
 import { useLanguage } from "../../hooks/useLanguage";
 import { scrollToSection } from "../../utils/scrollToSection";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
-import { Home, Layers, Sparkles, Star, User } from "lucide-react";
+import { Home, Layers, Mail, Sparkles, Star, User } from "lucide-react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const Sidebar = () => {
@@ -55,7 +55,12 @@ const Sidebar = () => {
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen]);
 
-  const activeSection = useScrollSpy(["tech", "highlights", "summary"]);
+  const activeSection = useScrollSpy([
+    "tech",
+    "summary",
+    "highlights",
+    "contact",
+  ]);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
@@ -133,6 +138,13 @@ const Sidebar = () => {
               onClick={close}
               active={activeSection === "highlights"}
               icon={<Star size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.home.contact}
+              action={() => scrollToSection("contact")}
+              onClick={close}
+              active={activeSection === "contact"}
+              icon={<Mail size={16} aria-hidden="true" />}
             />
           </div>
 

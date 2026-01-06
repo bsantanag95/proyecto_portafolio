@@ -4,7 +4,6 @@ export const en = {
     subtitle: "Frontend Developer",
     home: "Home",
     projects: "Projects",
-    contact: "Contact",
     toggleSections: "Show sections",
     ariaLabel: "Main navigation",
   },
@@ -22,6 +21,9 @@ export const en = {
     //CTA
     downloadCv: "Download CV",
     viewGithub: "View GitHub",
+
+    //CONTACT
+    contact: "Contact",
 
     //TECH STACK
     techStack: "Tech Stack",

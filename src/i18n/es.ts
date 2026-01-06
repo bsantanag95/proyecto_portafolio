@@ -4,7 +4,6 @@ export const es = {
     subtitle: "Desarrollador Frontend",
     home: "Inicio",
     projects: "Proyectos",
-    contact: "Contacto",
     toggleSections: "Mostrar secciones",
     ariaLabel: "Navegación principal",
   },
@@ -23,6 +22,9 @@ export const es = {
     //CTA
     downloadCv: "Descargar CV",
     viewGithub: "Ver GitHub",
+
+    //CONTACT
+    contact: "Contacto",
 
     //TECH STACK
     techStack: "Stack tecnológico",
