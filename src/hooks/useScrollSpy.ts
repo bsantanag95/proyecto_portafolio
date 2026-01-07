@@ -1,28 +1,39 @@
 import { useEffect, useState } from "react";
 
-export const useScrollSpy = (ids: string[]) => {
+interface ScrollSpyOptions {
+  enabled?: boolean;
+  rootMargin?: string;
+  threshold?: number;
+}
+
+export const useScrollSpy = (
+  ids: string[],
+  {
+    enabled = true,
+    rootMargin = "-20% 0px -60% 0px",
+    threshold = 0.1,
+  }: ScrollSpyOptions = {}
+) => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!enabled) {
+      setTimeout(() => setActiveId(null), 0); // Reset diferido para evitar estado persistente al cambiar de ruta
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.filter((e) => e.isIntersecting);
+        if (!visible.length) return;
 
-        if (visible.length === 0) return;
-
-        const topMost = visible.reduce((prev, curr) =>
-          prev.boundingClientRect.top < curr.boundingClientRect.top
-            ? prev
-            : curr
+        const topMost = visible.reduce((a, b) =>
+          a.boundingClientRect.top < b.boundingClientRect.top ? a : b
         );
 
         setActiveId(topMost.target.id);
       },
-      {
-        root: null,
-        threshold: 0.1,
-        rootMargin: "-20% 0px -60% 0px",
-      }
+      { rootMargin, threshold }
     );
 
     ids.forEach((id) => {
@@ -31,7 +42,7 @@ export const useScrollSpy = (ids: string[]) => {
     });
 
     return () => observer.disconnect();
-  }, [ids]);
+  }, [ids, enabled, rootMargin, threshold]);
 
-  return activeId;
+  return enabled ? activeId : null;
 };

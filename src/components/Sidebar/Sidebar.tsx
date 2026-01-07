@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { useSidebar } from "../../context/ui";
 import SidebarItem from "./SidebarItem";
 import { useLanguage } from "../../hooks/useLanguage";
@@ -11,6 +12,9 @@ const Sidebar = () => {
   const { isOpen, close } = useSidebar();
   const { t } = useLanguage();
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   /* ESC */
   useEffect(() => {
@@ -55,13 +59,14 @@ const Sidebar = () => {
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen]);
 
-  const activeSection = useScrollSpy([
-    "tech",
-    "summary",
-    "highlights",
-    "contact",
-  ]);
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const activeSection = useScrollSpy(
+    ["tech", "summary", "highlights", "contact-spy"],
+    {
+      enabled: isHome,
+      rootMargin: isDesktop ? "-30% 0px -60% 0px" : "-20% 0px -50% 0px",
+      threshold: isDesktop ? 0.2 : 0.1,
+    }
+  );
 
   return (
     <>
@@ -122,28 +127,28 @@ const Sidebar = () => {
               label={t.home.techStack}
               action={() => scrollToSection("tech")}
               onClick={close}
-              active={activeSection === "tech"}
+              active={isHome && activeSection === "tech"}
               icon={<Layers size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.summaryTitle}
               action={() => scrollToSection("summary")}
               onClick={close}
-              active={activeSection === "summary"}
+              active={isHome && activeSection === "summary"}
               icon={<User size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.highlightsTitle}
               action={() => scrollToSection("highlights")}
               onClick={close}
-              active={activeSection === "highlights"}
+              active={isHome && activeSection === "highlights"}
               icon={<Star size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.contact}
               action={() => scrollToSection("contact")}
               onClick={close}
-              active={activeSection === "contact"}
+              active={isHome && activeSection === "contact-spy"}
               icon={<Mail size={16} aria-hidden="true" />}
             />
           </div>
@@ -153,6 +158,7 @@ const Sidebar = () => {
             label={t.sidebar.projects}
             path="/projects"
             onClick={close}
+            active={!isHome && location.pathname.startsWith("/projects")}
             icon={<Sparkles size={16} aria-hidden="true" />}
           />
         </nav>

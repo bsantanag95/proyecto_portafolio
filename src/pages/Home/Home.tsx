@@ -75,9 +75,23 @@ function Home() {
       <section id="hero">
         <Hero />
       </section>
-      <section id="contact">
-        <Contact />
+      <section
+        id="contact"
+        aria-labelledby="contact-title"
+        className="scroll-mt-24 py-24 px-4 flex justify-center"
+      >
+        {/* SENTINEL */}
+        <span
+          id="contact-spy"
+          aria-hidden="true"
+          className="block h-0 scroll-mt-24"
+        />
+
+        <div className="w-full max-w-2xl ...">
+          <Contact />
+        </div>
       </section>
+
       <section id="hero">
         <Hero />
       </section>
