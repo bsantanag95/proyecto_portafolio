@@ -43,27 +43,30 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
       tabIndex={0}
       aria-label="Project images carousel"
       className="
-        relative w-full overflow-hidden rounded-xl
-        focus:outline-none focus-visible:ring-2
-        focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600
-      "
+    relative
+    h-56 sm:h-80 md:h-96
+    w-full overflow-hidden rounded-xl
+    focus:outline-none focus-visible:ring-2
+    focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600
+  "
     >
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} mode="wait">
         <motion.img
           key={images[index]}
           src={images[index]}
           alt={`Project screenshot ${index + 1}`}
           aria-live="polite"
-          className="
-            h-56 sm:h-80 md:h-96
-            w-full object-cover
-          "
           onLoad={onImageLoad}
-          initial={{ x: 50, opacity: 0 }}
+          className="
+      absolute inset-0
+      h-full w-full
+      object-cover
+    "
+          initial={{ x: 40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -50, opacity: 0 }}
+          exit={{ x: -40, opacity: 0 }}
           transition={{
-            duration: shouldReduceMotion ? 0 : 0.5,
+            duration: shouldReduceMotion ? 0 : 0.45,
             ease: "easeInOut",
           }}
           drag="x"
@@ -94,7 +97,7 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
       <button
         onClick={prev}
         className="
-          hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2
+          cursor-pointer hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2
           h-9 w-9 items-center justify-center rounded-full
           bg-black/40 text-white hover:bg-black/60
         "
@@ -106,7 +109,7 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
       <button
         onClick={next}
         className="
-          hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2
+          cursor-pointer hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2
           h-9 w-9 items-center justify-center rounded-full
           bg-black/40 text-white hover:bg-black/60
         "

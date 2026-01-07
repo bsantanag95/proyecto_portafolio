@@ -41,7 +41,7 @@ const ProjectDetail = () => {
 "
     >
       <ProjectBreadcrumb title={project.title[language]} />
-      <div className="relative">
+      <div className="relative h-56 sm:h-80 md:h-96">
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: loaded ? 0 : 1 }}
