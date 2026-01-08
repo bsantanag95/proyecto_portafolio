@@ -16,6 +16,15 @@ const Sidebar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
+  const prevPathRef = useRef(location.pathname);
+
+  useEffect(() => {
+    if (!isDesktop && prevPathRef.current !== location.pathname) {
+      close();
+      prevPathRef.current = location.pathname;
+    }
+  }, [location.pathname, isDesktop, close]);
+
   /* ESC */
   useEffect(() => {
     if (!isOpen) return;
@@ -71,7 +80,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Overlay */}
-      {isOpen && (
+      {isOpen && !isDesktop && (
         <div
           aria-hidden="true"
           onClick={close}
@@ -125,28 +134,40 @@ const Sidebar = () => {
           <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
             <SidebarItem
               label={t.home.techStack}
-              action={() => scrollToSection("tech")}
+              action={() => {
+                scrollToSection("tech");
+                close();
+              }}
               onClick={close}
               active={isHome && activeSection === "tech"}
               icon={<Layers size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.summaryTitle}
-              action={() => scrollToSection("summary")}
+              action={() => {
+                scrollToSection("summary");
+                close();
+              }}
               onClick={close}
               active={isHome && activeSection === "summary"}
               icon={<User size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.highlightsTitle}
-              action={() => scrollToSection("highlights")}
+              action={() => {
+                scrollToSection("highlights");
+                close();
+              }}
               onClick={close}
               active={isHome && activeSection === "highlights"}
               icon={<Star size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.contact}
-              action={() => scrollToSection("contact")}
+              action={() => {
+                scrollToSection("contact");
+                close();
+              }}
               onClick={close}
               active={isHome && activeSection === "contact-spy"}
               icon={<Mail size={16} aria-hidden="true" />}
