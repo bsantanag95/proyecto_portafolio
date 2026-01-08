@@ -7,6 +7,7 @@ const LanguageToggle = () => {
     <button
       onClick={toggleLanguage}
       className="
+        cursor-pointer
         flex items-center justify-center
         h-9 w-9
         rounded-full

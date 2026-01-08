@@ -30,6 +30,7 @@ const DarkModeToggle = () => {
       onClick={toggleTheme}
       aria-label="Toggle dark mode"
       className={`
+      cursor-pointer
       relative flex items-center
       h-9 w-16
       rounded-full
