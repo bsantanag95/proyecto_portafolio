@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import ImageLightbox from "./ImageLightbox";
 
 interface Props {
   images: string[];
@@ -10,6 +11,7 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
   const [index, setIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const next = useCallback(() => {
     setIndex((i) => (i + 1) % images.length);
@@ -52,6 +54,7 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.img
+          onClick={() => setIsOpen(true)}
           key={images[index]}
           src={images[index]}
           alt={`Project screenshot ${index + 1}`}
@@ -117,6 +120,14 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
       >
         ›
       </button>
+      {isOpen && (
+        <ImageLightbox
+          images={images}
+          index={index}
+          setIndex={setIndex}
+          onClose={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 };
