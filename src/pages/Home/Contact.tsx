@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      aria-labelledby="contact-title"
+      aria-label={t.home.contact}
       className="scroll-mt-24 py-24 px-4 flex justify-center"
     >
       <div className="w-full max-w-2xl rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 p-8 shadow-sm">
@@ -46,7 +46,7 @@ const Contact = () => {
             type="button"
             onClick={handleCopy}
             aria-live="polite"
-            aria-label="Copiar correo electrónico"
+            aria-label={`Copiar correo electrónico ${EMAIL}`}
             className="cursor-pointer
     inline-flex items-center justify-center gap-2
     rounded-lg px-5 py-3

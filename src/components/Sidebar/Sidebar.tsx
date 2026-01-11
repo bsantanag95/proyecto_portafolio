@@ -5,7 +5,15 @@ import SidebarItem from "./SidebarItem";
 import { useLanguage } from "../../hooks/useLanguage";
 import { scrollToSection } from "../../utils/scrollToSection";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
-import { Home, Layers, Mail, Sparkles, Star, User } from "lucide-react";
+import {
+  Briefcase,
+  Home,
+  Layers,
+  Mail,
+  Sparkles,
+  Star,
+  User,
+} from "lucide-react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const Sidebar = () => {
@@ -69,7 +77,13 @@ const Sidebar = () => {
   }, [isOpen]);
 
   const activeSection = useScrollSpy(
-    ["tech", "summary", "highlights", "contact-spy"],
+    [
+      "tech-spy",
+      "summary-spy",
+      "experience-spy",
+      "highlights-spy",
+      "contact-spy",
+    ],
     {
       enabled: isHome,
       rootMargin: isDesktop ? "-30% 0px -60% 0px" : "-20% 0px -50% 0px",
@@ -139,7 +153,7 @@ const Sidebar = () => {
                 close();
               }}
               onClick={close}
-              active={isHome && activeSection === "tech"}
+              active={isHome && activeSection === "tech-spy"}
               icon={<Layers size={16} aria-hidden="true" />}
             />
             <SidebarItem
@@ -149,8 +163,18 @@ const Sidebar = () => {
                 close();
               }}
               onClick={close}
-              active={isHome && activeSection === "summary"}
+              active={isHome && activeSection === "summary-spy"}
               icon={<User size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.home.experienceTitle}
+              action={() => {
+                scrollToSection("experience");
+                close();
+              }}
+              onClick={close}
+              active={isHome && activeSection === "experience-spy"}
+              icon={<Briefcase size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.highlightsTitle}
@@ -159,7 +183,7 @@ const Sidebar = () => {
                 close();
               }}
               onClick={close}
-              active={isHome && activeSection === "highlights"}
+              active={isHome && activeSection === "highlights-spy"}
               icon={<Star size={16} aria-hidden="true" />}
             />
             <SidebarItem

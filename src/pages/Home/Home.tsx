@@ -1,4 +1,5 @@
-import { Contact, Hero, Techstack, Summary, Highlights } from "./";
+import { Contact, Hero, Techstack, Summary, Highlights, Experience } from "./";
+import SectionSpy from "../../components/Sidebar/SectionSpy";
 
 function Home() {
   return (
@@ -6,106 +7,25 @@ function Home() {
       <section id="hero">
         <Hero />
       </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
       <section id="tech">
+        <SectionSpy id="tech" />
         <Techstack />
       </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
       <section id="summary">
+        <SectionSpy id="summary" />
         <Summary />
       </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
+      <section id="experience" className="scroll-mt-24">
+        <SectionSpy id="experience" />
+        <Experience />
       </section>
       <section id="highlights">
+        <SectionSpy id="highlights" />
         <Highlights />
       </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section
-        id="contact"
-        aria-labelledby="contact-title"
-        className="scroll-mt-24 py-24 px-4 flex justify-center"
-      >
-        {/* SENTINEL */}
-        <span
-          id="contact-spy"
-          aria-hidden="true"
-          className="block h-0 scroll-mt-24"
-        />
-
-        <div className="w-full max-w-2xl ...">
-          <Contact />
-        </div>
-      </section>
-
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="hero">
-        <Hero />
+      <section id="contact">
+        <SectionSpy id="contact" />
+        <Contact />
       </section>
     </section>
   );

@@ -22,18 +22,20 @@ function Hero() {
       {/* CTA */}
       <div className="mt-8 flex flex-wrap gap-4">
         <a
-          href="/cv/Esteban_Santana_CV.pdf"
+          href="cv/CV - Esteban Santana.pdf"
           download
           className="
-      inline-flex items-center gap-2
-      rounded-lg px-6 py-3
-      bg-zinc-900 text-white
-      dark:bg-zinc-100 dark:text-zinc-900
-      hover:opacity-90
-      transition
-    "
+    inline-flex items-center gap-2
+    rounded-lg px-5 py-3
+    text-sm font-medium
+    bg-zinc-900 text-white
+    hover:bg-zinc-800
+    dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200
+    transition
+  "
+          aria-label="Descargar currículum en PDF"
         >
-          <Download size={18} />
+          <Download size={16} aria-hidden="true" />
           {t.home.downloadCv}
         </a>
 

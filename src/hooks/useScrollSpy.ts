@@ -28,7 +28,10 @@ export const useScrollSpy = (
         if (!visible.length) return;
 
         const topMost = visible.reduce((a, b) =>
-          a.boundingClientRect.top < b.boundingClientRect.top ? a : b
+          Math.abs(a.boundingClientRect.top) <
+          Math.abs(b.boundingClientRect.top)
+            ? a
+            : b
         );
 
         setActiveId(topMost.target.id);
