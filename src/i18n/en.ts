@@ -31,9 +31,16 @@ export const en = {
     techStack: "Tech Stack",
 
     //SUMMARY
-    summary:
-      "I am a frontend developer with experience building modern and maintainable web applications.\nI primarily work with React and TypeScript, focusing on component architecture, code scalability, and user experience.\nI enjoy creating clean, accessible, and efficient interfaces, collaborating closely with design and backend teams to deliver well-structured and easy-to-maintain products.",
     summaryTitle: "Summary",
+
+    summaryIntro:
+      "I am a frontend developer focused on React and TypeScript, oriented toward building clear, accessible, and maintainable interfaces.",
+
+    summaryFocus:
+      "I work with component-based architectures, state management, and subtle animations to enhance the user experience, always taking care of code quality.",
+
+    summaryBridge:
+      "Below you can see how I have applied these principles in real projects and practical experiences.",
 
     //HIGHLIGHTS
     highlights: [

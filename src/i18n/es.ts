@@ -32,9 +32,16 @@ export const es = {
     techStack: "Stack tecnológico",
 
     //SUMMARY
-    summary:
-      "Soy desarrollador frontend con experiencia en la creación de aplicaciones web modernas y mantenibles.\nTrabajo principalmente con React y TypeScript, poniendo énfasis en la arquitectura de componentes, la escalabilidad del código y la experiencia de usuario.\nMe interesa construir interfaces claras, accesibles y eficientes, colaborando con diseño y backend para entregar productos bien estructurados y fáciles de mantener en el tiempo.",
     summaryTitle: "Resumen profesional",
+
+    summaryIntro:
+      "Soy desarrollador frontend con foco en React y TypeScript, orientado a construir interfaces claras, accesibles y mantenibles.",
+
+    summaryFocus:
+      "Trabajo con arquitecturas de componentes, manejo de estado y animaciones sutiles para mejorar la experiencia de usuario, cuidando siempre la calidad del código.",
+
+    summaryBridge:
+      "A continuación puedes ver cómo he aplicado estos principios en proyectos reales y experiencias prácticas.",
 
     //HIGHLIGHTS
     highlights: [
