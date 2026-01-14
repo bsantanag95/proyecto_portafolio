@@ -44,15 +44,12 @@ export const en = {
 
     //HIGHLIGHTS
     highlights: [
-      "Frontend Developer specialized in React and TypeScript.",
-      "Experience building modern, accessible, and responsive interfaces.",
-      "Focus on maintainable, scalable, and well-structured code.",
-      "Integration of REST APIs and state management in complex applications.",
-      "Use of modern tools such as Vite, Tailwind CSS, and Framer Motion.",
-      "Attention to detail in UX, animations, and microinteractions.",
-      "Ability to transform requirements into clear technical solutions.",
-      "Experience working on personal and collaborative projects.",
-      "Continuous interest in improving best practices and learning new technologies.",
+      "Strong focus on clean, maintainable, and well-structured code.",
+      "Experience building responsive and accessible interfaces.",
+      "Fast learner with adaptability to new technologies.",
+      "Continuous improvement mindset.",
+      "Comfortable working autonomously with technical responsibility.",
+      "Clear communication and collaborative approach.",
     ],
     highlightsTitle: "Highlights",
 

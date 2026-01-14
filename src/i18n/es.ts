@@ -15,7 +15,7 @@ export const es = {
     heading: "Hola, soy Esteban",
     role: "Desarrollador Frontend especializado en React y TypeScript",
     specialization:
-      "Desarrollo interfaces web modernas, escalables y mantenibles.\nEnfocado en experiencia de usuario, arquitectura de componentes y buenas prácticas frontend.",
+      "Desarrollo web modernas, escalables y mantenibles.\nEnfocado en experiencia de usuario, arquitectura de componentes y buenas prácticas frontend.",
     description:
       "Trabajo principalmente con React, TypeScript y Tailwind, integrando APIs y cuidando cada detalle de la experiencia de usuario.",
 
@@ -45,16 +45,14 @@ export const es = {
 
     //HIGHLIGHTS
     highlights: [
-      "Desarrollador Frontend especializado en React y TypeScript.",
-      "Experiencia construyendo interfaces modernas, accesibles y responsive.",
-      "Enfoque en código mantenible, escalable y bien estructurado.",
-      "Integración de APIs REST y manejo de estado en aplicaciones complejas.",
-      "Uso de herramientas modernas como Vite, Tailwind CSS y Framer Motion.",
-      "Atención al detalle en UX, animaciones y microinteracciones.",
-      "Capacidad para transformar requerimientos en soluciones técnicas claras.",
-      "Experiencia trabajando en proyectos personales y colaborativos.",
-      "Interés constante en mejorar buenas prácticas y aprender nuevas tecnologías.",
+      "Enfoque en código limpio, mantenible y bien estructurado.",
+      "Experiencia trabajando con diseño responsive y accesible.",
+      "Capacidad para aprender rápidamente nuevas tecnologías.",
+      "Mentalidad orientada a la mejora continua.",
+      "Buen manejo del trabajo autónomo y la responsabilidad técnica.",
+      "Comunicación clara y enfoque colaborativo.",
     ],
+
     highlightsTitle: "Puntos destacados",
 
     //EDUCATION
