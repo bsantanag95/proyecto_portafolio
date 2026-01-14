@@ -20,12 +20,14 @@ function Education() {
       <AnimatedSection delay={0.1}>
         <article
           className="
-          rounded-xl
-          border border-zinc-200 dark:border-zinc-800
-          p-5
-          bg-white dark:bg-zinc-900
-          space-y-2
-        "
+  rounded-xl
+  border border-zinc-200 dark:border-zinc-800
+  bg-white dark:bg-zinc-900
+  p-5
+  transition
+  hover:shadow-md hover:border-zinc-300
+  dark:hover:border-zinc-700
+"
         >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
             <h3 className="font-medium text-zinc-900 dark:text-zinc-100">

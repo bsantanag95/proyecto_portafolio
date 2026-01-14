@@ -1,8 +1,8 @@
 export const en = {
   sidebar: {
     title: "Esteban",
-    subtitle: "Frontend Developer",
-    home: "Home",
+    subtitle: "Web Developer",
+    home: "Overview",
     projects: "Projects",
     toggleSections: "Show sections",
     ariaLabel: "Main navigation",
@@ -51,11 +51,11 @@ export const en = {
       "Comfortable working autonomously with technical responsibility.",
       "Clear communication and collaborative approach.",
     ],
-    highlightsTitle: "Highlights",
+    highlightsTitle: "Key Highlights",
 
     //EDUCATION
     education: {
-      title: "Education & Certifications",
+      title: "Education",
       educationTitle: "Education",
       certificationsTitle: "Certifications",
       degree: "Bachelor's Degree in Computer Engineering",

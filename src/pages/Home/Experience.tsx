@@ -26,12 +26,14 @@ function Experience() {
             <article
               key={index}
               className="
-              relative
-              rounded-xl
-              border border-zinc-200 dark:border-zinc-800
-              p-5
-              bg-white dark:bg-zinc-900
-            "
+  rounded-xl
+  border border-zinc-200 dark:border-zinc-800
+  bg-white dark:bg-zinc-900
+  p-5
+  transition
+  hover:shadow-md hover:border-zinc-300
+  dark:hover:border-zinc-700
+"
             >
               {/* Header */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">

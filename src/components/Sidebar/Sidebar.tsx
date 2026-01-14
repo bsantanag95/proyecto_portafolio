@@ -169,7 +169,7 @@ const Sidebar = () => {
               icon={<User size={16} aria-hidden="true" />}
             />
             <SidebarItem
-              label={t.home.education.educationTitle}
+              label={t.home.education.title}
               action={() => {
                 scrollToSection("education");
                 close();

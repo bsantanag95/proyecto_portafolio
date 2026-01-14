@@ -1,8 +1,8 @@
 export const es = {
   sidebar: {
     title: "Esteban",
-    subtitle: "Desarrollador Frontend",
-    home: "Inicio",
+    subtitle: "Desarrollador Web",
+    home: "Resumen",
     projects: "Proyectos",
     toggleSections: "Mostrar secciones",
     ariaLabel: "Navegación principal",
@@ -35,7 +35,7 @@ export const es = {
     summaryTitle: "Resumen profesional",
 
     summaryIntro:
-      "Soy desarrollador frontend con foco en React y TypeScript, orientado a construir interfaces claras, accesibles y mantenibles.",
+      "Soy desarrollador frontend con foco en React y TypeScript, orientado a construir interfaces claras, accesibles y mantenibles. Actualmente abierto a oportunidades como Frontend Developer / Junior React Developer.",
 
     summaryFocus:
       "Trabajo con arquitecturas de componentes, manejo de estado y animaciones sutiles para mejorar la experiencia de usuario, cuidando siempre la calidad del código.",
@@ -53,11 +53,11 @@ export const es = {
       "Comunicación clara y enfoque colaborativo.",
     ],
 
-    highlightsTitle: "Puntos destacados",
+    highlightsTitle: "Puntos claves",
 
     //EDUCATION
     education: {
-      title: "Educación & Certificaciones",
+      title: "Formación",
       educationTitle: "Educación",
       certificationsTitle: "Certificaciones",
       degree: "Ingeniería en Informática",
