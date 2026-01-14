@@ -1,9 +1,7 @@
 import type { FC } from "react";
 
 interface SectionSpyProps {
-  /** Base id de la sección (ej: "summary", "experience") */
   id: string;
-  /** Offset opcional para headers sticky (default: 24) */
   offset?: number;
 }
 

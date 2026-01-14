@@ -1,3 +1,4 @@
+import AnimatedSection from "../../components/Animations/AnimatedSection";
 import { useLanguage } from "../../hooks/useLanguage";
 
 function Highlights() {
@@ -8,7 +9,6 @@ function Highlights() {
       <h2 className="text-xl sm:text-2xl font-semibold">
         {t.home.highlightsTitle}
       </h2>
-
       <ul
         className="
           grid grid-cols-1 sm:grid-cols-2
@@ -16,22 +16,24 @@ function Highlights() {
         "
       >
         {t.home.highlights.map((item: string) => (
-          <li
-            key={item}
-            className="
+          <AnimatedSection key={item} delay={0.1}>
+            <li
+              key={item}
+              className="
               flex items-start gap-2
               text-sm sm:text-base
               text-zinc-700 dark:text-zinc-300
             "
-          >
-            <span
-              aria-hidden
-              className="mt-0.5 text-zinc-900 dark:text-zinc-100"
             >
-              •
-            </span>
-            <span>{item}</span>
-          </li>
+              <span
+                aria-hidden
+                className="mt-0.5 text-zinc-900 dark:text-zinc-100"
+              >
+                •
+              </span>
+              <span>{item}</span>
+            </li>
+          </AnimatedSection>
         ))}
       </ul>
     </section>
