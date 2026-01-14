@@ -15,7 +15,10 @@ function Techstack() {
 
   return (
     <section>
-      <h3 className="text-base sm:text-lg font-semibold mb-4">
+      <h3
+        aria-label={t.home.techStack}
+        className="text-base sm:text-lg font-semibold mb-4"
+      >
         {t.home.techStack}
       </h3>
 

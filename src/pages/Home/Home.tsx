@@ -1,4 +1,12 @@
-import { Contact, Hero, Techstack, Summary, Highlights, Experience } from "./";
+import {
+  Contact,
+  Hero,
+  Techstack,
+  Summary,
+  Highlights,
+  Education,
+  Experience,
+} from "./";
 import SectionSpy from "../../components/Sidebar/SectionSpy";
 
 function Home() {
@@ -14,6 +22,10 @@ function Home() {
       <section id="summary">
         <SectionSpy id="summary" />
         <Summary />
+      </section>
+      <section id="education">
+        <SectionSpy id="education" />
+        <Education />
       </section>
       <section id="experience" className="scroll-mt-24">
         <SectionSpy id="experience" />

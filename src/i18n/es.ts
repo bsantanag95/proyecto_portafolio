@@ -57,6 +57,28 @@ export const es = {
     ],
     highlightsTitle: "Puntos destacados",
 
+    //EDUCATION
+    education: {
+      title: "Educación & Certificaciones",
+      educationTitle: "Educación",
+      certificationsTitle: "Certificaciones",
+      degree: "Ingeniería en Informática",
+      institution: "Duoc UC",
+      period: "2016 – 2022",
+      description:
+        "Formación orientada al desarrollo de software, arquitectura de sistemas, bases de datos y gestión de proyectos informáticos, con fuerte énfasis en calidad y buenas prácticas.",
+      certifications: [
+        "Análisis y Desarrollo de Modelos de Datos",
+        "Gestión de Proyectos Informáticos",
+        "Calidad de Software",
+        "Arquitectura de Software",
+        "Programación de Software",
+        "Inteligencia de Negocios",
+        "Análisis y Planificación de Requerimientos Informáticos",
+        "Certificación Internacional en Inglés Intermedio Alto",
+      ],
+    },
+
     //EXPERIENCE
     experienceTitle: "Experiencia",
     experienceIntro:

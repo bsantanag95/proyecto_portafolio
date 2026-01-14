@@ -7,6 +7,7 @@ import { scrollToSection } from "../../utils/scrollToSection";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 import {
   Briefcase,
+  GraduationCap,
   Home,
   Layers,
   Mail,
@@ -80,6 +81,7 @@ const Sidebar = () => {
     [
       "tech-spy",
       "summary-spy",
+      "education-spy",
       "experience-spy",
       "highlights-spy",
       "contact-spy",
@@ -165,6 +167,16 @@ const Sidebar = () => {
               onClick={close}
               active={isHome && activeSection === "summary-spy"}
               icon={<User size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.home.education.educationTitle}
+              action={() => {
+                scrollToSection("education");
+                close();
+              }}
+              onClick={close}
+              active={isHome && activeSection === "education-spy"}
+              icon={<GraduationCap size={16} aria-hidden="true" />}
             />
             <SidebarItem
               label={t.home.experienceTitle}

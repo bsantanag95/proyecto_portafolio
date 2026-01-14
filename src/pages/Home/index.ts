@@ -5,3 +5,4 @@ export { default as Summary } from "./Summary";
 export { default as Highlights } from "./Highlights";
 export { default as Contact } from "./Contact";
 export { default as Experience } from "./Experience";
+export { default as Education } from "./Education";

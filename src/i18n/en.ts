@@ -56,6 +56,28 @@ export const en = {
     ],
     highlightsTitle: "Highlights",
 
+    //EDUCATION
+    education: {
+      title: "Education & Certifications",
+      educationTitle: "Education",
+      certificationsTitle: "Certifications",
+      degree: "Bachelor's Degree in Computer Engineering",
+      institution: "Duoc UC",
+      period: "2016 – 2022",
+      description:
+        "Training focused on software development, system architecture, databases, and IT project management, with a strong emphasis on quality and best practices.",
+      certifications: [
+        "Data Model Analysis and Development",
+        "IT Project Management",
+        "Software Quality",
+        "Software Architecture",
+        "Software Programming",
+        "Business Intelligence",
+        "IT Requirements Analysis and Planning",
+        "International Upper-Intermediate English Certification",
+      ],
+    },
+
     //EXPERIENCE
     experienceTitle: "Experience",
     experienceIntro:
