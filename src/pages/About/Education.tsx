@@ -6,13 +6,13 @@ function Education() {
 
   return (
     <section
-      aria-label={t.home.education.title}
+      aria-label={t.about.education.title}
       className="max-w-3xl space-y-10"
     >
       {/* Header */}
       <div className="space-y-2">
         <h2 className="text-xl sm:text-2xl font-semibold">
-          {t.home.education.title}
+          {t.about.education.title}
         </h2>
       </div>
 
@@ -31,19 +31,19 @@ function Education() {
         >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
             <h3 className="font-medium text-zinc-900 dark:text-zinc-100">
-              {t.home.education.degree}
+              {t.about.education.degree}
             </h3>
             <span className="text-xs text-zinc-500">
-              {t.home.education.period}
+              {t.about.education.period}
             </span>
           </div>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            {t.home.education.institution}
+            {t.about.education.institution}
           </p>
 
           <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-            {t.home.education.description}
+            {t.about.education.description}
           </p>
         </article>
       </AnimatedSection>
@@ -51,11 +51,11 @@ function Education() {
         {/* Certifications */}
         <div className="space-y-3">
           <h3 className="text-sm font-medium uppercase tracking-wide text-zinc-500">
-            {t.home.education.certificationsTitle}
+            {t.about.education.certificationsTitle}
           </h3>
 
           <ul className="flex flex-wrap gap-2">
-            {t.home.education.certifications.map((cert: string) => (
+            {t.about.education.certifications.map((cert: string) => (
               <li
                 key={cert}
                 className="

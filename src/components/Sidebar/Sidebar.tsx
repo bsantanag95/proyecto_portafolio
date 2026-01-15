@@ -9,6 +9,7 @@ import {
   Briefcase,
   GraduationCap,
   Home,
+  IdCard,
   Layers,
   Mail,
   Sparkles,
@@ -24,6 +25,7 @@ const Sidebar = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isAbout = location.pathname === "/about";
 
   const prevPathRef = useRef(location.pathname);
 
@@ -87,7 +89,7 @@ const Sidebar = () => {
       "contact-spy",
     ],
     {
-      enabled: isHome,
+      enabled: isHome || isAbout,
       rootMargin: isDesktop ? "-30% 0px -60% 0px" : "-20% 0px -50% 0px",
       threshold: isDesktop ? 0.2 : 0.1,
     }
@@ -149,56 +151,6 @@ const Sidebar = () => {
           {/* Secciones Home */}
           <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
             <SidebarItem
-              label={t.home.techStack}
-              action={() => {
-                scrollToSection("tech");
-                close();
-              }}
-              onClick={close}
-              active={isHome && activeSection === "tech-spy"}
-              icon={<Layers size={16} aria-hidden="true" />}
-            />
-            <SidebarItem
-              label={t.home.summaryTitle}
-              action={() => {
-                scrollToSection("summary");
-                close();
-              }}
-              onClick={close}
-              active={isHome && activeSection === "summary-spy"}
-              icon={<User size={16} aria-hidden="true" />}
-            />
-            <SidebarItem
-              label={t.home.education.title}
-              action={() => {
-                scrollToSection("education");
-                close();
-              }}
-              onClick={close}
-              active={isHome && activeSection === "education-spy"}
-              icon={<GraduationCap size={16} aria-hidden="true" />}
-            />
-            <SidebarItem
-              label={t.home.experienceTitle}
-              action={() => {
-                scrollToSection("experience");
-                close();
-              }}
-              onClick={close}
-              active={isHome && activeSection === "experience-spy"}
-              icon={<Briefcase size={16} aria-hidden="true" />}
-            />
-            <SidebarItem
-              label={t.home.highlightsTitle}
-              action={() => {
-                scrollToSection("highlights");
-                close();
-              }}
-              onClick={close}
-              active={isHome && activeSection === "highlights-spy"}
-              icon={<Star size={16} aria-hidden="true" />}
-            />
-            <SidebarItem
               label={t.home.contact}
               action={() => {
                 scrollToSection("contact");
@@ -210,12 +162,76 @@ const Sidebar = () => {
             />
           </div>
 
+          {/* About */}
+          <SidebarItem
+            label={t.sidebar.about}
+            path="/about"
+            onClick={close}
+            icon={<IdCard size={16} aria-hidden="true" />}
+          />
+
+          {/* Secciones About */}
+          <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
+            <SidebarItem
+              label={t.about.summaryTitle}
+              action={() => {
+                scrollToSection("summary");
+                close();
+              }}
+              onClick={close}
+              active={isAbout && activeSection === "summary-spy"}
+              icon={<User size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.about.education.title}
+              action={() => {
+                scrollToSection("education");
+                close();
+              }}
+              onClick={close}
+              active={isAbout && activeSection === "education-spy"}
+              icon={<GraduationCap size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.about.experienceTitle}
+              action={() => {
+                scrollToSection("experience");
+                close();
+              }}
+              onClick={close}
+              active={isAbout && activeSection === "experience-spy"}
+              icon={<Briefcase size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.about.highlightsTitle}
+              action={() => {
+                scrollToSection("highlights");
+                close();
+              }}
+              onClick={close}
+              active={isAbout && activeSection === "highlights-spy"}
+              icon={<Star size={16} aria-hidden="true" />}
+            />
+            <SidebarItem
+              label={t.about.techStack}
+              action={() => {
+                scrollToSection("tech");
+                close();
+              }}
+              onClick={close}
+              active={isAbout && activeSection === "tech-spy"}
+              icon={<Layers size={16} aria-hidden="true" />}
+            />
+          </div>
+
           {/* Proyectos */}
           <SidebarItem
             label={t.sidebar.projects}
             path="/projects"
             onClick={close}
-            active={!isHome && location.pathname.startsWith("/projects")}
+            active={
+              !isHome && !isAbout && location.pathname.startsWith("/projects")
+            }
             icon={<Sparkles size={16} aria-hidden="true" />}
           />
         </nav>

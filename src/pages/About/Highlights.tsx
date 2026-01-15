@@ -7,7 +7,7 @@ function Highlights() {
   return (
     <section className="max-w-3xl space-y-4">
       <h2 className="text-xl sm:text-2xl font-semibold">
-        {t.home.highlightsTitle}
+        {t.about.highlightsTitle}
       </h2>
       <ul
         className="
@@ -15,7 +15,7 @@ function Highlights() {
           gap-3 sm:gap-4
         "
       >
-        {t.home.highlights.map((item: string) => (
+        {t.about.highlights.map((item: string) => (
           <AnimatedSection key={item} delay={0.1}>
             <li
               key={item}

@@ -16,10 +16,10 @@ function Techstack() {
   return (
     <section>
       <h3
-        aria-label={t.home.techStack}
+        aria-label={t.about.techStack}
         className="text-base sm:text-lg font-semibold mb-4"
       >
-        {t.home.techStack}
+        {t.about.techStack}
       </h3>
 
       <ul className="flex flex-wrap gap-3 max-w-xl sm:gap-3">

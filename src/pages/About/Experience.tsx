@@ -6,22 +6,22 @@ function Experience() {
 
   return (
     <section
-      aria-label={t.home.experienceTitle}
+      aria-label={t.about.experienceTitle}
       className="max-w-3xl space-y-10"
     >
       {/* Header */}
       <div className="space-y-2">
         <h2 className="text-xl sm:text-2xl font-semibold">
-          {t.home.experienceTitle}
+          {t.about.experienceTitle}
         </h2>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">
-          {t.home.experienceIntro}
+          {t.about.experienceIntro}
         </p>
       </div>
 
       {/* Experience list */}
       <div className="space-y-8">
-        {t.home.experience.map((exp, index) => (
+        {t.about.experience.map((exp, index) => (
           <AnimatedSection key={index} delay={index * 0.05}>
             <article
               key={index}

@@ -1,1 +1,1 @@
-export type SidebarKey = 'home' | 'projects' | 'contact';
+export type SidebarKey = "home" | "about" | "projects" | "contact";

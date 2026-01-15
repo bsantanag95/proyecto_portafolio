@@ -3,6 +3,7 @@ export const en = {
     title: "Esteban",
     subtitle: "Web Developer",
     home: "Overview",
+    about: "About Me",
     projects: "Projects",
     toggleSections: "Show sections",
     ariaLabel: "Main navigation",
@@ -26,7 +27,9 @@ export const en = {
     contact: "Contact",
     copyEmail: "Copy email to clipboard",
     copied: "Email copied!",
+  },
 
+  about: {
     //TECH STACK
     techStack: "Tech Stack",
 
@@ -125,6 +128,7 @@ export const en = {
       },
     ],
   },
+
   projects: {
     breadcrumb: "Projects",
     backend: "Backend",
