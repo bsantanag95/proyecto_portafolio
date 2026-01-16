@@ -1,4 +1,4 @@
-import { Contact, Hero } from "./";
+import { Contact, GitHubCta, CvCta, Hero } from "./";
 import SectionSpy from "../../components/Sidebar/SectionSpy";
 
 function Home() {
@@ -7,7 +7,10 @@ function Home() {
       <section id="hero" className="pt-24">
         <Hero />
       </section>
-
+      <section className="grid gap-6 sm:grid-cols-2">
+        <GitHubCta />
+        <CvCta />
+      </section>
       <section id="contact">
         <SectionSpy id="contact" />
         <Contact />

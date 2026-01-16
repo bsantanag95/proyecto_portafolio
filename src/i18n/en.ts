@@ -20,8 +20,14 @@ export const en = {
     description: "Frontend developer focused on building modern experiences.",
 
     //CTA
-    downloadCv: "Download CV",
-    viewGithub: "View GitHub",
+    cvTitle: "Resume",
+    cvDescription:
+      "Download my resume to learn more about my experience and skills.",
+    downloadCv: "Download Resume",
+    viewGithub: "View on GitHub",
+    githubTitle: "Portfolio Source Code",
+    githubDescription:
+      "This website was built with React and TypeScript, following frontend best practices and a strong focus on user experience.",
 
     //CONTACT
     contact: "Contact",
