@@ -5,6 +5,7 @@ export const en = {
     home: "Overview",
     about: "About Me",
     projects: "Projects",
+    contact: "Contact",
     toggleSections: "Show sections",
     ariaLabel: "Main navigation",
   },
@@ -30,7 +31,6 @@ export const en = {
       "This website was built with React and TypeScript, following frontend best practices and a strong focus on user experience.",
 
     //CONTACT
-    contact: "Contact",
     copyEmail: "Copy email to clipboard",
     copied: "Email copied!",
   },
@@ -135,6 +135,43 @@ export const en = {
     ],
   },
 
+  //CONTACT
+  contact: {
+    title: "Let’s talk",
+    subtitle:
+      "Do you have a job opportunity, a project, or just want to get in touch? Fill out the form and I’ll get back to you as soon as possible.",
+
+    formTitle: "Contact form",
+    formDescription: "Fields marked with * are required",
+
+    errors: {
+      firstName: "Please enter a valid first name",
+      lastName: "Please enter a valid last name",
+      email: "Invalid email address",
+      subject: "The subject is too short",
+      message: "The message must be at least 10 characters long",
+      phone: "Invalid phone number",
+    },
+
+    fields: {
+      firstName: "First name",
+      lastName: "Last name",
+      email: "Email",
+      phone: "Phone (optional)",
+      subject: "Subject",
+      message: "Message",
+    },
+
+    submit: "Send message",
+    submitting: "Sending...",
+
+    success: "Message sent successfully. I’ll get back to you shortly.",
+    error: "Something went wrong while sending the message. Please try again.",
+
+    privacy: "Your information will not be shared with third parties.",
+  },
+
+  //PROJECTS
   projects: {
     breadcrumb: "Projects",
     backend: "Backend",

@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-type SidebarContext = "home" | "about" | "projects";
+type SidebarContext = "home" | "about" | "projects" | "contact";
 
 const Sidebar = () => {
   const { isOpen, close } = useSidebar();
@@ -36,6 +36,8 @@ const Sidebar = () => {
       ? "about"
       : pathname.startsWith("/projects")
       ? "projects"
+      : pathname.startsWith("/contact")
+      ? "contact"
       : "home";
 
   useEffect(() => {
@@ -89,9 +91,7 @@ const Sidebar = () => {
   }, [isOpen]);
 
   const activeSection = useScrollSpy(
-    sidebarContext === "home"
-      ? ["contact-spy"]
-      : sidebarContext === "about"
+    sidebarContext === "about"
       ? [
           "summary-spy",
           "education-spy",
@@ -99,9 +99,11 @@ const Sidebar = () => {
           "highlights-spy",
           "tech-spy",
         ]
+      : sidebarContext === "home"
+      ? ["contact-spy"]
       : [],
     {
-      enabled: sidebarContext !== "projects",
+      enabled: sidebarContext === "home" || sidebarContext === "about",
       rootMargin: isDesktop ? "-30% 0px -60% 0px" : "-20% 0px -50% 0px",
       threshold: isDesktop ? 0.2 : 0.1,
     }
@@ -160,7 +162,7 @@ const Sidebar = () => {
             icon={<Home size={16} aria-hidden="true" />}
           />
 
-          {/* Secciones Home */}
+          {/* Secciones Home
           {sidebarContext === "home" && (
             <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
               <SidebarItem
@@ -173,7 +175,7 @@ const Sidebar = () => {
                 icon={<Mail size={16} aria-hidden="true" />}
               />
             </div>
-          )}
+          )} */}
 
           {/* About */}
           <SidebarItem
@@ -244,6 +246,14 @@ const Sidebar = () => {
             path="/projects"
             active={sidebarContext === "projects"}
             icon={<Sparkles size={16} />}
+          />
+
+          {/* Contacto */}
+          <SidebarItem
+            label={t.sidebar.contact}
+            path="/contact"
+            active={sidebarContext === "contact"}
+            icon={<Mail size={16} />}
           />
         </nav>
       </aside>

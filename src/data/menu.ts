@@ -9,4 +9,5 @@ export const menuItems: MenuItem[] = [
   { key: "home", path: "/" },
   { key: "about", path: "/about" },
   { key: "projects", path: "/projects" },
+  { key: "contact", path: "/contact" },
 ];

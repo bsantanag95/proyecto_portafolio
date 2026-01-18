@@ -5,6 +5,7 @@ export const es = {
     home: "Resumen",
     about: "Acerca de mi",
     projects: "Proyectos",
+    contact: "Contacto",
     toggleSections: "Mostrar secciones",
     ariaLabel: "Navegación principal",
   },
@@ -30,7 +31,6 @@ export const es = {
       "Este sitio web fue desarrollado con React y TypeScript, siguiendo buenas prácticas de arquitectura frontend y experiencia de usuario.",
 
     //CONTACT
-    contact: "Contacto",
     copyEmail: "Copiar correo al portapapeles",
     copied: "¡Correo copiado!",
   },
@@ -135,6 +135,43 @@ export const es = {
     ],
   },
 
+  //CONTACTO
+  contact: {
+    title: "Hablemos",
+    subtitle:
+      "¿Tienes una oportunidad laboral, un proyecto o simplemente quieres ponerte en contacto? Completa el formulario y te responderé lo antes posible.",
+
+    formTitle: "Formulario de contacto",
+    formDescription: "Todos los campos marcados con * son obligatorios",
+
+    errors: {
+      firstName: "Ingrese un nombre válido",
+      lastName: "Ingrese un apellido válido",
+      email: "Email inválido",
+      subject: "El asunto es muy corto",
+      message: "El mensaje debe tener al menos 10 caracteres",
+      phone: "Teléfono inválido",
+    },
+
+    fields: {
+      firstName: "Nombre",
+      lastName: "Apellido",
+      email: "Email",
+      phone: "Teléfono (opcional)",
+      subject: "Asunto",
+      message: "Mensaje",
+    },
+
+    submit: "Enviar mensaje",
+    submitting: "Enviando...",
+
+    success: "Mensaje enviado correctamente. Te responderé a la brevedad.",
+    error: "Ocurrió un error al enviar el mensaje. Intenta nuevamente.",
+
+    privacy: "No comparto tu información con terceros.",
+  },
+
+  //PROYECTO
   projects: {
     breadcrumb: "Proyectos",
     backend: "Backend",
