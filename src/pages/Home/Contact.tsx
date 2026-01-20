@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      aria-label={t.home.contact}
+      aria-label={t.contact.title}
       className="scroll-mt-24 py-24 px-4 flex justify-center"
     >
       <AnimatedSection delay={0.1}>

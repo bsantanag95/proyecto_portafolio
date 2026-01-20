@@ -3,8 +3,8 @@ import SectionSpy from "../../components/Sidebar/SectionSpy";
 
 function Home() {
   return (
-    <main className="space-y-24">
-      <section id="hero" className="pt-24">
+    <main className="space-y-12">
+      <section id="hero">
         <Hero />
       </section>
       <section className="grid gap-6 sm:grid-cols-2">

@@ -52,7 +52,7 @@ function GithubCTA() {
     hover:shadow-md hover:shadow-cyan-400/25
 
     dark:hover:bg-cyan-400/10
-    dark:hover:shadow-cyan-400/20
+    dark:hover:shadow-cyan-400/20 cursor-default
   "
           >
             <ReactIcon className="text-cyan-500 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
@@ -71,7 +71,7 @@ function GithubCTA() {
       hover:-translate-y-0.5
       hover:border-blue-500/40
       hover:bg-blue-50/60 dark:hover:bg-blue-500/10
-      hover:shadow-md hover:shadow-blue-500/20
+      hover:shadow-md hover:shadow-blue-500/20 cursor-default
     "
           >
             <TypeScriptIcon className="text-blue-600 dark:text-blue-500 transition-transform duration-300 group-hover:scale-110" />
@@ -90,7 +90,7 @@ function GithubCTA() {
       hover:-translate-y-0.5
       hover:border-cyan-300/40
       hover:bg-cyan-50/60 dark:hover:bg-cyan-300/10
-      hover:shadow-md hover:shadow-cyan-300/20
+      hover:shadow-md hover:shadow-cyan-300/20 cursor-default
     "
           >
             <TailwindIcon className="text-cyan-400 transition-transform duration-300 group-hover:scale-110" />
