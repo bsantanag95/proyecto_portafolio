@@ -14,12 +14,15 @@ export const en = {
   },
   home: {
     //HERO
-    heading: "Hi, I’m Esteban",
-    role: "Frontend Developer · React & TypeScript",
-    specialization:
-      "Specialized in React, TypeScript, and Laravel.\nI build modern interfaces and maintainable web solutions",
-    description: "Frontend developer focused on building modern experiences.",
-
+    availability: "Available for work",
+    role: "Web Developer",
+    specialization: "Focused on building web interfaces with React.",
+    description: [
+      "I build clear and well-thought-out web products, with a focus on user experience and code quality.",
+      "My specialty is frontend, where I prioritize readability, consistency, and maintainable architecture.",
+      "I also have experience in backend development using Laravel and MySQL, which allows me to understand the product as a whole.",
+      "I value continuous learning and constantly improving with each project.",
+    ],
     //CTA
     cvTitle: "Resume",
     cvDescription:
@@ -33,6 +36,11 @@ export const en = {
     //CONTACT
     copyEmail: "Copy email to clipboard",
     copied: "Email copied!",
+    contact: {
+      title: "Let’s talk?",
+      description:
+        "I’m open to new opportunities, collaborations, or simply chatting about frontend development and product design.",
+    },
   },
 
   about: {

@@ -34,12 +34,11 @@ const Contact = () => {
             id="contact-title"
             className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100"
           >
-            ¿Hablamos?
+            {t.home.contact.title}
           </h2>
 
           <p className="mt-3 text-zinc-600 dark:text-zinc-400">
-            Estoy abierto a nuevas oportunidades, colaboraciones o simplemente
-            conversar sobre desarrollo frontend y producto.
+            {t.home.contact.description}
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

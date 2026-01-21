@@ -14,13 +14,15 @@ export const es = {
   },
   home: {
     //HERO
-    heading: "Hola, soy Esteban",
-    role: "Desarrollador Frontend especializado en React y TypeScript",
-    specialization:
-      "Desarrollo web modernas, escalables y mantenibles.\nEnfocado en experiencia de usuario, arquitectura de componentes y buenas prácticas frontend.",
-    description:
-      "Trabajo principalmente con React, TypeScript y Tailwind, integrando APIs y cuidando cada detalle de la experiencia de usuario.",
-
+    availability: "Disponible para trabajar",
+    role: "Desarrollador Web",
+    specialization: "Enfocado en el desarrollo de interfaces web con React.",
+    description: [
+      "Creo productos web claros y bien pensados, con foco en la experiencia del usuario y la calidad del código.",
+      "Mi especialidad es frontend, donde priorizo legibilidad, consistencia y arquitectura mantenible.",
+      "También tengo experiencia en backend con Laravel y MySQL, lo que me permite comprender el producto en su conjunto.",
+      "Valoro el aprendizaje continuo y mejorar constantemente con cada proyecto.",
+    ],
     //CTA
     cvTitle: "Currículum",
     cvDescription: "Descarga mi CV para conocer mi experiencia y habilidades.",
@@ -33,6 +35,11 @@ export const es = {
     //CONTACT
     copyEmail: "Copiar correo al portapapeles",
     copied: "¡Correo copiado!",
+    contact: {
+      title: "¿Hablamos?",
+      description:
+        "Estoy abierto a nuevas oportunidades, colaboraciones o simplemente conversar sobre desarrollo frontend y producto.",
+    },
   },
   about: {
     //TECH STACK
