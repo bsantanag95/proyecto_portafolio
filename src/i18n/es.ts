@@ -203,4 +203,13 @@ export const es = {
     stack: "Tecnologías",
     viewGithub: "Ver repositorio",
   },
+
+  //404
+  notFound: {
+    error: "Ubicación desconocida",
+    title: "Te has salido del mapa",
+    subtitle:
+      "La página que buscas no existe. Puede que la URL haya cambiado o que hayas seguido un enlace incorrecto.",
+    cta: "Volver a inicio",
+  },
 };

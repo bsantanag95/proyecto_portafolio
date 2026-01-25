@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Projects, ProjectDetail } from "./pages/Projects";
 import ContactSection from "./pages/Contact/ContactSection";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/contact" element={<ContactSection />} />
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

@@ -207,4 +207,13 @@ export const en = {
     stack: "Tech stack",
     viewGithub: "View repository",
   },
+
+  //404
+  notFound: {
+    error: "Unknown location",
+    title: "You’ve gone off the map",
+    subtitle:
+      "The page you’re looking for doesn’t exist. The URL may have changed or you may have followed an incorrect link.",
+    cta: "Back to home",
+  },
 };
