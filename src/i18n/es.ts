@@ -42,20 +42,37 @@ export const es = {
     },
   },
   about: {
+    title: "Sobre mi",
+    introduction: "Introducción",
+
     //TECH STACK
     techStack: "Stack tecnológico",
 
     //SUMMARY
-    summaryTitle: "Resumen profesional",
+    summaryTitle: "Resumen",
+    summaryIntroTitle: "Presentación",
+    summaryFocusTitle: "Enfoque técnico",
+    projectsSectionTitle: "Proyectos y experiencia",
+    projectsSectionSubtitle: "Aplicando estos principios en proyectos reales",
+
+    nextSection: {
+      title: "Lo que sigue",
+      subtitle: "Mira cómo aplico estos principios",
+      items: {
+        projects: "Proyectos destacados",
+        experience: "Experiencia práctica",
+        caseStudies: "Casos de estudio",
+      },
+    },
 
     summaryIntro:
-      "Soy desarrollador frontend con foco en React y TypeScript, orientado a construir interfaces claras, accesibles y mantenibles. Actualmente abierto a oportunidades como Frontend Developer / Junior React Developer.",
+      "Soy desarrollador web con un fuerte enfoque en frontend utilizando React. Me gusta construir interfaces claras, accesibles y fáciles de mantener, y también estoy abierto a oportunidades que involucren trabajo en backend con Laravel.",
 
     summaryFocus:
-      "Trabajo con arquitecturas de componentes, manejo de estado y animaciones sutiles para mejorar la experiencia de usuario, cuidando siempre la calidad del código.",
+      "Trabajo con arquitecturas de componentes, manejo de estado y animaciones sutiles, siempre enfocado en mejorar la experiencia de usuario y mantener un código de calidad.6",
 
     summaryBridge:
-      "A continuación puedes ver cómo he aplicado estos principios en proyectos reales y experiencias prácticas.",
+      "En las secciones siguientes puedes ver cómo aplico estos principios en proyectos reales y experiencias prácticas.",
 
     //HIGHLIGHTS
     highlights: [

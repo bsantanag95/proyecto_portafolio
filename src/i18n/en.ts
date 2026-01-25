@@ -44,20 +44,40 @@ export const en = {
   },
 
   about: {
+    title: "About me",
+    introduction: "Introduction",
+
     //TECH STACK
     techStack: "Tech Stack",
 
     //SUMMARY
     summaryTitle: "Summary",
+    summaryIntroTitle: "Introduction",
+    summaryFocusTitle: "Technical approach",
+    summaryNextTitle: "What’s next",
+    projectsSectionTitle: "Projects & Experience",
+    projectsSectionSubtitle: "Applying these principles to real projects",
+
+    nextSection: {
+      title: "What's next",
+      subtitle: "See how I apply these principles",
+      items: {
+        projects: "Featured projects",
+        experience: "Hands-on experience",
+        caseStudies: "Case studies",
+      },
+      description:
+        "In the following sections, you can see how I apply these principles through real projects and hands-on experience.",
+    },
 
     summaryIntro:
-      "I am a frontend developer focused on React and TypeScript, oriented toward building clear, accessible, and maintainable interfaces.",
+      "I am a web developer with a strong focus on frontend development using React. I enjoy building clear, accessible, and maintainable interfaces, while also being open to opportunities involving backend work with Laravel.",
 
     summaryFocus:
-      "I work with component-based architectures, state management, and subtle animations to enhance the user experience, always taking care of code quality.",
+      "I work with component-based architectures, state management, and subtle animations, always aiming to improve the user experience while keeping the codebase clean and maintainable.",
 
     summaryBridge:
-      "Below you can see how I have applied these principles in real projects and practical experiences.",
+      "In the following sections, you can see how I apply these principles in real projects and practical experiences.",
 
     //HIGHLIGHTS
     highlights: [
