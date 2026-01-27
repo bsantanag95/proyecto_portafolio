@@ -48,7 +48,12 @@ export const en = {
     introduction: "Introduction",
 
     //TECH STACK
-    techStack: "Tech Stack",
+    techStack: "Tech stack",
+    techStackDescription:
+      "Technologies and tools I use to build digital solutions",
+    database: "Database",
+    tools: "Tools",
+    languages: "Languages",
 
     //SUMMARY
     summaryTitle: "Summary",
@@ -81,14 +86,15 @@ export const en = {
 
     //HIGHLIGHTS
     highlights: [
-      "Strong focus on clean, maintainable, and well-structured code.",
-      "Experience building responsive and accessible interfaces.",
-      "Fast learner with adaptability to new technologies.",
-      "Continuous improvement mindset.",
-      "Comfortable working autonomously with technical responsibility.",
-      "Clear communication and collaborative approach.",
+      "I prioritize clean, maintainable code, always thinking about how other developers can understand and scale it.",
+      "I design responsive and accessible interfaces, paying close attention to user experience across different devices and contexts.",
+      "I learn new tools and technologies autonomously when the project requires it.",
+      "I focus on continuous improvement, iterating on both code and design rather than aiming for rigid, final solutions.",
+      "I work with technical responsibility, managing my time and tasks effectively in autonomous work environments.",
+      "I value clear communication and a collaborative approach to building better products.",
     ],
     highlightsTitle: "Key Highlights",
+    highlightsSubtitle: "What defines me",
 
     //EDUCATION
     education: {

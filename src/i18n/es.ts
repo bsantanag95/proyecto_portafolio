@@ -47,6 +47,11 @@ export const es = {
 
     //TECH STACK
     techStack: "Stack tecnológico",
+    techStackDescription:
+      "Tecnologías y herramientas que utilizo para construir soluciones digitales",
+    database: "Base de datos",
+    tools: "Herramientas",
+    languages: "Lenguajes",
 
     //SUMMARY
     summaryTitle: "Resumen",
@@ -69,22 +74,23 @@ export const es = {
       "Soy desarrollador web con un fuerte enfoque en frontend utilizando React. Me gusta construir interfaces claras, accesibles y fáciles de mantener, y también estoy abierto a oportunidades que involucren trabajo en backend con Laravel.",
 
     summaryFocus:
-      "Trabajo con arquitecturas de componentes, manejo de estado y animaciones sutiles, siempre enfocado en mejorar la experiencia de usuario y mantener un código de calidad.6",
+      "Trabajo con arquitecturas de componentes, manejo de estado y animaciones sutiles, siempre enfocado en mejorar la experiencia de usuario y mantener un código de calidad.",
 
     summaryBridge:
       "En las secciones siguientes puedes ver cómo aplico estos principios en proyectos reales y experiencias prácticas.",
 
     //HIGHLIGHTS
     highlights: [
-      "Enfoque en código limpio, mantenible y bien estructurado.",
-      "Experiencia trabajando con diseño responsive y accesible.",
-      "Capacidad para aprender rápidamente nuevas tecnologías.",
-      "Mentalidad orientada a la mejora continua.",
-      "Buen manejo del trabajo autónomo y la responsabilidad técnica.",
-      "Comunicación clara y enfoque colaborativo.",
+      "Priorizo código claro y mantenible, pensando siempre en que otros desarrolladores puedan entenderlo y escalarlo.",
+      "Diseño interfaces responsive y accesibles, cuidando la experiencia del usuario en distintos dispositivos y contextos.",
+      "Aprendo nuevas herramientas y tecnologías de forma autónoma cuando el proyecto lo requiere.",
+      "Me enfoco en mejorar de manera continua, iterando sobre el código y el diseño en lugar de buscar soluciones rígidas.",
+      "Trabajo con responsabilidad técnica, gestionando bien mi tiempo y mis tareas en entornos de trabajo autónomos.",
+      "Valoro la comunicación clara y el trabajo colaborativo para construir mejores productos.",
     ],
 
     highlightsTitle: "Puntos claves",
+    highlightsSubtitle: "Lo que me define",
 
     //EDUCATION
     education: {
