@@ -7,17 +7,17 @@ function About() {
   return (
     <main className="pt-16 md:pt-20 space-y-12">
       <header className="max-w-6xl">
-        <div className="inline-flex items-center gap-3 mb-6">
+        {/* <div className="inline-flex items-center gap-3 mb-6">
           <div className="h-px w-8 bg-linear-to-r from-blue-500 to-transparent" />
           <span className="text-sm font-medium uppercase tracking-wider text-blue-600 dark:text-blue-400">
             {t.about.introduction}
           </span>
-        </div>
+        </div> */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
           {t.about.title}
         </h1>
       </header>
-      <section id="summary" className="mt-2">
+      <section id="summary">
         <SectionSpy id="summary" />
         <Summary />
       </section>

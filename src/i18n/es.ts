@@ -2,7 +2,7 @@ export const es = {
   sidebar: {
     title: "Esteban",
     subtitle: "Desarrollador Web",
-    home: "Resumen",
+    home: "Inicio",
     about: "Acerca de mi",
     projects: "Proyectos",
     contact: "Contacto",

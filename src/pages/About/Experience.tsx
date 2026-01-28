@@ -8,7 +8,7 @@ function Experience() {
   return (
     <section
       aria-label={t.about.experienceTitle}
-      className="max-w-4xl space-y-12 mt-20"
+      className="max-w-5xl space-y-10 mt-20"
     >
       {/* Header minimalista */}
       <div className="space-y-4">

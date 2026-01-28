@@ -1,10 +1,20 @@
+import { User } from "lucide-react";
 import { useLanguage } from "../../hooks/useLanguage";
 
 function Summary() {
   const { t } = useLanguage();
 
   return (
-    <section className="max-w-5xl">
+    <section className="max-w-5xl space-y-10 mt-20">
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-linear-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
+            <User size={18} className="text-blue-700 dark:text-blue-400" />
+          </div>
+          {t.about.summaryTitle}
+        </h2>
+        <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
+      </div>
       {/* Grid moderno con dos columnas en desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         {/* Columna 1: Presentación personal */}

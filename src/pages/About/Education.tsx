@@ -8,7 +8,7 @@ function Education() {
   return (
     <section
       aria-label={t.about.education.title}
-      className="max-w-4xl space-y-10 mt-10"
+      className="max-w-5xl space-y-10 mt-10"
     >
       {/* Header minimalista */}
       <div className="space-y-4">

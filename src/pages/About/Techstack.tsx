@@ -3,6 +3,7 @@ import type { translations } from "../../i18n";
 import AnimatedSection from "../../components/Animations/AnimatedSection";
 import { techStack } from "../../data/techStack";
 import { categoryIcons } from "../../config/techStackConfig";
+import { Layers } from "lucide-react";
 
 function TechStack() {
   const { t } = useLanguage();
@@ -24,20 +25,17 @@ function TechStack() {
     <section className="max-w-5xl space-y-10 mt-20">
       {/* Header minimalista */}
       <div className="space-y-4">
-        <div className="inline-flex items-center gap-3">
-          <div className="h-px w-8 bg-linear-to-r from-blue-500 to-transparent" />
-          <span className="text-sm font-medium uppercase tracking-wider text-blue-600 dark:text-blue-400">
-            Tecnologías
-          </span>
-        </div>
-
-        <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-linear-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
+            <Layers size={18} className="text-blue-700 dark:text-blue-400" />
+          </div>
           {t.about.techStack}
         </h2>
+        <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
 
-        <p className="max-w-3xl text-lg text-zinc-600 dark:text-zinc-400">
+        {/* <p className="max-w-3xl text-lg text-zinc-600 dark:text-zinc-400">
           {t.about.techStackDescription}
-        </p>
+        </p> */}
       </div>
 
       {/* Grid de categorías */}

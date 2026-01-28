@@ -1,10 +1,10 @@
-import { Code, Monitor, Database, Wrench, Globe, Layers } from "lucide-react";
+import { Code, Layout, Database, Wrench, Server, Layers2 } from "lucide-react";
 
 export const categoryIcons = {
-  frontend: Monitor,
-  backend: Code,
-  fullstack: Layers,
+  frontend: Layout,
+  backend: Server,
+  fullstack: Layers2,
   databases: Database,
-  languages: Globe,
+  languages: Code,
   tools: Wrench,
 };

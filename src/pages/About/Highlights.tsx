@@ -7,6 +7,7 @@ import {
   TrendingUp,
   CheckCircle,
   Sparkles,
+  Lightbulb,
 } from "lucide-react";
 
 function Highlights() {
@@ -14,7 +15,7 @@ function Highlights() {
 
   // Iconos para cada highlight
   const highlightIcons = [
-    <Star className="h-5 w-5" />,
+    <Lightbulb className="h-5 w-5" />,
     <Zap className="h-5 w-5" />,
     <Target className="h-5 w-5" />,
     <TrendingUp className="h-5 w-5" />,
@@ -29,15 +30,16 @@ function Highlights() {
     >
       {/* Header estilizado */}
       <div className="space-y-4">
-        <div className="inline-flex items-center gap-3">
-          <div className="h-px w-8 bg-linear-to-r from-blue-500 to-transparent" />
-          <span className="text-sm font-medium uppercase tracking-wider text-blue-600 dark:text-blue-400">
-            {t.about.highlightsTitle}
-          </span>
-        </div>
-        <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
-          {t.about.highlightsSubtitle}
+        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-linear-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
+            <Star size={18} className="text-blue-700 dark:text-blue-400" />
+          </div>
+          {t.about.highlightsTitle}
         </h2>
+        <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
+        <p className="text-lg text-zinc-600 dark:text-zinc-400">
+          {t.about.highlightsSubtitle}
+        </p>
       </div>
 
       {/* Grid de highlights */}
