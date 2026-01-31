@@ -90,7 +90,6 @@ const Sidebar = () => {
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen]);
 
-  // En Sidebar.tsx, ajusta el rootMargin para "about" a "-10% 0px -80% 0px" para desktop (y opcionalmente para mobile) para activar las secciones más cerca del top del viewport
   const { activeId, setAndLockActiveId } = useScrollSpy(
     sidebarContext === "about"
       ? [
@@ -105,7 +104,6 @@ const Sidebar = () => {
         : [],
     {
       enabled: sidebarContext === "home" || sidebarContext === "about",
-      // Sidebar.tsx
       rootMargin: isDesktop ? "-5% 0px -75% 0px" : "-5% 0px -80% 0px",
       threshold: 0.5,
     },
@@ -113,17 +111,12 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Overlay */}
+      {/* Overlay con efecto glassmorphism */}
       {isOpen && !isDesktop && (
         <div
           aria-hidden="true"
           onClick={close}
-          className="
-      fixed inset-0 z-10
-      bg-zinc-100/80 dark:bg-zinc-900/80
-      backdrop-blur-sm
-      md:hidden
-    "
+          className="fixed inset-0 z-10 bg-zinc-900/40 backdrop-blur-sm md:hidden"
         />
       )}
 
@@ -134,115 +127,108 @@ const Sidebar = () => {
         aria-hidden={!isDesktop && !isOpen}
         inert={!isDesktop && !isOpen}
         className={`
-    fixed left-0 top-0 z-20
-    h-screen w-64
-    bg-white dark:bg-zinc-900
-    border-r border-zinc-200 dark:border-zinc-800
-    px-4 py-6
-    transition-transform duration-300 ease-in-out
-    ${isOpen ? "translate-x-0" : "-translate-x-full"}
-    md:translate-x-0
-  `}
+          fixed left-0 top-0 z-20
+          h-screen w-64
+          flex flex-col
+          bg-linear-to-b from-white/95 to-white/90 backdrop-blur-sm
+          border-r border-zinc-200/50
+          px-5 py-8
+          transition-all duration-300 ease-in-out
+          ${isOpen ? "translate-x-0 shadow-xl" : "-translate-x-full"}
+          md:translate-x-0 md:shadow-lg
+          dark:from-zinc-900/95 dark:to-zinc-900/90 dark:border-zinc-800/50
+        `}
       >
-        {/* Header */}
-        <div className="mb-10">
-          <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+        {/* Header con efecto sutil */}
+        <div className="mb-12">
+          <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
             {t.sidebar.title}
           </h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             {t.sidebar.subtitle}
           </p>
+          <div className="mt-4 h-px w-12 bg-linear-to-r from-blue-500/50 to-transparent" />
         </div>
 
-        {/* Navigation */}
-        <nav className="space-y-6">
+        {/* Navegación */}
+        <nav className="flex-1 space-y-1 overflow-y-visible md:overflow-y-auto">
           {/* Inicio */}
           <SidebarItem
             label={t.sidebar.home}
             path="/"
             onClick={close}
-            icon={<Home size={16} aria-hidden="true" />}
+            icon={<Home size={18} aria-hidden="true" />}
           />
-
-          {/* Secciones Home
-          {sidebarContext === "home" && (
-            <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
-              <SidebarItem
-                label={t.home.contact}
-                action={() => {
-                  scrollToSection("contact");
-                  close();
-                }}
-                active={activeSection === "contact-spy"}
-                icon={<Mail size={16} aria-hidden="true" />}
-              />
-            </div>
-          )} */}
 
           {/* About */}
           <SidebarItem
             label={t.sidebar.about}
             path="/about"
             onClick={close}
-            icon={<IdCard size={16} aria-hidden="true" />}
+            icon={<IdCard size={18} aria-hidden="true" />}
           />
 
           {/* Secciones About */}
           {sidebarContext === "about" && (
-            <div className="space-y-2 border-l border-zinc-200 dark:border-zinc-700 pl-3">
+            <div className="space-y-1 ml-4 pl-3 border-l border-zinc-200/30 dark:border-zinc-700/30">
               <SidebarItem
                 label={t.about.summaryTitle}
                 action={() => {
-                  setAndLockActiveId("summary"); // Actualiza el UI al instante y bloquea el Spy
+                  setAndLockActiveId("summary");
                   scrollToSection("summary");
                   close();
                 }}
                 active={activeId === "summary-spy"}
                 icon={<User size={16} />}
+                nested
               />
 
               <SidebarItem
                 label={t.about.education.title}
                 action={() => {
-                  setAndLockActiveId("education"); // Actualiza el UI al instante y bloquea el Spy
+                  setAndLockActiveId("education");
                   scrollToSection("education");
                   close();
                 }}
                 active={activeId === "education-spy"}
                 icon={<GraduationCap size={16} />}
+                nested
               />
 
               <SidebarItem
                 label={t.about.experienceTitle}
                 action={() => {
-                  setAndLockActiveId("experience"); // Actualiza el UI al instante y bloquea el Spy
+                  setAndLockActiveId("experience");
                   scrollToSection("experience");
                   close();
                 }}
                 active={activeId === "experience-spy"}
                 icon={<Briefcase size={16} />}
+                nested
               />
 
               <SidebarItem
                 label={t.about.highlightsTitle}
                 action={() => {
-                  setAndLockActiveId("highlights"); // Actualiza el UI al instante y bloquea el Spy
+                  setAndLockActiveId("highlights");
                   scrollToSection("highlights");
                   close();
                 }}
                 active={activeId === "highlights-spy"}
                 icon={<Star size={16} />}
+                nested
               />
 
               <SidebarItem
                 label={t.about.techStack}
                 action={() => {
-                  setAndLockActiveId("tech"); // Actualiza el UI al instante y bloquea el Spy
+                  setAndLockActiveId("tech");
                   scrollToSection("tech");
                   close();
                 }}
                 active={activeId === "tech-spy"}
                 icon={<Layers size={16} />}
+                nested
               />
             </div>
           )}
@@ -252,7 +238,7 @@ const Sidebar = () => {
             label={t.sidebar.projects}
             path="/projects"
             active={sidebarContext === "projects"}
-            icon={<Sparkles size={16} />}
+            icon={<Sparkles size={18} />}
           />
 
           {/* Contacto */}
@@ -260,9 +246,17 @@ const Sidebar = () => {
             label={t.sidebar.contact}
             path="/contact"
             active={sidebarContext === "contact"}
-            icon={<Mail size={16} />}
+            icon={<Mail size={18} />}
           />
         </nav>
+
+        {/* Footer sutil */}
+        <div className="bottom-6 left-5 right-5">
+          <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-300/50 to-transparent dark:via-zinc-700/50 mb-4" />
+          <p className="text-xs text-zinc-500 dark:text-zinc-500 text-center">
+            {t.sidebar.portfolio} v1.0
+          </p>
+        </div>
       </aside>
     </>
   );

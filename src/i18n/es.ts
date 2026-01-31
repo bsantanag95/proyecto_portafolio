@@ -8,6 +8,7 @@ export const es = {
     contact: "Contacto",
     toggleSections: "Mostrar secciones",
     ariaLabel: "Navegación principal",
+    portfolio: "Portafolio",
   },
   footer: {
     text: "Desarrollador Frontend · React & TypeScript",
@@ -89,7 +90,7 @@ export const es = {
       "Valoro la comunicación clara y el trabajo colaborativo para construir mejores productos.",
     ],
 
-    highlightsTitle: "Puntos claves",
+    highlightsTitle: "Puntos clave",
     highlightsSubtitle: "Lo que me define",
 
     //EDUCATION

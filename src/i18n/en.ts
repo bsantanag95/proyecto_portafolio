@@ -3,11 +3,12 @@ export const en = {
     title: "Esteban",
     subtitle: "Web Developer",
     home: "Overview",
-    about: "About Me",
+    about: "About me",
     projects: "Projects",
     contact: "Contact",
     toggleSections: "Show sections",
     ariaLabel: "Main navigation",
+    portfolio: "Portfolio",
   },
   footer: {
     text: "Frontend Developer · React & TypeScript",
@@ -93,7 +94,7 @@ export const en = {
       "I work with technical responsibility, managing my time and tasks effectively in autonomous work environments.",
       "I value clear communication and a collaborative approach to building better products.",
     ],
-    highlightsTitle: "Key Highlights",
+    highlightsTitle: "Key highlights",
     highlightsSubtitle: "What defines me",
 
     //EDUCATION
