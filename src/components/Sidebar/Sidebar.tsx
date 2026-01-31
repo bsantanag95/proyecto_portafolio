@@ -33,12 +33,12 @@ const Sidebar = () => {
     pathname === "/"
       ? "home"
       : pathname.startsWith("/about")
-      ? "about"
-      : pathname.startsWith("/projects")
-      ? "projects"
-      : pathname.startsWith("/contact")
-      ? "contact"
-      : "home";
+        ? "about"
+        : pathname.startsWith("/projects")
+          ? "projects"
+          : pathname.startsWith("/contact")
+            ? "contact"
+            : "home";
 
   useEffect(() => {
     if (!isDesktop && prevPathRef.current !== location.pathname) {
@@ -64,7 +64,7 @@ const Sidebar = () => {
     if (!isOpen || !sidebarRef.current) return;
 
     const focusables = sidebarRef.current.querySelectorAll<HTMLElement>(
-      'a, button, [tabindex]:not([tabindex="-1"])'
+      'a, button, [tabindex]:not([tabindex="-1"])',
     );
 
     const first = focusables[0];
@@ -90,7 +90,8 @@ const Sidebar = () => {
     return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen]);
 
-  const activeSection = useScrollSpy(
+  // En Sidebar.tsx, ajusta el rootMargin para "about" a "-10% 0px -80% 0px" para desktop (y opcionalmente para mobile) para activar las secciones más cerca del top del viewport
+  const { activeId, setAndLockActiveId } = useScrollSpy(
     sidebarContext === "about"
       ? [
           "summary-spy",
@@ -100,13 +101,14 @@ const Sidebar = () => {
           "tech-spy",
         ]
       : sidebarContext === "home"
-      ? ["contact-spy"]
-      : [],
+        ? ["contact-spy"]
+        : [],
     {
       enabled: sidebarContext === "home" || sidebarContext === "about",
-      rootMargin: isDesktop ? "-30% 0px -60% 0px" : "-20% 0px -50% 0px",
-      threshold: isDesktop ? 0.2 : 0.1,
-    }
+      // Sidebar.tsx
+      rootMargin: isDesktop ? "-5% 0px -75% 0px" : "-5% 0px -80% 0px",
+      threshold: 0.5,
+    },
   );
 
   return (
@@ -191,50 +193,55 @@ const Sidebar = () => {
               <SidebarItem
                 label={t.about.summaryTitle}
                 action={() => {
+                  setAndLockActiveId("summary"); // Actualiza el UI al instante y bloquea el Spy
                   scrollToSection("summary");
                   close();
                 }}
-                active={activeSection === "summary-spy"}
+                active={activeId === "summary-spy"}
                 icon={<User size={16} />}
               />
 
               <SidebarItem
                 label={t.about.education.title}
                 action={() => {
+                  setAndLockActiveId("education"); // Actualiza el UI al instante y bloquea el Spy
                   scrollToSection("education");
                   close();
                 }}
-                active={activeSection === "education-spy"}
+                active={activeId === "education-spy"}
                 icon={<GraduationCap size={16} />}
               />
 
               <SidebarItem
                 label={t.about.experienceTitle}
                 action={() => {
+                  setAndLockActiveId("experience"); // Actualiza el UI al instante y bloquea el Spy
                   scrollToSection("experience");
                   close();
                 }}
-                active={activeSection === "experience-spy"}
+                active={activeId === "experience-spy"}
                 icon={<Briefcase size={16} />}
               />
 
               <SidebarItem
                 label={t.about.highlightsTitle}
                 action={() => {
+                  setAndLockActiveId("highlights"); // Actualiza el UI al instante y bloquea el Spy
                   scrollToSection("highlights");
                   close();
                 }}
-                active={activeSection === "highlights-spy"}
+                active={activeId === "highlights-spy"}
                 icon={<Star size={16} />}
               />
 
               <SidebarItem
                 label={t.about.techStack}
                 action={() => {
+                  setAndLockActiveId("tech"); // Actualiza el UI al instante y bloquea el Spy
                   scrollToSection("tech");
                   close();
                 }}
-                active={activeSection === "tech-spy"}
+                active={activeId === "tech-spy"}
                 icon={<Layers size={16} />}
               />
             </div>
