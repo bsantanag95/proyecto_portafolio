@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import type { Project } from "../../types/projects";
 import { useLanguage } from "../../hooks/useLanguage";
+import { StackBadge } from "../Stack";
 
 interface Props {
   project: Project;
@@ -35,18 +36,12 @@ const ProjectCard = ({ project }: Props) => {
           <h3 className="font-semibold">{project.title[language]}</h3>
 
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            {project.summary[language]}
+            {project.intro[language]}
           </p>
 
-          <ul className="flex flex-wrap gap-2">
-            {project.stack.slice(0, 3).map((tech) => (
-              <li
-                key={tech}
-                className="text-xs rounded-full px-2 py-0.5
-                bg-zinc-200 dark:bg-zinc-800"
-              >
-                {tech}
-              </li>
+          <ul className="flex flex-wrap items-center gap-2 sm:gap-3">
+            {project.stack.map((tech) => (
+              <StackBadge key={tech} tech={tech} />
             ))}
           </ul>
         </div>

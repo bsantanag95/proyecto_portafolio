@@ -25,7 +25,7 @@ export interface Project {
     es: string;
     en: string;
   };
-  
+
   description: {
     es: string;
     en: string;

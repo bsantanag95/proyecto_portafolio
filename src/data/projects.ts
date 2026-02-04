@@ -35,7 +35,7 @@ export const projects: Project[] = [
       es: "Aplicación desarrollada en React que consume la PokéAPI para mostrar información detallada de Pokémon, permitiendo búsqueda por nombre o número y visualización dinámica de datos.",
       en: "React application that consumes the PokéAPI to display detailed Pokémon information, allowing search by name or number with dynamic data rendering.",
     },
-    stack: ["React", "TypeScript", "Tailwind CSS", "REST API"],
+    stack: ["React", "JavaScript", "Sass", "REST API"],
     backend: "PokéAPI (externa)",
     database: null,
     images: [
@@ -54,8 +54,8 @@ export const projects: Project[] = [
       en: "GIS Construction Units Catalog",
     },
     intro: {
-      es: "Plataforma para gestionar unidades constructivas.",
-      en: "Platform to manage construction units.",
+      es: "Sistema para gestionar Unidades Constructivas, generando códigos únicos por catálogo.",
+      en: "Web system for managing and cataloging Construction Units. Includes CRUD for materials, services and catalogs, with automatic generation of unique CUDN codes.",
     },
     role: {
       es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       es: "Sistema desarrollado con Laravel y Livewire para la gestión de unidades constructivas, integrando información geoespacial y persistencia en MySQL.",
       en: "System built with Laravel and Livewire for managing construction units, integrating geospatial data and MySQL persistence.",
     },
-    stack: ["Laravel", "Livewire", "MySQL", "GIS"],
+    stack: ["Laravel", "Livewire", "MySQL", "Tailwind CSS"],
     backend: "Laravel",
     database: "MySQL",
     images: [
@@ -127,7 +127,14 @@ export const projects: Project[] = [
       es: "Aplicación fullstack que permite a futbolistas sin club crear perfiles y ser visualizados por clubes, desarrollada con Laravel, Inertia y React.",
       en: "Fullstack application allowing football players without a club to create profiles and be discovered by clubs, built with Laravel, Inertia and React.",
     },
-    stack: ["Laravel", "Inertia.js", "React", "MySQL"],
+    stack: [
+      "Laravel",
+      "React",
+      "JavaScript",
+      "Inertia",
+      "MySQL",
+      "Tailwind CSS",
+    ],
     backend: "Laravel + Inertia",
     database: "MySQL",
     images: [
