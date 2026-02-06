@@ -2,6 +2,7 @@ import { projectTechStack } from "../../config/projectTechStack";
 
 interface Props {
   tech: string;
+  className?: string;
 }
 
 const StackBadge = ({ tech }: Props) => {

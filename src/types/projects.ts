@@ -32,6 +32,7 @@ export interface Project {
   };
   stack: string[];
   backend: string;
+  category: string;
   database?: string | null;
   images: string[];
   github?: string;

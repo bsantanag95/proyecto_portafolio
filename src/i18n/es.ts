@@ -209,6 +209,7 @@ export const es = {
     database: "Base de datos",
     stack: "Tecnologías",
     viewGithub: "Ver repositorio",
+    details: "Ver detalles",
   },
 
   //404
