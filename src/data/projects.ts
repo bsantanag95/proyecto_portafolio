@@ -32,8 +32,8 @@ export const projects: Project[] = [
       en: "Platform for football players without a club.",
     },
     description: {
-      es: "Aplicación fullstack que permite a futbolistas sin club crear perfiles y ser visualizados por clubes, desarrollada con Laravel, Inertia y React.",
-      en: "Fullstack application allowing football players without a club to create profiles and be discovered by clubs, built with Laravel, Inertia and React.",
+      es: "Aplicación web que centraliza el registro de futbolistas sin club, permitiendo la creación de perfiles completos con información deportiva, trayectoria, estadísticas, galería multimedia y estado actual de contratación.",
+      en: "Web application that centralizes the registration of unsigned football players, allowing the creation of complete profiles with sporting information, career history, statistics, multimedia galleries and current contract status.",
     },
     stack: [
       "Laravel",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "/projects/busco-club/buscoclub3.webp",
       "/projects/busco-club/buscoclub4.webp",
     ],
-    github: "https://github.com/tu-usuario/busco-club",
+    github: "https://github.com/bsantanag95/busco_clubv1",
   },
 
   {
@@ -86,8 +86,8 @@ export const projects: Project[] = [
       en: "Management system with maps and database.",
     },
     description: {
-      es: "Sistema desarrollado con Laravel y Livewire para la gestión de unidades constructivas, integrando información geoespacial y persistencia en MySQL.",
-      en: "System built with Laravel and Livewire for managing construction units, integrating geospatial data and MySQL persistence.",
+      es: "Sistema web orientado a la gestión y catalogación de unidades constructivas, permitiendo organizar materiales y servicios asociados, y generar códigos únicos por catálogo según criterios configurables.",
+      en: "Web system focused on managing and cataloging construction units, allowing the organization of associated materials and services, and the generation of unique catalog codes based on configurable criteria.",
     },
     stack: ["Laravel", "Livewire", "MySQL", "Tailwind CSS"],
     backend: "Laravel",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       "/projects/gis/giscatalogo3.webp",
       "/projects/gis/giscatalogo4.webp",
     ],
-    github: "https://github.com/tu-usuario/gis-catalogo",
+    github: "https://github.com/bsantanag95/gis_catalogo",
   },
 
   {
@@ -133,8 +133,8 @@ export const projects: Project[] = [
       en: "Frontend application consuming an external API.",
     },
     description: {
-      es: "Aplicación desarrollada en React que consume la PokéAPI para mostrar información detallada de Pokémon, permitiendo búsqueda por nombre o número y visualización dinámica de datos.",
-      en: "React application that consumes the PokéAPI to display detailed Pokémon information, allowing search by name or number with dynamic data rendering.",
+      es: "Aplicación frontend que consume la PokéAPI para explorar información detallada de Pokémon, ofreciendo búsqueda por nombre o número y una visualización clara de datos en formato de tarjetas.",
+      en: "Frontend application that consumes the PokéAPI to explore detailed Pokémon information, offering search by name or number and a clear card-based data visualization.",
     },
     stack: ["React", "JavaScript", "Sass", "REST API"],
     backend: "PokéAPI (externa)",
@@ -146,6 +146,6 @@ export const projects: Project[] = [
       "/projects/pokedex/pokedex3.webp",
       "/projects/pokedex/pokedex4.webp",
     ],
-    github: "https://github.com/tu-usuario/pokedex",
+    github: "https://github.com/bsantanag95/react-api-pokemon",
   },
 ];

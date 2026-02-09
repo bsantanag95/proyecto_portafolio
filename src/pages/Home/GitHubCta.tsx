@@ -1,9 +1,9 @@
 import {
   ReactIcon,
-  GitHubIcon,
   TailwindIcon,
   TypeScriptIcon,
 } from "../../components/icons";
+import GitHubButton from "../../components/ui/GitHubButton";
 import { useLanguage } from "../../hooks/useLanguage";
 
 function GithubCTA() {
@@ -100,41 +100,10 @@ function GithubCTA() {
       </div>
 
       {/* CTA */}
-      <a
+      <GitHubButton
         href="https://github.com/bsantanag95/proyecto_portafolio"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Ver repositorio en GitHub"
-        className="
-    group mt-8 inline-flex self-center items-center gap-2
-    rounded-lg
-    px-6 py-3 sm:px-5 sm:py-2.5
-    text-sm font-medium
-
-    bg-zinc-900 text-white
-    shadow-md shadow-zinc-900/15
-
-    transition-all duration-300
-    hover:-translate-y-0.5
-    hover:bg-zinc-800
-    hover:shadow-lg hover:shadow-zinc-900/25
-
-    active:translate-y-0
-
-    dark:bg-zinc-100 dark:text-zinc-900
-    dark:hover:bg-zinc-200
-    dark:hover:shadow-zinc-100/20
-
-    focus:outline-none
-    focus-visible:ring-2 focus-visible:ring-zinc-400
-  "
-      >
-        <GitHubIcon
-          size={16}
-          className="transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
-        />
-        {t.home.viewGithub}
-      </a>
+        label={t.home.viewGithub}
+      />
     </section>
   );
 }

@@ -9,6 +9,7 @@ import {
   ProjectCarouselSkeleton,
   ProjectInfo,
 } from "../../components/Projects";
+import ExpandableDescription from "../../components/common/ExpandableDescription";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -34,13 +35,16 @@ const ProjectDetail = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: shouldReduceMotion ? 0 : 0.4, ease: "easeInOut" }}
       className="
-  mx-auto
-  w-full max-w-6xl
-  px-4 sm:px-6 lg:px-8
-  space-y-8 sm:space-y-12
-"
+        mx-auto
+        w-full max-w-6xl
+        px-4 sm:px-6 lg:px-8
+        space-y-8 sm:space-y-12
+      "
     >
+      {/* Breadcrumb */}
       <ProjectBreadcrumb title={project.title[language]} />
+
+      {/* Carousel */}
       <div className="relative h-56 sm:h-80 md:h-96">
         <motion.div
           initial={{ opacity: 1 }}
@@ -57,7 +61,14 @@ const ProjectDetail = () => {
         />
       </div>
 
+      {/* Main info (title, intro, stack, CTA) */}
       <ProjectInfo project={project} language={language} />
+
+      {/* Expandable description */}
+      <ExpandableDescription
+        title={language === "es" ? "Detalles del proyecto" : "Project details"}
+        content={project.description[language]}
+      />
     </motion.section>
   );
 };

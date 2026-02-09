@@ -1,4 +1,7 @@
 import type { Project } from "../../types/projects";
+import { StackBadge } from "../Stack";
+import { useLanguage } from "../../hooks/useLanguage";
+import GitHubButton from "../ui/GitHubButton";
 
 interface Props {
   project: Project;
@@ -6,6 +9,7 @@ interface Props {
 }
 
 const ProjectInfo = ({ project, language }: Props) => {
+  const { t } = useLanguage();
   return (
     <div className="space-y-6 max-w-3xl">
       {/* Title */}
@@ -17,7 +21,7 @@ const ProjectInfo = ({ project, language }: Props) => {
       </p>
 
       {/* Tech info */}
-      <div className="grid gap-4 sm:grid-cols-2">
+      {/* <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <h4 className="font-semibold">Backend</h4>
           <p className="text-zinc-600 dark:text-zinc-400">{project.backend}</p>
@@ -29,39 +33,17 @@ const ProjectInfo = ({ project, language }: Props) => {
             {project.database ?? "—"}
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Stack */}
-      <ul className="flex flex-wrap gap-2">
+      <ul className="flex flex-wrap items-center gap-2 sm:gap-3">
         {project.stack.map((tech) => (
-          <li
-            key={tech}
-            className="
-              rounded-full px-3 py-1 text-sm
-              bg-zinc-200 dark:bg-zinc-800
-            "
-          >
-            {tech}
-          </li>
+          <StackBadge key={tech} tech={tech} />
         ))}
       </ul>
 
       {/* GitHub */}
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-    inline-flex justify-center
-    w-full sm:w-auto
-    rounded-lg px-6 py-3
-    bg-zinc-900 text-white
-    dark:bg-zinc-100 dark:text-zinc-900
-    hover:opacity-90 transition
-  "
-      >
-        Ver en GitHub
-      </a>
+      <GitHubButton href={project.github} label={t.home.viewGithub} />
     </div>
   );
 };
