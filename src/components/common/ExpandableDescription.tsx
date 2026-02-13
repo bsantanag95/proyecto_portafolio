@@ -2,16 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../../hooks/useLanguage";
+import type { ContentSection } from "../../types/content";
 
 interface ExpandableDescriptionProps {
   title?: string;
-  content: string;
+  sections: ContentSection[];
 }
 
-const ExpandableDescription = ({
-  title,
-  content,
-}: ExpandableDescriptionProps) => {
+const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const reduceMotion = useReducedMotion();
   const { language } = useLanguage();
@@ -37,45 +35,64 @@ const ExpandableDescription = ({
           : language === "es"
             ? "Ver más"
             : "Show more"}
+
         <ChevronDown
-          className={`
-            h-4 w-4 transition-transform
-            ${isOpen ? "rotate-180" : ""}
-          `}
+          className={`h-4 w-4 transition-transform ${
+            isOpen ? "rotate-180" : ""
+          }`}
         />
       </button>
 
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            key="content"
-            initial={{
-              height: 0,
-              opacity: 0,
-            }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-            }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
             transition={{
               duration: reduceMotion ? 0 : 0.35,
               ease: "easeInOut",
             }}
-            className="overflow-hidden"
+            className="overflow-hidden space-y-4"
           >
-            {title && (
-              <h4 className="mt-2 font-semibold text-sm text-zinc-800 dark:text-zinc-200">
-                {title}
-              </h4>
-            )}
+            {sections.map((section, index) => {
+              switch (section.type) {
+                case "title":
+                  return (
+                    <h4
+                      key={index}
+                      className="text-sm font-semibold text-zinc-800 dark:text-zinc-200"
+                    >
+                      {section.content}
+                    </h4>
+                  );
 
-            <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              {content}
-            </p>
+                case "paragraph":
+                  return (
+                    <p
+                      key={index}
+                      className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400"
+                    >
+                      {section.content}
+                    </p>
+                  );
+
+                case "list":
+                  return (
+                    <ul
+                      key={index}
+                      className="list-disc pl-5 space-y-1 text-sm text-zinc-600 dark:text-zinc-400"
+                    >
+                      {section.items.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  );
+
+                default:
+                  return null;
+              }
+            })}
           </motion.div>
         )}
       </AnimatePresence>

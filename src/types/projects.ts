@@ -1,3 +1,5 @@
+import type { ContentSection } from "./content";
+
 export interface Project {
   slug: string;
 
@@ -36,4 +38,12 @@ export interface Project {
   database?: string | null;
   images: string[];
   github?: string;
+  descriptionContent: {
+    es: {
+      sections: ContentSection[];
+    };
+    en: {
+      sections: ContentSection[];
+    };
+  };
 }

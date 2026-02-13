@@ -67,7 +67,7 @@ const ProjectDetail = () => {
       {/* Expandable description */}
       <ExpandableDescription
         title={language === "es" ? "Detalles del proyecto" : "Project details"}
-        content={project.description[language]}
+        sections={project.descriptionContent[language].sections}
       />
     </motion.section>
   );

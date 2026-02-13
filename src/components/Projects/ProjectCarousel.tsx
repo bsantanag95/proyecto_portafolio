@@ -49,7 +49,7 @@ const ProjectCarousel = ({ images, onImageLoad }: Props) => {
     h-56 sm:h-80 md:h-96
     w-full overflow-hidden rounded-xl
     focus:outline-none focus-visible:ring-2
-    focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600
+    focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-600 cursor-pointer
   "
     >
       <AnimatePresence initial={false} mode="wait">

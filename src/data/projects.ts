@@ -1,4 +1,9 @@
 import type { Project } from "../types/projects";
+import {
+  buscoClubContent,
+  gisCatalogoContent,
+  pokedexContent,
+} from "../content/projects";
 
 export const projects: Project[] = [
   {
@@ -53,6 +58,7 @@ export const projects: Project[] = [
       "/projects/busco-club/buscoclub4.webp",
     ],
     github: "https://github.com/bsantanag95/busco_clubv1",
+    descriptionContent: buscoClubContent,
   },
 
   {
@@ -100,6 +106,7 @@ export const projects: Project[] = [
       "/projects/gis/giscatalogo4.webp",
     ],
     github: "https://github.com/bsantanag95/gis_catalogo",
+    descriptionContent: gisCatalogoContent,
   },
 
   {
@@ -147,5 +154,6 @@ export const projects: Project[] = [
       "/projects/pokedex/pokedex4.webp",
     ],
     github: "https://github.com/bsantanag95/react-api-pokemon",
+    descriptionContent: pokedexContent,
   },
 ];
