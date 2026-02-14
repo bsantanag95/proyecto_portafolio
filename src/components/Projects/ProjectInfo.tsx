@@ -11,14 +11,26 @@ interface Props {
 const ProjectInfo = ({ project, language }: Props) => {
   const { t } = useLanguage();
   return (
-    <div className="space-y-6 max-w-3xl">
+    <div className="space-y-8 max-w-3xl">
       {/* Title */}
-      <h1 className="text-3xl font-bold">{project.title[language]}</h1>
+      <div className="space-y-2">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+          {project.title[language]}
+        </h1>
+        <div className="h-px w-16 bg-linear-to-r from-blue-500/50 to-transparent" />
+      </div>
 
       {/* Description */}
-      <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
-        {project.description[language]}
-      </p>
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+          {language === "es" ? "Sobre el proyecto" : "About the project"}
+        </h2>
+        <div className="p-5 rounded-xl bg-zinc-50/50 border border-zinc-200/30 dark:bg-zinc-800/20 dark:border-zinc-700/30">
+          <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+            {project.description[language]}
+          </p>
+        </div>
+      </div>
 
       {/* Tech info */}
       {/* <div className="grid gap-4 sm:grid-cols-2">

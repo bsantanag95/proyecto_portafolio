@@ -24,7 +24,7 @@ const ProjectDetail = () => {
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
-    return <Navigate to="/proyects" replace />;
+    return <Navigate to="/projects" replace />;
   }
 
   return (
