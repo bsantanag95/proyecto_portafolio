@@ -19,7 +19,6 @@ const GitHubButton = ({ href, label }: GitHubButtonProps) => {
         transition-all duration-300 ease-out
         focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50
 
-        /* Gradiente en lugar de color sólido */
         bg-linear-to-r from-zinc-900 to-zinc-800
         text-white
         shadow-md shadow-zinc-900/20

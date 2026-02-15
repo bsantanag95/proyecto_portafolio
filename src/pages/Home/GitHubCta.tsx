@@ -100,10 +100,12 @@ function GithubCTA() {
       </div>
 
       {/* CTA */}
-      <GitHubButton
-        href="https://github.com/bsantanag95/proyecto_portafolio"
-        label={t.home.viewGithub}
-      />
+      <div className="pt-6 self-start">
+        <GitHubButton
+          href="https://github.com/bsantanag95/proyecto_portafolio"
+          label={t.home.viewGithub}
+        />
+      </div>
     </section>
   );
 }
