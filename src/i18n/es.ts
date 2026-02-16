@@ -34,7 +34,7 @@ export const es = {
       "Este sitio web fue desarrollado con React y TypeScript, siguiendo buenas prácticas de arquitectura frontend y experiencia de usuario.",
 
     //CONTACT
-    copyEmail: "Copiar correo al portapapeles",
+    copyEmail: "Copiar correo electrónico",
     copied: "¡Correo copiado!",
     contact: {
       title: "¿Hablamos?",

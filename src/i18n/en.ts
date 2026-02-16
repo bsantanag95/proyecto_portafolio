@@ -35,7 +35,7 @@ export const en = {
       "This website was built with React and TypeScript, following frontend best practices and a strong focus on user experience.",
 
     //CONTACT
-    copyEmail: "Copy email to clipboard",
+    copyEmail: "Copy email address",
     copied: "Email copied!",
     contact: {
       title: "Let’s talk?",

@@ -9,3 +9,4 @@ export { default as MySqlIcon } from "./MySqlIcon";
 export { default as LaravelIcon } from "./LaravelIcon";
 export { default as LivewireIcon } from "./LivewireIcon";
 export { default as SassIcon } from "./SassIcon";
+export { default as WhatsAppIcon } from "./WhatsAppIcon";
