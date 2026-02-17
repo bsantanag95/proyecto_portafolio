@@ -1,8 +1,12 @@
 import ContactForm from "./ContactForm";
 import { useLanguage } from "../../hooks/useLanguage";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
 const ContactSection = () => {
   const { t } = useLanguage();
+  {
+    usePageTitle(t.sidebar.contact + " · Esteban Santana");
+  }
   return (
     <section
       className="

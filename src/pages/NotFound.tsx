@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 const NotFound = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  usePageTitle(
+    "Error 404 - " +
+      (language === "en" ? "Page Not Found" : "Página No Encontrada"),
+  );
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-center px-6"

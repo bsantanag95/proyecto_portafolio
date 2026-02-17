@@ -1,9 +1,13 @@
 import { Education, Experience, Highlights, Summary, Techstack } from "./";
 import SectionSpy from "../../components/Sidebar/SectionSpy";
 import { useLanguage } from "../../hooks/useLanguage";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
 function About() {
   const { t } = useLanguage();
+  {
+    usePageTitle(t.sidebar.about + " · Esteban Santana");
+  }
   return (
     <main className="pt-16 md:pt-20 space-y-12">
       <header className="max-w-6xl">

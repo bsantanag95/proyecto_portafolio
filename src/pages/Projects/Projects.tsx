@@ -1,7 +1,13 @@
 import { projects } from "../../data/projects";
 import { ProjectCard } from "../../components/Projects";
+import { usePageTitle } from "../../hooks/usePageTitle";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const Projects = () => {
+  const { t } = useLanguage();
+  {
+    usePageTitle(t.sidebar.projects + " · Esteban Santana");
+  }
   return (
     <section
       className="
