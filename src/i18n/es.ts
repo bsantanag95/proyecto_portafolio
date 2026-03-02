@@ -11,7 +11,8 @@ export const es = {
     portfolio: "Portafolio",
   },
   footer: {
-    text: "Desarrollador Frontend · React & TypeScript",
+    text: "Desarrollador Web · React & Laravel",
+    subtitle: "Desarrollado con React y TypeScript",
   },
   home: {
     //HERO

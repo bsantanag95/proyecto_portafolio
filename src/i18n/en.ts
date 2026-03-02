@@ -11,7 +11,8 @@ export const en = {
     portfolio: "Portfolio",
   },
   footer: {
-    text: "Frontend Developer · React & TypeScript",
+    text: "Web Developer · React & Laravel",
+    subtitle: "Built with React & TypeScript",
   },
   home: {
     //HERO
