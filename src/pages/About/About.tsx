@@ -17,7 +17,7 @@ function About() {
             {t.about.introduction}
           </span>
         </div> */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight about-title">
           {t.about.title}
         </h1>
       </header>

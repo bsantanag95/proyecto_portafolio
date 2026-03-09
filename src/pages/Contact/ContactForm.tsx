@@ -92,12 +92,11 @@ const ContactForm = () => {
     <form
       onSubmit={handleSubmit}
       className="
+    border contact-form
     space-y-5
     rounded-xl
-    bg-white/70 dark:bg-zinc-900/60
     backdrop-blur
-    border border-zinc-200 dark:border-zinc-800
-    shadow-md shadow-black/5
+    shadow-md
     p-5 sm:p-6
   "
     >
@@ -159,10 +158,8 @@ const ContactForm = () => {
     inline-flex items-center gap-2
     rounded-lg px-5 py-2.5
     text-sm font-medium
-    bg-linear-to-r from-emerald-500 to-emerald-600
-    text-white
-    shadow shadow-emerald-500/20
-    hover:from-emerald-400 hover:to-emerald-500
+    bg-linear-to-r
+    shadow contact-submit-button
     active:scale-95
     transition-all cursor-pointer
   "
@@ -171,19 +168,17 @@ const ContactForm = () => {
         {status === "loading" ? t.contact.submitting : t.contact.submit}
       </button>
 
-      <p className="text-xs text-zinc-500 dark:text-zinc-500">
-        {t.contact.privacy}
-      </p>
+      <p className="text-xs contact-privacy">{t.contact.privacy}</p>
 
       {/* Feedback */}
       {status === "success" && (
-        <p className="text-sm text-emerald-600 flex items-center gap-2">
+        <p className="text-sm contact-success flex items-center gap-2">
           {t.contact.success}
         </p>
       )}
 
       {status === "error" && (
-        <p className="text-sm text-red-500 flex items-center gap-2">
+        <p className="text-sm contact-error flex items-center gap-2">
           <span className="text-lg">⚠️</span>
           {t.contact.error}
         </p>

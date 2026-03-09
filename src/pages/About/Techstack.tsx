@@ -25,13 +25,13 @@ function TechStack() {
     <section className="max-w-5xl space-y-10 mt-20">
       {/* Header minimalista */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-linear-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
-            <Layers size={18} className="text-blue-700 dark:text-blue-400" />
+        <h2 className="text-2xl font-bold techstack-title flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-linear-to-br techstack-icon-wrapper flex items-center justify-center">
+            <Layers size={18} className="techstack-icon" />
           </div>
           {t.about.techStack}
         </h2>
-        <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
+        <div className="h-px w-full bg-linear-to-r techstack-divider" />
 
         {/* <p className="max-w-3xl text-lg text-zinc-600 dark:text-zinc-400">
           {t.about.techStackDescription}
@@ -45,18 +45,18 @@ function TechStack() {
 
           return (
             <AnimatedSection key={category} delay={index * 0.05}>
-              <div className="group rounded-xl border border-zinc-200/60 bg-white/50 p-5 transition-all duration-300 hover:border-blue-300/60 hover:shadow-md dark:border-zinc-700/60 dark:bg-zinc-800/30 dark:hover:border-blue-500/40">
+              <div className="group rounded-xl border techstack-card p-5 transition-all duration-300 hover:shadow-md">
                 {/* Header de categoría */}
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-blue-500/20 to-blue-600/20 text-blue-700 dark:text-blue-400">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br techstack-icon-wrapper techstack-icon">
                     <Icon className="h-4 w-4" />
                   </div>
 
-                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                  <h3 className="text-lg font-semibold techstack-category-title">
                     {categoryTitles[category as keyof typeof categoryTitles]}
                   </h3>
 
-                  <span className="ml-auto rounded-full bg-zinc-100 px-2 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+                  <span className="ml-auto rounded-full techstack-count px-2 py-1 text-xs font-medium">
                     {items.length}
                   </span>
                 </div>
@@ -66,7 +66,7 @@ function TechStack() {
                   {items.map((tech) => (
                     <span
                       key={tech}
-                      className="inline-flex items-center rounded-lg bg-linear-to-br from-zinc-100/80 to-zinc-50/50 px-3 py-1.5 text-sm font-medium text-zinc-800 transition-all duration-300 hover:scale-105 hover:from-blue-100/80 hover:to-blue-50/50 hover:text-blue-800 dark:from-zinc-800/50 dark:to-zinc-800/30 dark:text-zinc-300 dark:hover:from-blue-900/30 dark:hover:to-blue-800/20 dark:hover:text-blue-300"
+                      className="inline-flex items-center cursor-default rounded-lg bg-linear-to-br tech-badge px-3 py-1.5 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >
                       {tech}
                     </span>
@@ -74,7 +74,7 @@ function TechStack() {
                 </div>
 
                 {/* Línea decorativa */}
-                <div className="mt-4 h-0.5 w-12 bg-linear-to-r from-blue-400/30 to-transparent transition-all duration-500 group-hover:w-24" />
+                <div className="mt-4 h-0.5 w-12 bg-linear-to-r techstack-line transition-all duration-500 group-hover:w-24" />
               </div>
             </AnimatedSection>
           );

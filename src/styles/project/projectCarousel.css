@@ -1,0 +1,132 @@
+/* projectCarousel.css */
+@layer components {
+
+  /* Container */
+
+  .carousel-surface {
+    @apply
+      border-zinc-200/50
+      bg-zinc-100;
+  }
+
+  .dark .carousel-surface {
+    @apply
+      border-zinc-700/50
+      bg-zinc-800;
+  }
+
+  .carousel-surface:focus-visible {
+    @apply ring-blue-500/50;
+  }
+
+  .dark .carousel-surface:focus-visible {
+    @apply ring-blue-400/50;
+  }
+
+  /* Bottom gradient overlay */
+
+  .carousel-bottom-overlay {
+    @apply
+      from-black/40
+      via-black/20
+      to-transparent;
+  }
+
+  /* Floating controls (shared) */
+
+  .carousel-float-control {
+    @apply
+      bg-black/40
+      text-white/90;
+  }
+
+  .carousel-float-control:hover {
+    @apply bg-black/60;
+  }
+
+  /* Navigation arrows */
+
+  .carousel-arrow {
+    @apply
+      bg-black/40
+      text-white/90;
+  }
+
+  .carousel-arrow:focus-visible {
+    @apply ring-white/80;
+  }
+
+  /* Counter */
+
+  .carousel-counter {
+    @apply
+      bg-black/40
+      text-white/90;
+  }
+
+  /* Dots */
+
+  .carousel-dot {
+    @apply
+      bg-white/60;
+  }
+
+  .carousel-dot:hover {
+    @apply bg-white/80;
+  }
+
+  .carousel-dot-active {
+    @apply
+      bg-white
+      shadow-white/50;
+  }
+
+  .carousel-dot-pulse {
+    @apply
+      bg-white/30;
+  }
+
+  /* Skeleton */
+
+  .carousel-skeleton-image {
+    @apply
+      bg-zinc-200;
+  }
+
+  .dark .carousel-skeleton-image {
+    @apply bg-zinc-800;
+  }
+
+  .carousel-skeleton-dot {
+    @apply
+      bg-zinc-300;
+  }
+
+  .dark .carousel-skeleton-dot {
+    @apply bg-zinc-700;
+  }
+
+  /* Lightbox Border */
+
+  .lightbox-border {
+    @apply border-white/10 dark:border-white/20;
+  }
+
+    /* Lightbox Overlay */
+
+  .lightbox-overlay {
+    @apply
+      bg-black/80;
+  }
+
+  /* Lightbox Controls */
+
+  .lightbox-control {
+    @apply
+      text-white;
+  }
+
+  .lightbox-close {
+    @apply text-white;
+  }
+}

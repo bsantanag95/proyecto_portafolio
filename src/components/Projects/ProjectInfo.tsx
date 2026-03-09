@@ -14,38 +14,23 @@ const ProjectInfo = ({ project, language }: Props) => {
     <div className="space-y-8 max-w-3xl">
       {/* Title */}
       <div className="space-y-2">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight project-title">
           {project.title[language]}
         </h1>
-        <div className="h-px w-16 bg-linear-to-r from-blue-500/50 to-transparent" />
+        <div className="h-px w-16 bg-linear-to-r project-title-divider" />
       </div>
 
       {/* Description */}
       <div className="space-y-4">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+        <h2 className="text-lg font-semibold project-section-title flex items-center gap-2">
           {language === "es" ? "Sobre el proyecto" : "About the project"}
         </h2>
-        <div className="p-5 rounded-xl bg-zinc-50/50 border border-zinc-200/30 dark:bg-zinc-800/20 dark:border-zinc-700/30">
-          <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+        <div className="p-5 rounded-xl border project-description-box">
+          <p className="text-base leading-relaxed project-description-text">
             {project.description[language]}
           </p>
         </div>
       </div>
-
-      {/* Tech info */}
-      {/* <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <h4 className="font-semibold">Backend</h4>
-          <p className="text-zinc-600 dark:text-zinc-400">{project.backend}</p>
-        </div>
-
-        <div>
-          <h4 className="font-semibold">Database</h4>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            {project.database ?? "—"}
-          </p>
-        </div>
-      </div> */}
 
       {/* Stack */}
       <ul className="flex flex-wrap items-center gap-2 sm:gap-3">

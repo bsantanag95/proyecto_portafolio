@@ -1,0 +1,5 @@
+@layer components {
+    .about-title {
+        @apply text-zinc-900 dark:text-zinc-100;
+    }
+}

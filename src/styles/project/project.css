@@ -1,0 +1,143 @@
+@layer components{
+
+  /* Título principal */
+  .project-title {
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  /* Línea decorativa */
+  .project-title-divider {
+    @apply  from-blue-500/50 to-transparent;
+  }
+
+  /* Subtítulo */
+  .project-section-title {
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  /* Caja de descripción */
+  .project-description-box {
+    @apply
+      bg-zinc-50/50
+      border-red-200/30
+      dark:bg-zinc-800/20
+      dark:border-zinc-700/30;
+  }
+
+  /* Texto de descripción */
+  .project-description-text {
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+
+  /* Project Breadcrumb */
+  .breadcrumb {
+    @apply
+      text-zinc-500
+      dark:text-zinc-400;
+  }
+
+  .breadcrumb-link:hover {
+    @apply text-zinc-900;
+  }
+
+  .dark .breadcrumb-link:hover {
+    @apply text-zinc-100;
+  }
+
+  .breadcrumb-current {
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  /* Expandable Description */
+  .toggle-button {
+    @apply
+      from-zinc-100/80
+      to-zinc-50/80
+      border-zinc-200/50
+      text-zinc-700
+      dark:text-zinc-300
+      dark:from-zinc-800/50
+      dark:to-zinc-800/30
+      dark:border-zinc-700/50;
+  }
+
+  /* Hover botón */
+  .toggle-button:hover {
+    @apply
+      border-blue-300/50
+      from-blue-50/80
+      to-white/80;
+  }
+
+  .dark .toggle-button:hover {
+    @apply
+      border-blue-500/30
+      from-blue-900/20
+      to-zinc-800/30;
+  }
+
+  /* Focus accesible */
+  .toggle-button:focus-visible {
+    @apply ring-blue-500/50;
+  }
+
+  /* Caja del contenido expandido */
+  .expandable-content-box {
+    @apply
+      from-white/50
+      to-white/30
+      border-zinc-200/50
+      dark:from-zinc-900/30
+      dark:to-zinc-800/20
+      dark:border-zinc-700/50;
+  }
+
+  /* Título de sección */
+  .expandable-section-title {
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  /* Punto decorativo del título */
+  .expandable-section-dot {
+    @apply bg-blue-500;
+  }
+
+
+  /* Texto de párrafo */
+  .expandable-paragraph {
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+  /* Lista */
+  .expandable-list {
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+  /* Marcador de lista */
+  .expandable-list-item::marker {
+    @apply text-blue-500;
+  }
+
+  /* Línea decorativa inferior */
+  .expandable-divider {
+    @apply
+      from-blue-500/50
+      to-transparent;
+  }
+
+}

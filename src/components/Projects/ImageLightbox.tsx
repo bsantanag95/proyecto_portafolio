@@ -33,7 +33,7 @@ const ImageLightbox = ({ images, index, setIndex, onClose }: Props) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center"
+        className="fixed inset-0 z-50 lightbox-overlay backdrop-blur-sm flex items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -53,7 +53,7 @@ const ImageLightbox = ({ images, index, setIndex, onClose }: Props) => {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="cursor-pointer max-h-[90vh] max-w-[90vw] object-contain"
+          className="cursor-pointer max-h-[90vh] max-w-[90vw] object-contain rounded-xl border lightbox-border shadow-2xl"
           onClick={(e) => {
             e.stopPropagation();
             onClose();
@@ -63,7 +63,7 @@ const ImageLightbox = ({ images, index, setIndex, onClose }: Props) => {
         {/* Close */}
         <button
           onClick={onClose}
-          className="cursor-pointer absolute top-4 right-4 text-white"
+          className="cursor-pointer absolute top-4 right-4 lightbox-close"
           aria-label="Cerrar imagen"
         >
           <X />
@@ -75,7 +75,7 @@ const ImageLightbox = ({ images, index, setIndex, onClose }: Props) => {
             e.stopPropagation();
             prev();
           }}
-          className="cursor-pointer absolute left-4 text-white text-4xl"
+          className="cursor-pointer absolute left-4 lightbox-control text-4xl"
           aria-hidden
         >
           ‹
@@ -87,7 +87,7 @@ const ImageLightbox = ({ images, index, setIndex, onClose }: Props) => {
             e.stopPropagation();
             next();
           }}
-          className="cursor-pointer absolute right-4 text-white text-4xl"
+          className="cursor-pointer absolute right-4 lightbox-control text-4xl"
           aria-hidden
         >
           ›

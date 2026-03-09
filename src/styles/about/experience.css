@@ -1,0 +1,122 @@
+@layer components{
+
+  .experience-title{
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  .experience-intro{
+    @apply
+      text-zinc-600
+      dark:text-zinc-400;
+  }
+
+  .experience-divider{
+    @apply
+      from-transparent
+      via-zinc-300
+      to-transparent
+      dark:via-zinc-700;
+  }
+
+  .experience-icon-wrapper{
+    @apply
+      from-blue-500/20
+      to-blue-600/20;
+  }
+
+  .experience-icon{
+    @apply
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+  /* Experience Card */
+
+  .experience-card{
+    @apply
+      border-zinc-200/60
+      bg-white/50
+      dark:border-zinc-700/60
+      dark:bg-zinc-800/30;
+  }
+
+  .experience-card:hover{
+    @apply border-blue-300/60;
+  }
+
+  .dark .experience-card:hover{
+    @apply border-blue-500/40;
+  }
+
+  .experience-role{
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  .experience-company{
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+  .experience-company-icon{
+    @apply
+      text-zinc-500
+      dark:text-zinc-400;
+  }
+
+  .experience-date{
+    @apply
+      text-zinc-500
+      dark:text-zinc-400;
+  }
+
+  .experience-description{
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+  /* Accent Bar*/
+
+  .experience-accent-bar{
+    @apply
+      from-blue-500
+      to-purple-500;
+  }
+
+  /* Type Badge*/
+
+  .experience-type-badge{
+    @apply
+      bg-blue-500/10
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+  /* Bullet Point */
+
+  .experience-bullet-dot{
+    @apply bg-blue-500;
+  }
+
+  .experience-bullet-text{
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+  /* Stack Badge */
+
+  .experience-stack-badge{
+    @apply
+      from-blue-500/10
+      to-blue-600/10
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+}

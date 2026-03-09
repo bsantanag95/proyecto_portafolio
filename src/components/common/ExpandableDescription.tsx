@@ -16,7 +16,6 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
 
   return (
     <div className="space-y-4">
-      {/* Botón mejorado con estilo más moderno */}
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -25,15 +24,10 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
           group inline-flex items-center gap-2
           px-4 py-2 rounded-lg
           text-sm font-medium
-          bg-linear-to-r from-zinc-100/80 to-zinc-50/80
-          border border-zinc-200/50
-          text-zinc-700 dark:text-zinc-300
-          hover:border-blue-300/50 hover:from-blue-50/80 hover:to-white/80
-          dark:from-zinc-800/50 dark:to-zinc-800/30
-          dark:border-zinc-700/50
-          dark:hover:border-blue-500/30 dark:hover:from-blue-900/20 dark:hover:to-zinc-800/30
+          bg-linear-to-r
+          border toggle-button
           transition-all duration-300
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 cursor-pointer
+          focus:outline-none focus-visible:ring-2  cursor-pointer
         "
       >
         <span>
@@ -76,16 +70,16 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
           className="overflow-hidden"
         >
           {/* Contenido con tarjeta sutil y bordes redondeados */}
-          <div className="p-5 rounded-xl bg-linear-to-br from-white/50 to-white/30 border border-zinc-200/50 dark:from-zinc-900/30 dark:to-zinc-800/20 dark:border-zinc-700/50 space-y-4">
+          <div className="p-5 rounded-xl bg-linear-to-br  border expandable-content-box space-y-4">
             {sections.map((section, index) => {
               switch (section.type) {
                 case "title":
                   return (
                     <h4
                       key={index}
-                      className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 flex items-center gap-2"
+                      className="text-sm font-semibold expandable-section-title flex items-center gap-2"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+                      <span className="h-1.5 w-1.5 rounded-full expandable-section-dot" />
                       {section.content}
                     </h4>
                   );
@@ -94,7 +88,7 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
                   return (
                     <p
                       key={index}
-                      className="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 pl-3"
+                      className="text-sm leading-relaxed expandable-paragraph pl-3"
                     >
                       {section.content}
                     </p>
@@ -104,10 +98,10 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
                   return (
                     <ul
                       key={index}
-                      className="list-disc pl-6 space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300"
+                      className="list-disc pl-6 space-y-1.5 text-sm expandable-list"
                     >
                       {section.items.map((item, i) => (
-                        <li key={i} className="pl-1 marker:text-blue-500">
+                        <li key={i} className="pl-1 expandable-list-item">
                           {item}
                         </li>
                       ))}
@@ -120,7 +114,7 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
             })}
 
             {/* Línea decorativa inferior */}
-            <div className="h-px w-12 bg-linear-to-r from-blue-500/50 to-transparent mt-2" />
+            <div className="h-px w-12 bg-linear-to-r expandable-divider mt-2" />
           </div>
         </motion.div>
       </AnimatePresence>

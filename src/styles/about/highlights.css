@@ -1,0 +1,104 @@
+@layer components{
+
+
+  .highlights-title{
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  .highlights-subtitle{
+    @apply
+      text-zinc-600
+      dark:text-zinc-400;
+  }
+
+  .highlights-divider{
+    @apply
+      from-transparent
+      via-zinc-300
+      to-transparent
+      dark:via-zinc-700;
+  }
+
+  .highlights-icon-wrapper{
+    @apply
+      from-blue-500/20
+      to-blue-600/20;
+  }
+
+  .highlights-icon{
+    @apply
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+
+  /* Highlight Card */
+
+  .highlight-card{
+    @apply
+      from-white/60
+      to-white/30
+      border-zinc-200/50
+      dark:from-zinc-900/40
+      dark:to-zinc-800/30
+      dark:border-zinc-700/50;
+  }
+
+  .highlight-card:hover{
+    @apply border-blue-300/50;
+  }
+
+  .dark .highlight-card:hover{
+    @apply border-blue-500/30;
+  }
+
+  .highlight-card-text{
+    @apply
+      text-zinc-800
+      dark:text-zinc-200;
+  }
+
+  .highlight-number{
+    @apply
+      text-zinc-900/5
+      dark:text-zinc-100/5;
+  }
+
+
+  /* Hover Background */
+
+  .highlight-hover-bg{
+    @apply
+      from-blue-500/5
+      to-purple-500/5;
+  }
+
+  .highlight-glow{
+    @apply
+      from-red-500/10
+      to-purple-500/10;
+  }
+
+
+  /* Highlight Icon */
+
+  .highlight-icon{
+    @apply
+      from-blue-500/20
+      to-blue-600/20
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+
+  /* Bottom Line */
+
+  .highlight-bottom-line{
+    @apply
+      from-blue-400/50
+      to-purple-400/50;
+  }
+
+}

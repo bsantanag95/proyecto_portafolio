@@ -1,0 +1,157 @@
+/* sidebar.css */
+@layer components {
+
+  /* Surface & Overlay */
+
+  .sidebar-surface {
+    @apply from-white/95 to-white/90 backdrop-blur-sm;
+  }
+
+  .dark .sidebar-surface {
+    @apply from-zinc-900/95 to-zinc-900/90;
+  }
+
+  .sidebar-overlay {
+    @apply bg-zinc-900/40 backdrop-blur-sm;
+  }
+
+  /* Border */
+
+  .sidebar-border {
+    @apply  border-zinc-200/50;
+  }
+
+  .dark .sidebar-border {
+    @apply border-zinc-800/50;
+  }
+
+  .sidebar-nested {
+    @apply border-zinc-200/30;
+  }
+
+  .dark .sidebar-nested {
+    @apply border-zinc-700/30;
+  }
+
+  /* Typography */
+
+  .sidebar-title {
+    @apply text-zinc-900;
+  }
+
+  .dark .sidebar-title {
+    @apply text-zinc-100;
+  }
+
+  .sidebar-subtitle {
+    @apply text-zinc-600;
+  }
+
+  .dark .sidebar-subtitle {
+    @apply text-zinc-400;
+  }
+
+  /* Decorative */
+
+  .sidebar-divider {
+    @apply from-blue-500/50 to-transparent;
+  }
+
+   /* =========================
+     Footer
+     ========================= */
+
+  .sidebar-footer-divider {
+    @apply  from-transparent via-zinc-300/50 to-transparent;
+  }
+
+  .dark .sidebar-footer-divider {
+    @apply via-zinc-700/50;
+  }
+
+  .sidebar-footer-text {
+    @apply text-zinc-500;
+  }
+
+  /* Sidebar Item – Base */
+  .sidebar-item:focus-visible {
+    @apply ring-blue-500/50;
+  }
+
+  .sidebar-item-active {
+    @apply
+      text-blue-700
+      bg-blue-50/80;
+  }
+
+  .dark .sidebar-item-active {
+    @apply
+      text-blue-400
+      bg-blue-900/20;
+  }
+
+  .sidebar-item-inactive {
+    @apply
+      text-zinc-700;
+  }
+
+  .dark .sidebar-item-inactive {
+    @apply text-zinc-300;
+  }
+
+  .sidebar-item-inactive:hover {
+    @apply
+      text-zinc-900
+      bg-zinc-100/80;
+  }
+
+  .dark .sidebar-item-inactive:hover {
+    @apply
+      text-zinc-100
+      bg-zinc-800/50;
+  }
+
+  .sidebar-item-indicator {
+    @apply  from-blue-500 to-purple-500;
+  }
+
+  /* Fondo activo */
+  .sidebar-item-active-bg {
+    @apply from-blue-50/80 to-white/30;
+  }
+
+  .dark .sidebar-item-active-bg {
+    @apply from-blue-900/20 to-zinc-900/20;
+  }
+
+  /* Sidebar Item – Icon */
+
+  .sidebar-item-icon {
+    @apply text-zinc-500;
+  }
+
+
+  .sidebar-item-icon-active {
+    @apply text-blue-600;
+  }
+
+  .dark .sidebar-item-icon-active {
+    @apply text-blue-400;
+  }
+
+  .sidebar-item-dot {
+    @apply text-blue-500;
+  }
+
+  .dark .sidebar-item-dot {
+    @apply text-blue-400;
+  }
+
+  /* Sidebar Item – Hover glow */
+
+  .sidebar-item-glow {
+    @apply
+      from-blue-500/0 to-blue-500/0;
+  }
+}
+

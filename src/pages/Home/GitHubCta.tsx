@@ -13,11 +13,9 @@ function GithubCTA() {
     <section
       className="
         flex flex-col justify-between
-        rounded-xl border border-zinc-200/20
-        bg-zinc-50 dark:bg-zinc-900/50
+        rounded-xl border github-card
         p-6 sm:p-8
         transition
-        hover:border-zinc-300/40
       "
     >
       {/* Text */}
@@ -27,7 +25,7 @@ function GithubCTA() {
             {t.home.githubTitle}
           </h3>
 
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm sm:text-base github-description">
             {t.home.githubDescription}
           </p>
         </div>
@@ -38,24 +36,19 @@ function GithubCTA() {
           <li
             className="
     group flex items-center gap-1.5
-    rounded-md border border-zinc-300/40
-    bg-white dark:bg-zinc-900/40
+    rounded-md border 
     px-2.5 py-1.5 text-xs
-    text-zinc-700 dark:text-zinc-400
 
-    shadow-sm shadow-zinc-900/5
+    shadow-sm
+    stack-badge
+    stack-react
     transition-all duration-300
 
     hover:-translate-y-0.5
-    hover:border-cyan-400/50
-    hover:bg-cyan-50
-    hover:shadow-md hover:shadow-cyan-400/25
-
-    dark:hover:bg-cyan-400/10
-    dark:hover:shadow-cyan-400/20 cursor-default
+    hover:shadow-md cursor-default
   "
           >
-            <ReactIcon className="text-cyan-500 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
+            <ReactIcon className="stack-react-icon transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
             React
           </li>
 
@@ -63,18 +56,16 @@ function GithubCTA() {
           <li
             className="
       group flex items-center gap-1.5
-      rounded-md border border-zinc-300/30
-      bg-white/40 dark:bg-zinc-900/40
+      rounded-md border 
+      stack-badge
+      stack-typescript
       px-2.5 py-1.5 text-xs
-      text-zinc-600 dark:text-zinc-400
       transition-all duration-300
       hover:-translate-y-0.5
-      hover:border-blue-500/40
-      hover:bg-blue-50/60 dark:hover:bg-blue-500/10
-      hover:shadow-md hover:shadow-blue-500/20 cursor-default
+      hover:shadow-md cursor-default
     "
           >
-            <TypeScriptIcon className="text-blue-600 dark:text-blue-500 transition-transform duration-300 group-hover:scale-110" />
+            <TypeScriptIcon className="stack-typescript-icon transition-transform duration-300 group-hover:scale-110" />
             TypeScript
           </li>
 
@@ -82,18 +73,16 @@ function GithubCTA() {
           <li
             className="
       group flex items-center gap-1.5
-      rounded-md border border-zinc-300/30
-      bg-white/40 dark:bg-zinc-900/40
+      rounded-md border 
+      stack-badge
+      stack-tailwind
       px-2.5 py-1.5 text-xs
-      text-zinc-600 dark:text-zinc-400
       transition-all duration-300
       hover:-translate-y-0.5
-      hover:border-cyan-300/40
-      hover:bg-cyan-50/60 dark:hover:bg-cyan-300/10
-      hover:shadow-md hover:shadow-cyan-300/20 cursor-default
+      hover:shadow-md cursor-default
     "
           >
-            <TailwindIcon className="text-cyan-400 transition-transform duration-300 group-hover:scale-110" />
+            <TailwindIcon className="stack-tailwind-icon transition-transform duration-300 group-hover:scale-110" />
             Tailwind
           </li>
         </ul>

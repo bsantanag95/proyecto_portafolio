@@ -27,15 +27,15 @@ const Contact = () => {
       aria-label={t.contact.title}
       className="scroll-mt-24 py-24 px-4 flex justify-center"
     >
-      <div className="w-full max-w-2xl rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 p-8 shadow-sm">
+      <div className="w-full max-w-2xl rounded-2xl border contact-card p-8 shadow-sm">
         <h2
           id="contact-title"
-          className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100"
+          className="text-2xl font-semibold contact-card-title"
         >
           {t.home.contact.title}
         </h2>
 
-        <p className="mt-3 text-zinc-600 dark:text-zinc-400">
+        <p className="mt-3 contact-card-description">
           {t.home.contact.description}
         </p>
 
@@ -50,9 +50,7 @@ const Contact = () => {
     inline-flex items-center justify-center gap-2
     rounded-lg px-5 py-3
     text-sm font-medium
-    bg-zinc-900 text-white
-    hover:bg-zinc-800
-    dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200
+    contact-primary-button
     transition
   "
           >
@@ -94,9 +92,7 @@ const Contact = () => {
               inline-flex items-center justify-center gap-2
               rounded-lg px-5 py-3
               text-sm font-medium
-              border border-zinc-300 dark:border-zinc-700
-              text-zinc-700 dark:text-zinc-300
-              hover:bg-zinc-100 dark:hover:bg-zinc-800
+              border contact-secondary-button
               transition
             "
           >
@@ -113,9 +109,7 @@ const Contact = () => {
               inline-flex items-center justify-center gap-2
               rounded-lg px-5 py-3
               text-sm font-medium
-              border border-zinc-300 dark:border-zinc-700
-              text-zinc-700 dark:text-zinc-300
-              hover:bg-zinc-100 dark:hover:bg-zinc-800
+              border contact-secondary-button
               transition
             "
           >
@@ -136,9 +130,7 @@ const Contact = () => {
     inline-flex items-center justify-center gap-1.5
     rounded-lg px-4 py-3
     text-xs font-medium
-    border border-emerald-500/40
-    text-emerald-600 dark:text-emerald-400
-    hover:bg-emerald-50 dark:hover:bg-emerald-500/10
+    border contact-whatsapp-button
     transition
   "
           >

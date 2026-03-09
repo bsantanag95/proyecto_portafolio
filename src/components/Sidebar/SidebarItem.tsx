@@ -32,17 +32,12 @@ const SidebarItem = ({
     transition-all duration-300
     focus:outline-none
     focus-visible:ring-2
-    focus-visible:ring-blue-500/50
+    sidebar-item
     ${nested ? "text-sm" : "text-base"}
   `;
 
-  const activeClasses =
-    "text-blue-700 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20";
-  const inactiveClasses = `
-    text-zinc-700 dark:text-zinc-300 
-    hover:text-zinc-900 dark:hover:text-zinc-100
-    hover:bg-zinc-100/80 dark:hover:bg-zinc-800/50
-  `;
+  const activeClasses = "sidebar-item-active";
+  const inactiveClasses = "sidebar-item-inactive";
 
   const pillTransition: Transition = shouldReduceMotion
     ? { duration: 0 }
@@ -59,7 +54,7 @@ const SidebarItem = ({
         <motion.div
           layoutId="sidebar-active-indicator"
           transition={pillTransition}
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-1 rounded-r-full bg-linear-to-b from-blue-500 to-purple-500"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-1 rounded-r-full bg-linear-to-b sidebar-item-indicator"
         />
       )}
 
@@ -68,7 +63,7 @@ const SidebarItem = ({
         <motion.div
           layoutId="sidebar-active-bg"
           transition={pillTransition}
-          className="absolute inset-0 rounded-lg bg-linear-to-r from-blue-50/80 to-white/30 dark:from-blue-900/20 dark:to-zinc-900/20"
+          className="absolute inset-0 rounded-lg bg-linear-to-r sidebar-item-active-bg"
         />
       )}
 
@@ -91,9 +86,7 @@ const SidebarItem = ({
                 : { type: "spring", stiffness: 500, damping: 30 }
             }
             className={
-              active
-                ? "text-blue-600 dark:text-blue-400"
-                : "text-zinc-500 dark:text-zinc-500"
+              active ? "sidebar-item-icon-active" : "sidebar-item-icon"
             }
           >
             {icon}
@@ -102,22 +95,22 @@ const SidebarItem = ({
           {label}
         </span>
 
-        {/* Flecha indicadora para hover */}
+        {/* Punto indicador para hover */}
         <motion.span
           initial={{ opacity: 0, x: -5 }}
           animate={{ opacity: active ? 1 : 0, x: active ? 0 : -5 }}
-          className="text-blue-500 dark:text-blue-400"
+          className="sidebar-item-dot"
         >
           <Dot size={14} />
         </motion.span>
       </motion.span>
 
       {/* Efecto de brillo en hover */}
-      <div className="absolute inset-0 rounded-lg bg-linear-to-r from-blue-500/0 to-blue-500/0 opacity-0 hover:opacity-5 transition-opacity duration-300" />
+      <div className="absolute inset-0 rounded-lg bg-linear-to-r sidebar-item-glow opacity-0 hover:opacity-5 transition-opacity duration-300" />
     </>
   );
 
-  /* 🔹 ScrollSpy / acciones */
+  /*  ScrollSpy / acciones */
   if (action) {
     return (
       <button
@@ -134,7 +127,7 @@ const SidebarItem = ({
     );
   }
 
-  /* 🔹 Rutas */
+  /* Rutas */
   return (
     <NavLink to={path!} onClick={onClick}>
       {({ isActive }) => (
@@ -148,7 +141,7 @@ const SidebarItem = ({
             <motion.div
               layoutId="sidebar-active-indicator"
               transition={pillTransition}
-              className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-1 rounded-r-full bg-linear-to-b from-blue-500 to-purple-500"
+              className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-1 rounded-r-full bg-linear-to-b sidebar-item-indicator"
             />
           )}
 
@@ -156,7 +149,7 @@ const SidebarItem = ({
             <motion.div
               layoutId="sidebar-active-bg"
               transition={pillTransition}
-              className="absolute inset-0 rounded-lg bg-linear-to-r from-blue-50/80 to-white/30 dark:from-blue-900/20 dark:to-zinc-900/20"
+              className="absolute inset-0 rounded-lg bg-linear-to-r sidebar-item-active-bg"
             />
           )}
 
@@ -177,9 +170,7 @@ const SidebarItem = ({
                     : { type: "spring", stiffness: 500, damping: 30 }
                 }
                 className={
-                  isActive
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-zinc-500 dark:text-zinc-500"
+                  isActive ? "sidebar-item-icon-active" : "sidebar-item-icon"
                 }
               >
                 {icon}
@@ -191,13 +182,13 @@ const SidebarItem = ({
             <motion.span
               initial={{ opacity: 0, x: -5 }}
               animate={{ opacity: isActive ? 1 : 0, x: isActive ? 0 : -5 }}
-              className="text-blue-500 dark:text-blue-400"
+              className="sidebar-item-dot"
             >
               <ChevronRight size={14} />
             </motion.span>
           </motion.span>
 
-          <div className="absolute inset-0 rounded-lg bg-linear-to-r from-blue-500/0 to-blue-500/0 opacity-0 hover:opacity-5 transition-opacity duration-300" />
+          <div className="absolute inset-0 rounded-lg bg-linear-to-r sidebar-item-glow opacity-0 hover:opacity-5 transition-opacity duration-300" />
         </span>
       )}
     </NavLink>

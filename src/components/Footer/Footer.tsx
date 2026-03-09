@@ -1,6 +1,9 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { LinkedinIcon, GitHubIcon } from "../icons";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer
       role="contentinfo"
@@ -19,25 +22,21 @@ const Footer = () => {
       >
         {/* Identity */}
         <div className="space-y-1 text-center sm:text-left">
-          <p className="font-medium text-zinc-900 dark:text-zinc-100">
-            Esteban Santana
-          </p>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            Frontend Developer · React & TypeScript
-          </p>
+          <p className="font-medium footer-title">Esteban Santana</p>
+          <p className="text-sm footer-subtitle">{t.footer.text}</p>
         </div>
 
         {/* Links */}
         <div
           className="
             flex items-center justify-center gap-4
-            text-zinc-600 dark:text-zinc-400
+            footer-links
           "
         >
           <a
             href="mailto:besantanag95@gmail.com"
             aria-label="Enviar correo"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+            className="footer-link transition"
           >
             <Mail size={18} />
           </a>
@@ -47,9 +46,9 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de GitHub"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+            className="footer-link transition"
           >
-            <Github size={18} />
+            <GitHubIcon size={18} />
           </a>
 
           <a
@@ -57,9 +56,9 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de LinkedIn"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+            className="footer-link transition"
           >
-            <Linkedin size={18} />
+            <LinkedinIcon size={18} />
           </a>
         </div>
       </div>
@@ -67,13 +66,11 @@ const Footer = () => {
       {/* Bottom line */}
       <div
         className="
-          border-t border-zinc-200 dark:border-zinc-800
+          border-t footer-bottom
           py-4 text-center text-xs
-          text-zinc-500 dark:text-zinc-500
         "
       >
-        © {new Date().getFullYear()} Esteban Santana. Built with React &
-        TypeScript.
+        © {new Date().getFullYear()} Esteban Santana. {t.footer.subtitle}.
       </div>
     </footer>
   );

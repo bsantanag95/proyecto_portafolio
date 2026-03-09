@@ -23,7 +23,7 @@ const ContactSection = () => {
     text-2xl sm:text-3xl
     font-semibold
     tracking-tight
-    text-zinc-900 dark:text-zinc-100
+    contact-title
   "
           >
             {t.contact.title}
@@ -32,7 +32,7 @@ const ContactSection = () => {
           <p
             className="
     text-sm sm:text-base
-    text-zinc-600 dark:text-zinc-400
+    contact-subtitle
     max-w-lg mx-auto
     leading-relaxed
   "

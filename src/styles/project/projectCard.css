@@ -1,0 +1,145 @@
+/* project-card.css */
+@layer components {
+
+  /* Card Surface */
+
+  .project-card-surface {
+    @apply bg-zinc-100;
+  }
+
+  .dark .project-card-surface {
+    @apply bg-zinc-900;
+  }
+
+  /* Glow exterior */
+  .project-card-glow {
+    @apply
+      from-blue-500/10
+      to-purple-500/10
+  }
+
+  /* Inner container */
+
+  .project-card-container {
+    @apply
+      border-zinc-200/60
+      bg-white/50
+  }
+
+  .dark .project-card-container {
+    @apply
+      border-zinc-700/60
+      bg-zinc-800/30;
+  }
+
+  .project-card-container:hover {
+    @apply
+      border-blue-300/60
+      shadow-blue-500/10;
+  }
+
+  .dark .project-card-container:hover {
+    @apply
+      border-blue-500/40
+      shadow-blue-500/5;
+  }
+
+  /* Image Overlay */
+
+  .project-card-image-overlay {
+    @apply
+      from-zinc-900/20;
+  }
+
+  /* Badge*/
+
+  .project-card-badge {
+    @apply
+      bg-white/90
+      text-zinc-800;
+  }
+
+  .dark .project-card-badge {
+    @apply
+      bg-zinc-900/90
+      text-zinc-200;
+  }
+
+  /* View indicator */
+
+  .project-card-eye {
+    @apply
+      bg-white/90;
+  }
+
+  .dark .project-card-eye {
+    @apply bg-zinc-900/90;
+  }
+
+  .project-card-eye-icon {
+    @apply text-blue-600;
+  }
+
+  .dark .project-card-eye-icon {
+    @apply text-blue-400;
+  }
+
+  /* Title & Text */
+
+  .project-card-title {
+    @apply text-zinc-900;
+  }
+
+  .dark .project-card-title {
+    @apply text-zinc-100;
+  }
+
+  .project-card-description {
+    @apply text-zinc-600;
+  }
+
+  .dark .project-card-description {
+    @apply text-zinc-400;
+  }
+
+  /* Divider */
+
+  .project-card-divider {
+    @apply border-t border-zinc-300/30;
+  }
+
+  .dark .project-card-divider {
+    @apply border-zinc-700/30;
+  }
+
+  /* Stack badge */
+
+
+
+  .project-card-stack-more {
+    @apply
+      bg-zinc-100/80
+      text-zinc-500;
+  }
+
+  .dark .project-card-stack-more {
+    @apply
+      bg-zinc-800/50
+      text-zinc-500;
+  }
+
+  /* Footer */
+
+  .project-card-footer {
+    @apply text-zinc-500;
+  }
+
+  /* Bottom decorative line */
+
+  .project-card-bottom-line {
+    @apply
+      from-blue-500/0
+      via-blue-500/30
+      to-purple-500/0;
+  }
+}

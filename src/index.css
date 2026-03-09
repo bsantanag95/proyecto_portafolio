@@ -1,40 +1,19 @@
 @import "tailwindcss";
+@import "./styles/theme.css";
+@import "./styles/sidebar.css";
+@import "./styles/footer.css";
+@import "./styles/header.css";
+@import "./styles/project/project.css";
+@import "./styles/project/projectCard.css";
+@import "./styles/project/projectCarousel.css";
+@import "./styles/contact/contact.css";
+@import "./styles/home/home.css";
+@import "./styles/about/about.css";
+@import "./styles/about/education.css";
+@import "./styles/about/experience.css";
+@import "./styles/about/highlights.css";
+@import "./styles/about/summary.css";
+@import "./styles/about/techstack.css";
 
-@layer base {
-  body {
-    @apply bg-zinc-100 text-zinc-900 transition-colors duration-300;
-  }
-
-  .dark body {
-    @apply bg-zinc-900 text-zinc-100;
-  }
-
-    body, header, main, aside, footer {
-    @apply transition-colors duration-300;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
 
 @custom-variant dark (&:where(.dark, .dark *));
-
-@theme {
-  --color-bg: theme(colors.zinc.50);
-  --color-bg-dark: theme(colors.zinc.950);
-
-  --color-surface: theme(colors.zinc.100);
-  --color-surface-dark: theme(colors.zinc.900);
-
-  --color-text: theme(colors.zinc.900);
-  --color-text-dark: theme(colors.zinc.100);
-
-  --color-muted: theme(colors.zinc.600);
-  --color-muted-dark: theme(colors.zinc.400);
-
-  --color-accent: theme(colors.emerald.500);
-}

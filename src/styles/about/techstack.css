@@ -1,0 +1,98 @@
+@layer components{
+
+  .techstack-title{
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  .techstack-divider{
+    @apply
+      from-transparent
+      via-zinc-300
+      to-transparent
+      dark:via-zinc-700;
+  }
+
+  .techstack-icon-wrapper{
+    @apply
+      from-blue-500/20
+      to-blue-600/20;
+  }
+
+  .techstack-icon{
+    @apply
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+
+  /* Category Card */
+
+  .techstack-card{
+    @apply
+      border-zinc-200/60
+      bg-white/50
+      dark:border-zinc-700/60
+      dark:bg-zinc-800/30;
+  }
+
+  .techstack-card:hover{
+    @apply border-blue-300/60;
+  }
+
+  .dark .techstack-card:hover{
+    @apply border-blue-500/40;
+  }
+
+  .techstack-category-title{
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  .techstack-count{
+    @apply
+      bg-zinc-100
+      text-zinc-600
+      dark:bg-zinc-800
+      dark:text-zinc-400;
+  }
+
+
+  /* Tech Badge */
+
+  .tech-badge{
+    @apply
+      from-zinc-100/80
+      to-zinc-50/50
+      text-zinc-800
+      dark:from-zinc-800/50
+      dark:to-zinc-800/30
+      dark:text-zinc-300;
+  }
+
+  .tech-badge:hover{
+    @apply
+      from-blue-100/80
+      to-blue-50/50
+      text-blue-800;
+  }
+
+  .dark .tech-badge:hover{
+    @apply
+      from-blue-900/30
+      to-blue-800/20
+      text-blue-300;
+  }
+
+
+  /* Decorative Line */
+
+  .techstack-line{
+    @apply
+      from-blue-400/30
+      to-transparent;
+  }
+
+}

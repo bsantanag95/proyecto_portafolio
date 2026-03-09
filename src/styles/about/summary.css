@@ -1,0 +1,94 @@
+@layer components {
+    .summary-section-title {
+        @apply text-zinc-900 dark:text-zinc-100;
+    }
+
+    .summary-section-icon-bg {
+        @apply from-blue-500/20 to-blue-600/20;
+    }
+
+    .summary-section-icon {
+        @apply text-blue-700 dark:text-blue-400;
+    }
+
+    /* Línea divisora */
+    .summary-divider {
+        @apply from-transparent via-zinc-300 to-transparent dark:via-zinc-700;
+    }
+
+    /* About Card*/
+
+    .summary-card {
+        @apply from-white/60 to-white/30 border-zinc-200/50 dark:from-zinc-900/40 dark:to-zinc-800/30 dark:border-zinc-700/50;
+    }
+
+    .summary-card:hover {
+        @apply border-blue-300/50;
+    }
+
+    .dark .summary-card:hover {
+        @apply border-blue-500/30;
+    }
+
+    /* Glow hover background */
+    .summary-card-glow {
+        @apply from-blue-500/5 to-purple-500/5;
+    }
+
+    /* Card Title */
+
+    .summary-card-title {
+        @apply text-zinc-900 dark:text-zinc-100;
+    }
+
+    /* Card text */
+    .summary-card-text {
+        @apply text-zinc-700 dark:text-zinc-300;
+    }
+
+    /* Purple Icon Variant */
+
+    .summary-icon-purple-bg {
+        @apply from-purple-500/20 to-purple-600/20;
+    }
+
+    .summary-icon-purple {
+        @apply text-purple-700 dark:text-purple-400;
+    }
+
+    /* Sidebar card */
+
+    .summary-sidebar-card {
+        @apply from-blue-50/80 to-white/60 border-blue-200/50 dark:from-blue-900/10 dark:to-zinc-900/20 dark:border-blue-800/30;
+    }
+
+    /* Sidebar title */
+    .summary-sidebar-title {
+        @apply text-zinc-900 dark:text-zinc-100;
+    }
+
+    /* Sidebar subtitle */
+    .summary-sidebar-subtitle {
+        @apply text-zinc-600 dark:text-zinc-400;
+    }
+
+    /* Sidebar List */
+
+    .summary-sidebar-dot {
+        @apply bg-blue-500;
+    }
+
+    .summary-sidebar-item {
+        @apply text-zinc-800 dark:text-zinc-300;
+    }
+
+    /* Transition Text */
+
+    .summary-transition-divider {
+        @apply border-blue-200/30 dark:border-blue-800/30;
+    }
+
+    .summary-transition-text {
+        @apply text-zinc-800 dark:text-zinc-200;
+    }
+}

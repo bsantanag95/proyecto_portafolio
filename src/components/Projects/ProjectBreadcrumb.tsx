@@ -18,13 +18,13 @@ const ProjectBreadcrumb = ({ title }: Props) => {
       className="
         flex items-center gap-2
         text-xs sm:text-sm
-        text-zinc-500 dark:text-zinc-400
+        breadcrumb
         max-w-full
       "
     >
       <Link
         to="/projects"
-        className="hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+        className="breadcrumb-link transition-colors duration-200"
       >
         {t.projects.breadcrumb}
       </Link>
@@ -33,7 +33,7 @@ const ProjectBreadcrumb = ({ title }: Props) => {
 
       <span
         className="
-          font-medium text-zinc-900 dark:text-zinc-100
+          font-medium breadcrumb-current
           truncate
         "
       >

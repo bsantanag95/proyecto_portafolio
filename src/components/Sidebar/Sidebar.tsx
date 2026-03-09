@@ -116,7 +116,7 @@ const Sidebar = () => {
         <div
           aria-hidden="true"
           onClick={close}
-          className="fixed inset-0 z-10 bg-zinc-900/40 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-10 sidebar-overlay backdrop-blur-sm md:hidden"
         />
       )}
 
@@ -130,24 +130,22 @@ const Sidebar = () => {
           fixed left-0 top-0 z-20
           h-screen w-64
           flex flex-col
-          bg-linear-to-b from-white/95 to-white/90 backdrop-blur-sm
-          border-r border-zinc-200/50
+          backdrop-blur-sm
+          bg-linear-to-b
+          sidebar-surface
+          border-r
+          sidebar-border
           px-5 py-8
           transition-all duration-300 ease-in-out
           ${isOpen ? "translate-x-0 shadow-xl" : "-translate-x-full"}
           md:translate-x-0 md:shadow-lg
-          dark:from-zinc-900/95 dark:to-zinc-900/90 dark:border-zinc-800/50
         `}
       >
         {/* Header con efecto sutil */}
         <div className="mb-12">
-          <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
-            {t.sidebar.title}
-          </h1>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            {t.sidebar.subtitle}
-          </p>
-          <div className="mt-4 h-px w-12 bg-linear-to-r from-blue-500/50 to-transparent" />
+          <h1 className="text-xl font-bold sidebar-title">{t.sidebar.title}</h1>
+          <p className="text-sm sidebar-subtitle">{t.sidebar.subtitle}</p>
+          <div className="mt-4 h-px w-12 bg-linear-to-r sidebar-divider" />
         </div>
 
         {/* Navegación */}
@@ -170,7 +168,7 @@ const Sidebar = () => {
 
           {/* Secciones About */}
           {sidebarContext === "about" && (
-            <div className="space-y-1 ml-4 pl-3 border-l border-zinc-200/30 dark:border-zinc-700/30">
+            <div className="space-y-1 ml-4 pl-3 border-l sidebar-nested">
               <SidebarItem
                 label={t.about.summaryTitle}
                 action={() => {
@@ -252,8 +250,8 @@ const Sidebar = () => {
 
         {/* Footer sutil */}
         <div className="bottom-6 left-5 right-5">
-          <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-300/50 to-transparent dark:via-zinc-700/50 mb-4" />
-          <p className="text-xs text-zinc-500 dark:text-zinc-500 text-center">
+          <div className="h-px w-full bg-linear-to-r sidebar-footer-divider mb-4" />
+          <p className="text-xs sidebar-footer-text text-center">
             {t.sidebar.portfolio} v1.0
           </p>
         </div>

@@ -1,0 +1,285 @@
+@layer components{
+
+  /* HERO */
+  .availability-badge {
+    @apply
+      bg-blue-500/10
+      border-blue-500/20;
+  }
+
+  .availability-dot {
+    @apply bg-blue-500;
+  }
+
+  .availability-text {
+    @apply
+      text-blue-600
+      dark:text-blue-400;
+  }
+
+  /* Rol */
+  .role-badge {
+    @apply
+      border-zinc-700/60
+      text-zinc-400;
+  }
+
+  /* Nombre (gradiente) */
+  .hero-name-gradient {
+    @apply
+      from-blue-600
+      to-purple-600
+      text-transparent
+      dark:from-blue-400
+      dark:to-purple-400;
+  }
+
+  /* Especialización */
+  .hero-specialization {
+    @apply
+      text-zinc-800
+      dark:text-zinc-200;
+  }
+
+  /* Item descripción hover */
+  .hero-description-item:hover {
+    @apply
+      bg-blue-50/30;
+  }
+
+  .dark .hero-description-item:hover {
+    @apply
+      bg-blue-900/5;
+  }
+
+  /* Número del indicador */
+  .hero-indicator-number {
+    @apply
+      bg-linear-to-br
+      from-blue-500/20
+      to-purple-500/20
+      text-blue-700
+      dark:text-blue-400;
+  }
+
+  /* Línea del indicador */
+  .hero-indicator-line {
+    @apply
+      from-blue-400/30
+      to-transparent;
+  }
+
+  .hero-description-item:hover .hero-indicator-line {
+    @apply from-blue-400/70;
+  }
+
+  /* Texto descripción */
+  .hero-description-text {
+    @apply
+      text-zinc-700
+      dark:text-zinc-300;
+  }
+
+  /* GITHUB */
+
+  .github-card {
+    @apply
+      border-zinc-200/20
+      bg-zinc-50
+      dark:bg-zinc-900/50;
+  }
+
+  .github-card:hover {
+    @apply border-zinc-300/40;
+  }
+
+  /* Descripción */
+  .github-description {
+    @apply
+      text-zinc-600
+      dark:text-zinc-400;
+  }
+
+  /* Stack Base */
+  .stack-badge {
+    @apply
+      border-zinc-300/30
+      bg-white/40
+      text-zinc-600
+      shadow-zinc-900/5
+      dark:bg-zinc-900/40
+      dark:text-zinc-400;
+  }
+
+  /* React */
+  .stack-react:hover {
+    @apply
+      border-cyan-400/50
+      bg-cyan-50
+      shadow-cyan-400/25;
+  }
+
+  .dark .stack-react:hover {
+    @apply
+      bg-cyan-400/10
+      shadow-cyan-400/20;
+  }
+
+  .stack-react-icon {
+    @apply text-cyan-500;
+  }
+
+  /* TypeScript */
+
+  .stack-typescript:hover {
+    @apply
+      border-blue-500/40
+      bg-blue-50/60
+      shadow-blue-500/20;
+  }
+
+  .dark .stack-typescript:hover {
+    @apply bg-blue-500/10 shadow-blue-500/20;
+  }
+
+  .stack-typescript-icon {
+    @apply
+      text-blue-600
+      dark:text-blue-500;
+  }
+
+  /* Tailwind */
+
+  .stack-tailwind:hover {
+    @apply
+      border-cyan-300/40
+      bg-cyan-50/60
+      shadow-cyan-300/20;
+  }
+
+  .dark .stack-tailwind:hover {
+    @apply bg-cyan-300/10 shadow-cyan-300/20;
+  }
+
+  .stack-tailwind-icon {
+    @apply text-cyan-400;
+  }
+
+  /* CV */
+
+  .cv-card {
+    @apply
+      border-zinc-200/20
+      bg-zinc-50
+      dark:bg-zinc-900/50;
+  }
+
+  .cv-card:hover {
+    @apply border-zinc-300/40;
+  }
+
+  /* Descripción */
+  .cv-description {
+    @apply
+      text-zinc-600
+      dark:text-zinc-400;
+  }
+
+  /* CV */
+
+  .cv-download-button {
+    @apply
+      bg-zinc-900
+      text-white
+      dark:bg-zinc-100
+      dark:text-zinc-900;
+  }
+
+  .cv-download-button:hover {
+    @apply
+      bg-zinc-800
+      shadow-zinc-900/20;
+  }
+
+  .dark .cv-download-button:hover {
+    @apply
+      bg-zinc-200
+      shadow-zinc-100/20;
+  }
+
+  .cv-download-button:focus-visible {
+    @apply ring-zinc-400;
+  }
+
+  /* CONTACTO */
+
+  .contact-card {
+    @apply
+      border-zinc-200
+      bg-zinc-50
+      dark:border-zinc-800
+      dark:bg-zinc-900;
+  }
+
+  /* Título */
+  .contact-card-title {
+    @apply
+      text-zinc-900
+      dark:text-zinc-100;
+  }
+
+  /* Descripción */
+  .contact-card-description {
+    @apply
+      text-zinc-600
+      dark:text-zinc-400;
+  }
+
+  /* Botones */
+  .contact-primary-button {
+    @apply
+      bg-zinc-900
+      text-white
+      dark:bg-zinc-100
+      dark:text-zinc-900;
+  }
+
+  .contact-primary-button:hover {
+    @apply bg-zinc-800;
+  }
+
+  .dark .contact-primary-button:hover {
+    @apply bg-zinc-200;
+  }
+
+  .contact-secondary-button {
+    @apply
+      border-zinc-300
+      text-zinc-700
+      dark:border-zinc-700
+      dark:text-zinc-300;
+  }
+
+  .contact-secondary-button:hover {
+    @apply bg-zinc-100;
+  }
+
+  .dark .contact-secondary-button:hover {
+    @apply bg-zinc-800;
+  }
+
+  .contact-whatsapp-button {
+    @apply
+      border-emerald-500/40
+      text-emerald-600
+      dark:text-emerald-400;
+  }
+
+  .contact-whatsapp-button:hover {
+    @apply bg-emerald-50;
+  }
+
+  .dark .contact-whatsapp-button:hover {
+    @apply bg-emerald-500/10;
+  }
+}
