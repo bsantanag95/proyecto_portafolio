@@ -22,6 +22,7 @@ const GitHubButton = ({ href, label }: GitHubButtonProps) => {
         bg-linear-to-r from-zinc-900 to-zinc-800
         text-white
         shadow-md shadow-zinc-900/20
+        theme-transition
 
         hover:-translate-y-0.5
         hover:shadow-lg hover:shadow-zinc-900/30

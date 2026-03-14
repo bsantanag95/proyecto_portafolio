@@ -2,54 +2,30 @@
 @layer components {
   /* Superficie principal */
   .footer-surface {
-    @apply bg-white border-zinc-200;
-  }
-
-  .dark .footer-surface {
-    @apply bg-zinc-900 border-zinc-800;
+    @apply bg-white border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800;
   }
 
   /* Texto principal (nombre) */
   .footer-title {
-    @apply text-zinc-900;
-  }
-
-  .dark .footer-title {
-    @apply text-zinc-100;
+    @apply text-zinc-900 dark:text-zinc-100;
   }
 
   /* Texto secundario */
   .footer-subtitle {
-    @apply text-zinc-600;
-  }
-
-  .dark .footer-subtitle {
-    @apply text-zinc-400;
+    @apply text-zinc-600 dark:text-zinc-400;
   }
 
   /* Grupo de links */
   .footer-links {
-    @apply text-zinc-600;
-  }
-
-  .dark .footer-links {
-    @apply text-zinc-400;
+    @apply text-zinc-600 dark:text-zinc-400;
   }
 
   .footer-link {
-    @apply  hover:text-zinc-900;
-  }
-
-  .dark .footer-link {
-    @apply hover:text-zinc-100;
+    @apply  hover:text-zinc-900 dark:hover:text-zinc-100;
   }
 
   /* Línea inferior */
   .footer-bottom {
-    @apply border-zinc-200 text-zinc-500;
-  }
-
-  .dark .footer-bottom {
-    @apply border-zinc-800 text-zinc-500;
+    @apply border-zinc-200 text-zinc-500 dark:border-zinc-800 dark:text-zinc-500;
   }
 }

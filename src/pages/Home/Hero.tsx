@@ -49,7 +49,7 @@ function Hero() {
           {t.home.description.map((item, index) => (
             <div
               key={index}
-              className="group flex items-start gap-3 rounded-lg p-3 transition-colors duration-300 hero-description-item"
+              className="group flex items-start gap-3 rounded-lg p-3 hero-description-item"
             >
               {/* Indicador con línea */}
               <div className="relative flex shrink-0 items-center">

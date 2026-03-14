@@ -30,14 +30,17 @@ function Highlights() {
     >
       {/* Header estilizado */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-bold highlights-title flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-linear-to-br highlights-icon-wrapper flex items-center justify-center">
+        <h2 className="text-2xl font-bold highlights-title theme-transition flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-linear-to-br highlights-icon-wrapper theme-transition flex items-center justify-center">
             <Star size={18} className="highlights-icon" />
           </div>
+
           {t.about.highlightsTitle}
         </h2>
-        <div className="h-px w-full bg-linear-to-r highlights-divider" />
-        <p className="text-lg highlights-subtitle">
+
+        <div className="h-px w-full bg-linear-to-r highlights-divider theme-transition" />
+
+        <p className="text-lg highlights-subtitle theme-transition">
           {t.about.highlightsSubtitle}
         </p>
       </div>
@@ -48,32 +51,32 @@ function Highlights() {
           <AnimatedSection key={item} delay={index * 0.05}>
             <div className="group relative h-full">
               {/* Tarjeta principal */}
-              <div className="h-full p-5 rounded-2xl bg-linear-to-br border highlight-card transition-all duration-500 hover:shadow-lg hover:-translate-y-0.5">
+              <div className="h-full p-5 rounded-2xl bg-linear-to-br border highlight-card theme-transition hover:shadow-lg hover:-translate-y-0.5">
                 {/* Fondo decorativo en hover */}
                 <div className="absolute -inset-1 rounded-2xl bg-linear-to-r highlight-hover-bg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative">
-                  {/* Icono decorativo */}
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br highlight-icon transition-transform duration-300 group-hover:scale-110">
+                  {/* Icono */}
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br highlight-icon theme-transition transition-transform duration-300 group-hover:scale-110">
                     {highlightIcons[index % highlightIcons.length]}
                   </div>
 
                   {/* Número decorativo */}
-                  <div className="absolute right-4 top-0 text-6xl font-black highlight-number leading-none">
+                  <div className="absolute right-4 top-0 text-6xl font-black highlight-number theme-transition leading-none">
                     {index + 1}
                   </div>
 
-                  {/* Texto del highlight */}
-                  <p className="text-base font-medium highlight-card-text leading-relaxed">
+                  {/* Texto */}
+                  <p className="text-base font-medium highlight-card-text theme-transition leading-relaxed">
                     {item}
                   </p>
 
-                  {/* Línea decorativa inferior */}
-                  <div className="mt-4 h-0.5 w-8 bg-linear-to-r highlight-bottom-line transition-all duration-500 group-hover:w-full" />
+                  {/* Línea inferior */}
+                  <div className="mt-4 h-0.5 w-8 bg-linear-to-r highlight-bottom-line theme-transition transition-all duration-500 group-hover:w-full" />
                 </div>
               </div>
 
-              {/* Efecto de brillo en hover */}
+              {/* Glow */}
               <div className="absolute -inset-1 rounded-2xl bg-linear-to-r highlight-glow blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10" />
             </div>
           </AnimatedSection>

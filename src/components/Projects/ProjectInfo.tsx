@@ -10,23 +10,26 @@ interface Props {
 
 const ProjectInfo = ({ project, language }: Props) => {
   const { t } = useLanguage();
+
   return (
     <div className="space-y-8 max-w-3xl">
       {/* Title */}
       <div className="space-y-2">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight project-title">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight project-title theme-transition">
           {project.title[language]}
         </h1>
-        <div className="h-px w-16 bg-linear-to-r project-title-divider" />
+
+        <div className="h-px w-16 bg-linear-to-r project-title-divider theme-transition" />
       </div>
 
       {/* Description */}
       <div className="space-y-4">
-        <h2 className="text-lg font-semibold project-section-title flex items-center gap-2">
+        <h2 className="text-lg font-semibold project-section-title theme-transition flex items-center gap-2">
           {language === "es" ? "Sobre el proyecto" : "About the project"}
         </h2>
-        <div className="p-5 rounded-xl border project-description-box">
-          <p className="text-base leading-relaxed project-description-text">
+
+        <div className="p-5 rounded-xl border project-description-box theme-transition">
+          <p className="text-base leading-relaxed project-description-text theme-transition">
             {project.description[language]}
           </p>
         </div>

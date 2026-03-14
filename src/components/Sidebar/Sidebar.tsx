@@ -111,12 +111,12 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Overlay con efecto glassmorphism */}
+      {/* Overlay */}
       {isOpen && !isDesktop && (
         <div
           aria-hidden="true"
           onClick={close}
-          className="fixed inset-0 z-10 sidebar-overlay backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-10 sidebar-overlay theme-transition backdrop-blur-sm md:hidden"
         />
       )}
 
@@ -135,40 +135,44 @@ const Sidebar = () => {
           sidebar-surface
           border-r
           sidebar-border
+          theme-transition
           px-5 py-8
-          transition-all duration-300 ease-in-out
+          ease-in-out
           ${isOpen ? "translate-x-0 shadow-xl" : "-translate-x-full"}
           md:translate-x-0 md:shadow-lg
         `}
       >
-        {/* Header con efecto sutil */}
+        {/* Header */}
         <div className="mb-12">
-          <h1 className="text-xl font-bold sidebar-title">{t.sidebar.title}</h1>
-          <p className="text-sm sidebar-subtitle">{t.sidebar.subtitle}</p>
-          <div className="mt-4 h-px w-12 bg-linear-to-r sidebar-divider" />
+          <h1 className="text-xl font-bold sidebar-title theme-transition">
+            {t.sidebar.title}
+          </h1>
+
+          <p className="text-sm sidebar-subtitle theme-transition">
+            {t.sidebar.subtitle}
+          </p>
+
+          <div className="mt-4 h-px w-12 bg-linear-to-r sidebar-divider theme-transition" />
         </div>
 
         {/* Navegación */}
         <nav className="flex-1 space-y-1 overflow-y-visible md:overflow-y-auto">
-          {/* Inicio */}
           <SidebarItem
             label={t.sidebar.home}
             path="/"
             onClick={close}
-            icon={<Home size={18} aria-hidden="true" />}
+            icon={<Home size={18} />}
           />
 
-          {/* About */}
           <SidebarItem
             label={t.sidebar.about}
             path="/about"
             onClick={close}
-            icon={<IdCard size={18} aria-hidden="true" />}
+            icon={<IdCard size={18} />}
           />
 
-          {/* Secciones About */}
           {sidebarContext === "about" && (
-            <div className="space-y-1 ml-4 pl-3 border-l sidebar-nested">
+            <div className="space-y-1 ml-4 pl-3 border-l sidebar-nested theme-transition">
               <SidebarItem
                 label={t.about.summaryTitle}
                 action={() => {
@@ -231,7 +235,6 @@ const Sidebar = () => {
             </div>
           )}
 
-          {/* Proyectos */}
           <SidebarItem
             label={t.sidebar.projects}
             path="/projects"
@@ -239,7 +242,6 @@ const Sidebar = () => {
             icon={<Sparkles size={18} />}
           />
 
-          {/* Contacto */}
           <SidebarItem
             label={t.sidebar.contact}
             path="/contact"
@@ -248,10 +250,11 @@ const Sidebar = () => {
           />
         </nav>
 
-        {/* Footer sutil */}
+        {/* Footer */}
         <div className="bottom-6 left-5 right-5">
-          <div className="h-px w-full bg-linear-to-r sidebar-footer-divider mb-4" />
-          <p className="text-xs sidebar-footer-text text-center">
+          <div className="h-px w-full bg-linear-to-r sidebar-footer-divider theme-transition mb-4" />
+
+          <p className="text-xs sidebar-footer-text theme-transition text-center">
             {t.sidebar.portfolio} v1.0
           </p>
         </div>

@@ -1,27 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/theme/ThemeContext";
 import Sun from "./Sun.svg";
 import Moon from "./Moon.svg";
 
-type Theme = "light" | "dark";
-
 const DarkModeToggle = () => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem("selectedTheme");
-    return savedTheme === "dark" ? "dark" : "light";
-  });
+  const context = useContext(ThemeContext);
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    localStorage.setItem("selectedTheme", theme);
-  }, [theme]);
+  if (!context) return null;
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
+  const { theme, toggleTheme } = context;
 
   const isDark = theme === "dark";
 

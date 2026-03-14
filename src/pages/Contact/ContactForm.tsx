@@ -63,10 +63,12 @@ const ContactForm = () => {
     e.preventDefault();
 
     const validationErrors = validate(form, t);
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
+
     setErrors({});
     setStatus("loading");
 
@@ -92,13 +94,14 @@ const ContactForm = () => {
     <form
       onSubmit={handleSubmit}
       className="
-    border contact-form
-    space-y-5
-    rounded-xl
-    backdrop-blur
-    shadow-md
-    p-5 sm:p-6
-  "
+        border contact-form
+        theme-transition
+        space-y-5
+        rounded-xl
+        backdrop-blur
+        shadow-md
+        p-5 sm:p-6
+      "
     >
       {/* Nombre / Apellido */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -109,6 +112,7 @@ const ContactForm = () => {
           error={errors.firstName}
           onChange={handleChange}
         />
+
         <Input
           label={t.contact.fields.lastName}
           name="lastName"
@@ -128,6 +132,7 @@ const ContactForm = () => {
           error={errors.email}
           onChange={handleChange}
         />
+
         <Input
           label={t.contact.fields.phone}
           name="phone"
@@ -153,32 +158,37 @@ const ContactForm = () => {
         onChange={handleChange}
       />
 
+      {/* Botón */}
       <button
         className="
-    inline-flex items-center gap-2
-    rounded-lg px-5 py-2.5
-    text-sm font-medium
-    bg-linear-to-r
-    shadow contact-submit-button
-    active:scale-95
-    transition-all cursor-pointer
-  "
+          inline-flex items-center gap-2
+          rounded-lg px-5 py-2.5
+          text-sm font-medium
+          bg-linear-to-r
+          shadow contact-submit-button
+          theme-transition
+          active:scale-95
+          transition-all
+          cursor-pointer
+        "
       >
         <Send size={16} />
         {status === "loading" ? t.contact.submitting : t.contact.submit}
       </button>
 
-      <p className="text-xs contact-privacy">{t.contact.privacy}</p>
+      <p className="text-xs contact-privacy theme-transition">
+        {t.contact.privacy}
+      </p>
 
       {/* Feedback */}
       {status === "success" && (
-        <p className="text-sm contact-success flex items-center gap-2">
+        <p className="text-sm contact-success theme-transition flex items-center gap-2">
           {t.contact.success}
         </p>
       )}
 
       {status === "error" && (
-        <p className="text-sm contact-error flex items-center gap-2">
+        <p className="text-sm contact-error theme-transition flex items-center gap-2">
           <span className="text-lg">⚠️</span>
           {t.contact.error}
         </p>

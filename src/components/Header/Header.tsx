@@ -11,7 +11,13 @@ export const Header = () => {
       {/* Botón menú solo en mobile */}
       <button
         onClick={toggle}
-        className="md:hidden rounded p-2 header-toggle"
+        className="
+          md:hidden
+          rounded
+          p-2
+          header-toggle
+          theme-transition
+        "
         aria-label="Open menu"
       >
         <Menu className="h-6 w-6" />

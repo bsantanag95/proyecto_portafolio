@@ -6,16 +6,25 @@
 
 @layer base {
   body {
-    @apply bg-zinc-100 text-zinc-900 transition-colors duration-300;
+    @apply bg-zinc-100 text-zinc-900;
   }
 
   .dark body {
     @apply bg-zinc-900 text-zinc-100;
   }
 
-    body, header, main, aside, footer {
-    @apply transition-colors duration-300;
+    body, header, main, aside, footer, section, article {
+    @apply transition-colors duration-500;
   }
+
+  .theme-transition {
+    @apply transition-colors duration-500;
+  }
+
+.card-theme-transition {
+  transition: colors 500ms, transform 300ms ease-out, box-shadow 300ms ease-out;
+}
+
 }
 
 @media (prefers-reduced-motion: reduce) {

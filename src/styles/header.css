@@ -1,8 +1,5 @@
 @layer components{
-    .header-toggle:hover {
-        @apply bg-zinc-200;
-    }
-    .dark .header-toggle:hover {
-        @apply bg-zinc-800
+    .header-toggle {
+        @apply hover:bg-zinc-200 dark:hover:bg-zinc-800;
     }
 }

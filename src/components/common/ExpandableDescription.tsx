@@ -25,9 +25,9 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
           px-4 py-2 rounded-lg
           text-sm font-medium
           bg-linear-to-r
-          border toggle-button
+          border toggle-button theme-transition
           transition-all duration-300
-          focus:outline-none focus-visible:ring-2  cursor-pointer
+          focus:outline-none focus-visible:ring-2 cursor-pointer
         "
       >
         <span>
@@ -39,7 +39,6 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
               ? "Ver más"
               : "Show more"}
         </span>
-
         <ChevronDown
           size={16}
           className={`
@@ -69,17 +68,16 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
           }}
           className="overflow-hidden"
         >
-          {/* Contenido con tarjeta sutil y bordes redondeados */}
-          <div className="p-5 rounded-xl bg-linear-to-br  border expandable-content-box space-y-4">
+          <div className="p-5 rounded-xl bg-linear-to-br border expandable-content-box theme-transition space-y-4">
             {sections.map((section, index) => {
               switch (section.type) {
                 case "title":
                   return (
                     <h4
                       key={index}
-                      className="text-sm font-semibold expandable-section-title flex items-center gap-2"
+                      className="text-sm font-semibold expandable-section-title theme-transition flex items-center gap-2"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full expandable-section-dot" />
+                      <span className="h-1.5 w-1.5 rounded-full expandable-section-dot theme-transition" />
                       {section.content}
                     </h4>
                   );
@@ -88,7 +86,7 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
                   return (
                     <p
                       key={index}
-                      className="text-sm leading-relaxed expandable-paragraph pl-3"
+                      className="text-sm leading-relaxed expandable-paragraph theme-transition pl-3"
                     >
                       {section.content}
                     </p>
@@ -98,10 +96,13 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
                   return (
                     <ul
                       key={index}
-                      className="list-disc pl-6 space-y-1.5 text-sm expandable-list"
+                      className="list-disc pl-6 space-y-1.5 text-sm expandable-list theme-transition"
                     >
                       {section.items.map((item, i) => (
-                        <li key={i} className="pl-1 expandable-list-item">
+                        <li
+                          key={i}
+                          className="pl-1 expandable-list-item theme-transition"
+                        >
                           {item}
                         </li>
                       ))}
@@ -112,9 +113,7 @@ const ExpandableDescription = ({ sections }: ExpandableDescriptionProps) => {
                   return null;
               }
             })}
-
-            {/* Línea decorativa inferior */}
-            <div className="h-px w-12 bg-linear-to-r expandable-divider mt-2" />
+            <div className="h-px w-12 bg-linear-to-r expandable-divider theme-transition mt-2" />
           </div>
         </motion.div>
       </AnimatePresence>

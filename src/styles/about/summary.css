@@ -19,15 +19,7 @@
     /* About Card*/
 
     .summary-card {
-        @apply from-white/60 to-white/30 border-zinc-200/50 dark:from-zinc-900/40 dark:to-zinc-800/30 dark:border-zinc-700/50;
-    }
-
-    .summary-card:hover {
-        @apply border-blue-300/50;
-    }
-
-    .dark .summary-card:hover {
-        @apply border-blue-500/30;
+        @apply from-white/60 to-white/30 border-zinc-200/50 dark:from-zinc-900/40 dark:to-zinc-800/30 dark:border-zinc-700/50 hover:border-blue-300/50 dark:hover:border-blue-500/30;
     }
 
     /* Glow hover background */

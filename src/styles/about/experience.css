@@ -39,15 +39,9 @@
       border-zinc-200/60
       bg-white/50
       dark:border-zinc-700/60
-      dark:bg-zinc-800/30;
-  }
-
-  .experience-card:hover{
-    @apply border-blue-300/60;
-  }
-
-  .dark .experience-card:hover{
-    @apply border-blue-500/40;
+      dark:bg-zinc-800/30
+      hover:border-blue-300/60
+      dark:hover:border-blue-500/40;
   }
 
   .experience-role{

@@ -9,5 +9,5 @@ export interface LanguageContextType {
 }
 
 export const LanguageContext = createContext<LanguageContextType>(
-  {} as LanguageContextType
+  {} as LanguageContextType,
 );

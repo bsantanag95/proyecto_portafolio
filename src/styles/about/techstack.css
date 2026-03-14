@@ -34,15 +34,9 @@
       border-zinc-200/60
       bg-white/50
       dark:border-zinc-700/60
-      dark:bg-zinc-800/30;
-  }
-
-  .techstack-card:hover{
-    @apply border-blue-300/60;
-  }
-
-  .dark .techstack-card:hover{
-    @apply border-blue-500/40;
+      dark:bg-zinc-800/30
+      hover:border-blue-300/60
+      dark:hover:border-blue-500/40;
   }
 
   .techstack-category-title{
@@ -69,23 +63,14 @@
       text-zinc-800
       dark:from-zinc-800/50
       dark:to-zinc-800/30
-      dark:text-zinc-300;
+      dark:text-zinc-300
+      hover:from-blue-100/80
+      hover:to-blue-50/50
+      hover:text-blue-800
+      dark:hover:from-blue-900/30
+      dark:hover:to-blue-800/20
+      dark:hover:text-blue-300;
   }
-
-  .tech-badge:hover{
-    @apply
-      from-blue-100/80
-      to-blue-50/50
-      text-blue-800;
-  }
-
-  .dark .tech-badge:hover{
-    @apply
-      from-blue-900/30
-      to-blue-800/20
-      text-blue-300;
-  }
-
 
   /* Decorative Line */
 

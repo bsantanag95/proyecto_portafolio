@@ -4,12 +4,14 @@ import { useLanguage } from "../../hooks/useLanguage";
 
 const Footer = () => {
   const { t } = useLanguage();
+
   return (
     <footer
       role="contentinfo"
       className="
         border-t border-zinc-200 dark:border-zinc-800
         bg-white dark:bg-zinc-900
+        theme-transition
       "
     >
       <div
@@ -22,8 +24,13 @@ const Footer = () => {
       >
         {/* Identity */}
         <div className="space-y-1 text-center sm:text-left">
-          <p className="font-medium footer-title">Esteban Santana</p>
-          <p className="text-sm footer-subtitle">{t.footer.text}</p>
+          <p className="font-medium footer-title theme-transition">
+            Esteban Santana
+          </p>
+
+          <p className="text-sm footer-subtitle theme-transition">
+            {t.footer.text}
+          </p>
         </div>
 
         {/* Links */}
@@ -36,7 +43,7 @@ const Footer = () => {
           <a
             href="mailto:besantanag95@gmail.com"
             aria-label="Enviar correo"
-            className="footer-link transition"
+            className="footer-link theme-transition"
           >
             <Mail size={18} />
           </a>
@@ -46,7 +53,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de GitHub"
-            className="footer-link transition"
+            className="footer-link theme-transition"
           >
             <GitHubIcon size={18} />
           </a>
@@ -56,7 +63,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de LinkedIn"
-            className="footer-link transition"
+            className="footer-link theme-transition"
           >
             <LinkedinIcon size={18} />
           </a>
@@ -68,6 +75,7 @@ const Footer = () => {
         className="
           border-t footer-bottom
           py-4 text-center text-xs
+          theme-transition
         "
       >
         © {new Date().getFullYear()} Esteban Santana. {t.footer.subtitle}.

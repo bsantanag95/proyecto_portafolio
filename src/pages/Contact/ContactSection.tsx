@@ -4,9 +4,8 @@ import { usePageTitle } from "../../hooks/usePageTitle";
 
 const ContactSection = () => {
   const { t } = useLanguage();
-  {
-    usePageTitle(t.sidebar.contact + " · Esteban Santana");
-  }
+  usePageTitle(t.sidebar.contact + " · Esteban Santana");
+
   return (
     <section
       className="
@@ -20,22 +19,24 @@ const ContactSection = () => {
         <header className="text-center space-y-3">
           <h1
             className="
-    text-2xl sm:text-3xl
-    font-semibold
-    tracking-tight
-    contact-title
-  "
+              text-2xl sm:text-3xl
+              font-semibold
+              tracking-tight
+              contact-title
+              theme-transition
+            "
           >
             {t.contact.title}
           </h1>
 
           <p
             className="
-    text-sm sm:text-base
-    contact-subtitle
-    max-w-lg mx-auto
-    leading-relaxed
-  "
+              text-sm sm:text-base
+              contact-subtitle
+              max-w-lg mx-auto
+              leading-relaxed
+              theme-transition
+            "
           >
             {t.contact.subtitle}
           </p>

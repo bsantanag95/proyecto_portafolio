@@ -30,14 +30,9 @@
       from-emerald-500
       to-emerald-600
       text-white
-      shadow-emerald-500/20;
-  }
-
-  /* Hover botón */
-  .contact-submit-button:hover {
-    @apply
-      from-emerald-400
-      to-emerald-500;
+      shadow-emerald-500/20
+      hover:from-emerald-400
+      hover:to-emerald-500;
   }
 
   /* Texto de privacidad */

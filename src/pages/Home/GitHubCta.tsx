@@ -16,6 +16,7 @@ function GithubCTA() {
         rounded-xl border github-card
         p-6 sm:p-8
         transition
+        theme-transition
       "
     >
       {/* Text */}
@@ -46,6 +47,7 @@ function GithubCTA() {
 
     hover:-translate-y-0.5
     hover:shadow-md cursor-default
+    theme-transition
   "
           >
             <ReactIcon className="stack-react-icon transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
@@ -61,6 +63,8 @@ function GithubCTA() {
       stack-typescript
       px-2.5 py-1.5 text-xs
       transition-all duration-300
+      theme-transition
+
       hover:-translate-y-0.5
       hover:shadow-md cursor-default
     "
@@ -78,6 +82,7 @@ function GithubCTA() {
       stack-tailwind
       px-2.5 py-1.5 text-xs
       transition-all duration-300
+      theme-transition
       hover:-translate-y-0.5
       hover:shadow-md cursor-default
     "

@@ -34,15 +34,9 @@
       border-zinc-200/60
       bg-white/50
       dark:border-zinc-700/60
-      dark:bg-zinc-800/30;
-  }
-
-  .education-card:hover{
-    @apply border-blue-300/60;
-  }
-
-  .dark .education-card:hover{
-    @apply border-blue-500/40;
+      dark:bg-zinc-800/30
+      hover:border-blue-300/60
+      dark:hover:border-blue-500/40;
   }
 
   .education-card-title{
@@ -97,15 +91,9 @@
       border-zinc-200/50
       dark:from-zinc-800/40
       dark:to-zinc-800/20
-      dark:border-zinc-700/50;
-  }
-
-  .certification-card:hover{
-    @apply border-blue-300/50;
-  }
-
-  .dark .certification-card:hover{
-    @apply border-blue-500/30;
+      dark:border-zinc-700/50
+      hover:border-blue-300/50
+      dark:hover:border-blue-500/30;
   }
 
   .certification-number{

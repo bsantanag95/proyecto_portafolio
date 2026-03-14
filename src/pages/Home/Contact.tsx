@@ -27,15 +27,15 @@ const Contact = () => {
       aria-label={t.contact.title}
       className="scroll-mt-24 py-24 px-4 flex justify-center"
     >
-      <div className="w-full max-w-2xl rounded-2xl border contact-card p-8 shadow-sm">
+      <div className="w-full max-w-2xl rounded-2xl border contact-card theme-transition p-8 shadow-sm">
         <h2
           id="contact-title"
-          className="text-2xl font-semibold contact-card-title"
+          className="text-2xl font-semibold contact-card-title theme-transition"
         >
           {t.home.contact.title}
         </h2>
 
-        <p className="mt-3 contact-card-description">
+        <p className="mt-3 contact-card-description theme-transition">
           {t.home.contact.description}
         </p>
 
@@ -52,6 +52,7 @@ const Contact = () => {
     text-sm font-medium
     contact-primary-button
     transition
+    theme-transition
   "
           >
             <AnimatePresence mode="wait">
@@ -94,6 +95,7 @@ const Contact = () => {
               text-sm font-medium
               border contact-secondary-button
               transition
+              theme-transition
             "
           >
             <LinkedinIcon size={16} aria-hidden="true" />
@@ -111,6 +113,7 @@ const Contact = () => {
               text-sm font-medium
               border contact-secondary-button
               transition
+              theme-transition
             "
           >
             <GitHubIcon size={16} aria-hidden="true" />
@@ -132,6 +135,7 @@ const Contact = () => {
     text-xs font-medium
     border contact-whatsapp-button
     transition
+    theme-transition
   "
           >
             <WhatsAppIcon size={16} aria-hidden="true" />

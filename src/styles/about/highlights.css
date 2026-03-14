@@ -43,15 +43,9 @@
       border-zinc-200/50
       dark:from-zinc-900/40
       dark:to-zinc-800/30
-      dark:border-zinc-700/50;
-  }
-
-  .highlight-card:hover{
-    @apply border-blue-300/50;
-  }
-
-  .dark .highlight-card:hover{
-    @apply border-blue-500/30;
+      dark:border-zinc-700/50
+      hover:border-blue-300/50
+      dark:hover:border-blue-500/30;
   }
 
   .highlight-card-text{

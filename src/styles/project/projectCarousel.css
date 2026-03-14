@@ -6,21 +6,11 @@
   .carousel-surface {
     @apply
       border-zinc-200/50
-      bg-zinc-100;
-  }
-
-  .dark .carousel-surface {
-    @apply
-      border-zinc-700/50
-      bg-zinc-800;
-  }
-
-  .carousel-surface:focus-visible {
-    @apply ring-blue-500/50;
-  }
-
-  .dark .carousel-surface:focus-visible {
-    @apply ring-blue-400/50;
+      bg-zinc-100
+      dark:border-zinc-700/50
+      dark:bg-zinc-800
+      focus-visible:ring-blue-500/50
+      dark:focus-visible:ring-blue-400/50;
   }
 
   /* Bottom gradient overlay */
@@ -37,11 +27,8 @@
   .carousel-float-control {
     @apply
       bg-black/40
-      text-white/90;
-  }
-
-  .carousel-float-control:hover {
-    @apply bg-black/60;
+      text-white/90
+      hover:bg-zinc-800;
   }
 
   /* Navigation arrows */
@@ -49,11 +36,8 @@
   .carousel-arrow {
     @apply
       bg-black/40
-      text-white/90;
-  }
-
-  .carousel-arrow:focus-visible {
-    @apply ring-white/80;
+      text-white/90
+      focus-visible:ring-white/80;
   }
 
   /* Counter */
@@ -68,11 +52,8 @@
 
   .carousel-dot {
     @apply
-      bg-white/60;
-  }
-
-  .carousel-dot:hover {
-    @apply bg-white/80;
+      bg-white/60
+       hover:bg-white/80;
   }
 
   .carousel-dot-active {
@@ -90,20 +71,12 @@
 
   .carousel-skeleton-image {
     @apply
-      bg-zinc-200;
-  }
-
-  .dark .carousel-skeleton-image {
-    @apply bg-zinc-800;
+      bg-zinc-200 dark:bg-zinc-800;
   }
 
   .carousel-skeleton-dot {
     @apply
-      bg-zinc-300;
-  }
-
-  .dark .carousel-skeleton-dot {
-    @apply bg-zinc-700;
+      bg-zinc-300 dark:bg-zinc-700;
   }
 
   /* Lightbox Border */

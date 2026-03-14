@@ -11,13 +11,14 @@ function CvCta() {
         rounded-xl border cv-card
         p-6 sm:p-8
         transition
+        theme-transition
       "
     >
       {/* Text */}
       <div className="space-y-4">
         <h3 className="text-lg sm:text-xl font-semibold">{t.home.cvTitle}</h3>
 
-        <p className="text-sm sm:text-base cv-description">
+        <p className="text-sm sm:text-base cv-description theme-transition">
           {t.home.cvDescription}
         </p>
       </div>
@@ -39,11 +40,12 @@ function CvCta() {
 
           active:translate-y-0
           focus:outline-none focus-visible:ring-2 
+          theme-transition
         "
       >
         <Download
           size={16}
-          className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110"
+          className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 theme-transition"
         />
         {t.home.downloadCv}
       </a>
