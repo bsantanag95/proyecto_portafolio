@@ -1,52 +1,74 @@
 @layer components{
+    /* HERO */
 
-  /* HERO */
-  .availability-badge {
-    @apply
-      bg-blue-500/10
-      border-blue-500/20;
-  }
+/* Disponibilidad */
+.availability-badge {
+  @apply
+    bg-emerald-500/10
+    border-emerald-500/20
+    dark:bg-zinc-800/40
+    dark:border-zinc-700/50;
+}
 
-  .availability-dot {
-    @apply bg-blue-500;
-  }
+.availability-dot {
+  @apply
+    bg-emerald-500
+    dark:bg-emerald-400;
+}
 
-  .availability-text {
-    @apply
-      text-blue-600
-      dark:text-blue-400;
-  }
+.availability-text {
+  @apply
+    text-emerald-700
+    dark:text-zinc-300;
+}
 
-  /* Rol */
-  .role-badge {
-    @apply
-      border-zinc-700/60
-      text-zinc-400;
-  }
+/* Rol */
+.role-badge {
+  @apply
+    border-zinc-300
+    bg-zinc-100
+    text-zinc-600
+    dark:border-zinc-700/50
+    dark:bg-zinc-800/30
+    dark:text-zinc-400;
+}
 
-  /* Nombre (gradiente) */
-  .hero-name-gradient {
-    @apply
-      from-blue-600
-      to-purple-600
-      text-transparent
-      dark:from-blue-400
-      dark:to-purple-400;
-  }
+/*Nombre */
+.hero-name {
+  @apply
+    text-zinc-900
+    dark:text-zinc-100;
+}
 
-  /* Especialización */
-  .hero-specialization {
-    @apply
-      text-zinc-800
-      dark:text-zinc-200;
-  }
+/* Nombre (gradiente) */
+.hero-name-gradient {
+  @apply
+    from-blue-500
+    to-slate-400
+    text-transparent
+    bg-clip-text
+    dark:from-blue-400
+    dark:to-slate-300;
+}
 
-  /* Item descripción hover */
-  .hero-description-item {
-    @apply
-      hover:bg-blue-50/30
-      dark:hover:bg-blue-900/5;
-  }
+
+/* Especialización */
+.hero-specialization {
+  @apply
+    text-zinc-700
+    dark:text-zinc-300;
+}
+
+/* Card descripción */
+.hero-description-item {
+  @apply
+    border-zinc-200
+    bg-zinc-50
+    dark:border-zinc-800
+    dark:bg-zinc-900/40
+    hover:bg-zinc-100
+    dark:hover:bg-zinc-900/60;
+}
 
   /* Número del indicador */
   .hero-indicator-number {
@@ -68,12 +90,12 @@
     @apply from-blue-400/70;
   }
 
-  /* Texto descripción */
-  .hero-description-text {
-    @apply
-      text-zinc-700
-      dark:text-zinc-300;
-  }
+/* Texto descripción */
+.hero-description-text {
+  @apply
+    text-zinc-600
+    dark:text-zinc-400;
+}
 
   /* GITHUB */
 
