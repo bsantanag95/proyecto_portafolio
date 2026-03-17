@@ -49,7 +49,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/bsantanag95"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de GitHub"
@@ -59,7 +59,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/tuusuario"
+            href="https://linkedin.com/in/besantanag95"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Perfil de LinkedIn"

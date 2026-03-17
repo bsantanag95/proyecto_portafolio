@@ -86,7 +86,7 @@ const Contact = () => {
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/tuusuario"
+            href="https://linkedin.com/in/besantanag95"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -104,7 +104,7 @@ const Contact = () => {
 
           {/* GitHub */}
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/bsantanag95"
             target="_blank"
             rel="noopener noreferrer"
             className="
