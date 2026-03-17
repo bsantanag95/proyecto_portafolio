@@ -16,7 +16,7 @@ const MainLayout = () => {
     "
       >
         <Sidebar />
-        <main className="flex-1 px-4 py-6 md:px-8">
+        <main className="flex-1 px-4 py-6 pt-20 md:pt-6 md:px-8">
           <AnimatePresence mode="wait">
             <Outlet />
           </AnimatePresence>
