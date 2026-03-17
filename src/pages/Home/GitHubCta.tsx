@@ -94,7 +94,7 @@ function GithubCTA() {
       </div>
 
       {/* CTA */}
-      <div className="pt-6 self-start">
+      <div className="pt-6 flex justify-center">
         <GitHubButton
           href="https://github.com/bsantanag95/proyecto_portafolio"
           label={t.home.viewGithub}
