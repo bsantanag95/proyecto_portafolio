@@ -2,6 +2,7 @@ import { Education, Experience, Highlights, Summary, Techstack } from "./";
 import SectionSpy from "../../components/Sidebar/SectionSpy";
 import { useLanguage } from "../../hooks/useLanguage";
 import { usePageTitle } from "../../hooks/usePageTitle";
+import BackButton from "../../components/ui/BackButton";
 
 function About() {
   const { t } = useLanguage();
@@ -10,6 +11,7 @@ function About() {
   }
   return (
     <main className="pt-16 md:pt-20 space-y-12">
+      <BackButton />
       <header className="max-w-6xl">
         {/* <div className="inline-flex items-center gap-3 mb-6">
           <div className="h-px w-8 bg-linear-to-r from-blue-500 to-transparent" />

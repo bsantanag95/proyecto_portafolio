@@ -2,12 +2,14 @@ import { Contact, GitHubCta, CvCta, Hero } from "./";
 import SectionSpy from "../../components/Sidebar/SectionSpy";
 import { useLanguage } from "../../hooks/useLanguage";
 import { usePageTitle } from "../../hooks/usePageTitle";
+import BackButton from "../../components/ui/BackButton";
 
 function Home() {
   const { t } = useLanguage();
   usePageTitle(t.sidebar.home + " · Esteban Santana");
   return (
     <main className="space-y-12">
+      <BackButton />
       <section id="hero">
         <Hero />
       </section>

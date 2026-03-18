@@ -2,6 +2,7 @@ import { projects } from "../../data/projects";
 import { ProjectCard } from "../../components/Projects";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useLanguage } from "../../hooks/useLanguage";
+import BackButton from "../../components/ui/BackButton";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -9,8 +10,10 @@ const Projects = () => {
     usePageTitle(t.sidebar.projects + " · Esteban Santana");
   }
   return (
-    <section
-      className="
+    <>
+      <BackButton />
+      <section
+        className="
         mx-auto
         max-w-6xl
         px-4 sm:px-6 lg:px-8
@@ -20,11 +23,12 @@ const Projects = () => {
         sm:grid-cols-2
         lg:grid-cols-3
       "
-    >
-      {projects.map((project) => (
-        <ProjectCard key={project.slug} project={project} />
-      ))}
-    </section>
+      >
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
+        ))}
+      </section>
+    </>
   );
 };
 
