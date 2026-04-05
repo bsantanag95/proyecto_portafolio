@@ -78,13 +78,21 @@ export const projects: Project[] = [
     highlights: {
       es: [
         "Autenticación y roles de usuario",
-        "Relaciones many-to-many entre jugadores y clubes",
-        "Frontend desacoplado con Inertia + React",
+        "Base de datos relacional para gestionar unidades, materiales y servicios",
+        "Uso de Laravel Livewire para una experiencia de usuario fluida sin recargas completas",
+        "CRUD completo para unidades constructivas, materiales y servicios",
+        "Generación automática de códigos únicos por catálogo según criterios configurables",
+        "Administración de catálogos con asignación de unidades constructivas a cada catálogo",
+        "Búsqueda y filtrado avanzado de unidades constructivas, materiales y servicios",
       ],
       en: [
         "User authentication and roles",
-        "Many-to-many relationships between players and clubs",
-        "Decoupled frontend using Inertia + React",
+        "Relational database to manage units, materials and services",
+        "Use of Laravel Livewire for a smooth user experience without full page reloads",
+        "Full CRUD for construction units, materials and services",
+        "Automatic generation of unique catalog codes based on configurable criteria",
+        "Catalog management with assignment of construction units to each catalog",
+        "Advanced search and filtering of construction units, materials and services",
       ],
     },
     summary: {
@@ -125,14 +133,20 @@ export const projects: Project[] = [
     },
     highlights: {
       es: [
-        "Autenticación y roles de usuario",
-        "Relaciones many-to-many entre jugadores y clubes",
-        "Frontend desacoplado con Inertia + React",
+        "Visualización de datos en formato de tarjetas",
+        "Búsqueda por nombre o número de Pokémon",
+        "Consumo de API REST externa (PokéAPI)",
+        "Desarrollo frontend con React y Sass para una experiencia de usuario fluida",
+        "Desarrollo de funciones personalizadas para formatear y mostrar datos de la API de manera clara y atractiva",
+        "Aplicación de Hooks de React para gestionar el estado y los efectos secundarios relacionados con la obtención de datos de la API",
       ],
       en: [
-        "User authentication and roles",
-        "Many-to-many relationships between players and clubs",
-        "Decoupled frontend using Inertia + React",
+        "Card-based data visualization",
+        "Search by Pokémon name or number",
+        "Consumption of external REST API (PokéAPI)",
+        "Frontend development with React and Sass for a smooth user experience",
+        "Development of custom functions to format and display API data clearly and attractively",
+        "Application of React Hooks to manage state and side effects related to fetching data from the API",
       ],
     },
     summary: {
