@@ -83,12 +83,12 @@ export const es = {
 
     //HIGHLIGHTS
     highlights: [
-      "Priorizo código claro y mantenible, pensando siempre en que otros desarrolladores puedan entenderlo y escalarlo.",
-      "Diseño interfaces responsive y accesibles, cuidando la experiencia del usuario en distintos dispositivos y contextos.",
-      "Aprendo nuevas herramientas y tecnologías de forma autónoma cuando el proyecto lo requiere.",
-      "Me enfoco en mejorar de manera continua, iterando sobre el código y el diseño en lugar de buscar soluciones rígidas.",
-      "Trabajo con responsabilidad técnica, gestionando bien mi tiempo y mis tareas en entornos de trabajo autónomos.",
-      "Valoro la comunicación clara y el trabajo colaborativo para construir mejores productos.",
+      "Antes de agregar una abstracción, me pregunto si realmente la necesito. El código que no existe no se rompe.",
+      "Diseño pensando en el usuario real, no en el caso ideal: distintos tamaños, conexiones lentas, lectores de pantalla.",
+      "Cuando algo no lo entiendo, no lo uso hasta entender por qué funciona. Las dependencias también tienen costo.",
+      "Prefiero una solución simple que funciona hoy a una arquitectura perfecta que nunca termina.",
+      "Trabajo solo sin perder el hilo: me organizo, cumplo lo que digo y aviso cuando algo cambia.",
+      "Un equipo funciona cuando la comunicación es tan cuidada como el código. Escribo PRs que se entienden.",
     ],
 
     highlightsTitle: "Puntos clave",

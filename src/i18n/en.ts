@@ -88,12 +88,12 @@ export const en = {
 
     //HIGHLIGHTS
     highlights: [
-      "I prioritize clean, maintainable code, always thinking about how other developers can understand and scale it.",
-      "I design responsive and accessible interfaces, paying close attention to user experience across different devices and contexts.",
-      "I learn new tools and technologies autonomously when the project requires it.",
-      "I focus on continuous improvement, iterating on both code and design rather than aiming for rigid, final solutions.",
-      "I work with technical responsibility, managing my time and tasks effectively in autonomous work environments.",
-      "I value clear communication and a collaborative approach to building better products.",
+      "Before adding an abstraction, I ask myself if I really need it. Code that doesn't exist can't break.",
+      "I design for the real user, not the ideal case: different screen sizes, slow connections, screen readers.",
+      "If I don't understand something, I don't use it until I know why it works. Dependencies have a cost too.",
+      "I prefer a simple solution that works today over a perfect architecture that never ships.",
+      "I work independently without losing track: I stay organized, keep my word, and communicate when things change.",
+      "A team works when communication is as deliberate as the code. I write PRs that actually make sense.",
     ],
     highlightsTitle: "Key highlights",
     highlightsSubtitle: "What defines me",
