@@ -3,6 +3,7 @@ import {
   buscoClubContent,
   gisCatalogoContent,
   pokedexContent,
+  portafolioContent,
 } from "../content/projects";
 
 export const projects: Project[] = [
@@ -15,26 +16,6 @@ export const projects: Project[] = [
     intro: {
       es: "Plataforma para registrar y visibilizar futbolistas sin club mediante perfiles detallados",
       en: "Platform to register and showcase football players without a club through detailed profiles.",
-    },
-    role: {
-      es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
-      en: "End-to-end full-stack development, from architecture to user experience.",
-    },
-    highlights: {
-      es: [
-        "Autenticación y roles de usuario",
-        "Relaciones many-to-many entre jugadores y clubes",
-        "Frontend desacoplado con Inertia + React",
-      ],
-      en: [
-        "User authentication and roles",
-        "Many-to-many relationships between players and clubs",
-        "Decoupled frontend using Inertia + React",
-      ],
-    },
-    summary: {
-      es: "Plataforma para futbolistas sin club.",
-      en: "Platform for football players without a club.",
     },
     description: {
       es: "Aplicación web que centraliza el registro de futbolistas sin club, permitiendo la creación de perfiles completos con información deportiva, trayectoria, estadísticas, galería multimedia y estado actual de contratación.",
@@ -71,34 +52,6 @@ export const projects: Project[] = [
       es: "Sistema para gestionar Unidades Constructivas, generando códigos únicos por catálogo.",
       en: "System for managing Construction Units, generating unique codes per catalog.",
     },
-    role: {
-      es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
-      en: "End-to-end full-stack development, from architecture to user experience.",
-    },
-    highlights: {
-      es: [
-        "Autenticación y roles de usuario",
-        "Base de datos relacional para gestionar unidades, materiales y servicios",
-        "Uso de Laravel Livewire para una experiencia de usuario fluida sin recargas completas",
-        "CRUD completo para unidades constructivas, materiales y servicios",
-        "Generación automática de códigos únicos por catálogo según criterios configurables",
-        "Administración de catálogos con asignación de unidades constructivas a cada catálogo",
-        "Búsqueda y filtrado avanzado de unidades constructivas, materiales y servicios",
-      ],
-      en: [
-        "User authentication and roles",
-        "Relational database to manage units, materials and services",
-        "Use of Laravel Livewire for a smooth user experience without full page reloads",
-        "Full CRUD for construction units, materials and services",
-        "Automatic generation of unique catalog codes based on configurable criteria",
-        "Catalog management with assignment of construction units to each catalog",
-        "Advanced search and filtering of construction units, materials and services",
-      ],
-    },
-    summary: {
-      es: "Sistema de gestión con mapas y base de datos.",
-      en: "Management system with maps and database.",
-    },
     description: {
       es: "Sistema web orientado a la gestión y catalogación de unidades constructivas, permitiendo organizar materiales y servicios asociados, y generar códigos únicos por catálogo según criterios configurables.",
       en: "Web system focused on managing and cataloging construction units, allowing the organization of associated materials and services, and the generation of unique catalog codes based on configurable criteria.",
@@ -127,32 +80,6 @@ export const projects: Project[] = [
       es: "Pokedex que consume la PokéAPI con búsqueda y visualización de detalles en tarjetas.",
       en: "Pokedex consuming the PokéAPI with search and card-based detail display.",
     },
-    role: {
-      es: "Desarrollo full-stack completo, desde la arquitectura hasta la experiencia de usuario.",
-      en: "End-to-end full-stack development, from architecture to user experience.",
-    },
-    highlights: {
-      es: [
-        "Visualización de datos en formato de tarjetas",
-        "Búsqueda por nombre o número de Pokémon",
-        "Consumo de API REST externa (PokéAPI)",
-        "Desarrollo frontend con React y Sass para una experiencia de usuario fluida",
-        "Desarrollo de funciones personalizadas para formatear y mostrar datos de la API de manera clara y atractiva",
-        "Aplicación de Hooks de React para gestionar el estado y los efectos secundarios relacionados con la obtención de datos de la API",
-      ],
-      en: [
-        "Card-based data visualization",
-        "Search by Pokémon name or number",
-        "Consumption of external REST API (PokéAPI)",
-        "Frontend development with React and Sass for a smooth user experience",
-        "Development of custom functions to format and display API data clearly and attractively",
-        "Application of React Hooks to manage state and side effects related to fetching data from the API",
-      ],
-    },
-    summary: {
-      es: "Aplicación frontend que consume una API externa.",
-      en: "Frontend application consuming an external API.",
-    },
     description: {
       es: "Aplicación frontend que consume la PokéAPI para explorar información detallada de Pokémon, ofreciendo búsqueda por nombre o número y una visualización clara de datos en formato de tarjetas.",
       en: "Frontend application that consumes the PokéAPI to explore detailed Pokémon information, offering search by name or number and a clear card-based data visualization.",
@@ -169,5 +96,28 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/bsantanag95/react-api-pokemon",
     descriptionContent: pokedexContent,
+  },
+
+  {
+    slug: "portafolio",
+    title: {
+      es: "Portafolio Personal",
+      en: "Personal Portfolio",
+    },
+    intro: {
+      es: "Portafolio personal construido con React y Tailwind CSS para mostrar proyectos y habilidades.",
+      en: "Personal portfolio built with React and Tailwind CSS to showcase projects and skills.",
+    },
+    description: {
+      es: "Portafolio personal construido con React y Tailwind CSS para mostrar proyectos y habilidades. Diseño responsivo y moderno que optimiza el rendimiento y la accesibilidad, con secciones para proyectos, habilidades y experiencia.",
+      en: "Personal portfolio built with React and Tailwind CSS to showcase projects and skills. Responsive and modern design that optimizes performance and accessibility, featuring sections for projects, skills, and experience.",
+    },
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    backend: "N/A (frontend-only)",
+    database: null,
+    category: "Web",
+    images: ["/projects/portafolio/portafolio.webp"],
+    github: "https://github.com/bsantanag95/proyecto_portafolio",
+    descriptionContent: portafolioContent,
   },
 ];

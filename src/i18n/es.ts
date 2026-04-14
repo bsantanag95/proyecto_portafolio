@@ -30,6 +30,7 @@ export const es = {
     cvDescription: "Descarga mi CV para conocer mi experiencia y habilidades.",
     downloadCv: "Descargar CV",
     viewGithub: "Ver GitHub",
+    viewDetails: "Ver Detalles",
     githubTitle: "Código del portafolio",
     githubDescription:
       "Este sitio web fue desarrollado con React y TypeScript, siguiendo buenas prácticas de arquitectura frontend y experiencia de usuario.",

@@ -31,6 +31,7 @@ export const en = {
       "Download my resume to learn more about my experience and skills.",
     downloadCv: "Download Resume",
     viewGithub: "View on GitHub",
+    viewDetails: "View Details",
     githubTitle: "Portfolio Source Code",
     githubDescription:
       "This website was built with React and TypeScript, following frontend best practices and a strong focus on user experience.",
