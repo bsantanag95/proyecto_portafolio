@@ -1,4 +1,12 @@
-import { Code, Layout, Database, Wrench, Server, Layers2 } from "lucide-react";
+import {
+  Code,
+  Layout,
+  Database,
+  Wrench,
+  Server,
+  Layers2,
+  FlaskConical,
+} from "lucide-react";
 
 export const categoryIcons = {
   frontend: Layout,
@@ -7,4 +15,5 @@ export const categoryIcons = {
   databases: Database,
   languages: Code,
   tools: Wrench,
+  testing: FlaskConical,
 };

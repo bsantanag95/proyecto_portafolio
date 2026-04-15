@@ -16,6 +16,7 @@ function TechStack() {
     databases: t.about.database,
     tools: t.about.tools,
     languages: t.about.languages,
+    testing: "Testing",
   });
 
   const categoryTitles = getCategoryTitles(t);
