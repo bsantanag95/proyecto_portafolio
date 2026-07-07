@@ -156,7 +156,7 @@ const Sidebar = () => {
         </div>
 
         {/* Navegación */}
-        <nav className="flex-1 space-y-1 overflow-y-visible md:overflow-y-auto">
+        <nav className="flex-1 space-y-1 overflow-hidden">
           <SidebarItem
             label={t.sidebar.home}
             path="/"
