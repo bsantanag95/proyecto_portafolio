@@ -78,8 +78,7 @@ function Education() {
                   key={cert}
                   className="
     group flex items-center gap-3 p-3 rounded-lg
-    bg-linear-to-r border certification-card
-    theme-card-transition
+    bg-linear-to-r border certification-card theme-transition
     hover:-translate-y-0.5
   "
                 >
