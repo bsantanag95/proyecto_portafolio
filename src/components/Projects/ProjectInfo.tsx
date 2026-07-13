@@ -2,6 +2,7 @@ import type { Project } from "../../types/projects";
 import { StackBadge } from "../Stack";
 import { useLanguage } from "../../hooks/useLanguage";
 import GitHubButton from "../ui/GitHubButton";
+import DemoButton from "../ui/DemoButton";
 
 interface Props {
   project: Project;
@@ -43,7 +44,12 @@ const ProjectInfo = ({ project, language }: Props) => {
       </ul>
 
       {/* GitHub */}
-      <GitHubButton href={project.github} label={t.home.viewGithub} />
+      <div className="flex flex-wrap gap-3">
+        <GitHubButton href={project.github} label={t.home.viewGithub} />
+        {project.url && (
+          <DemoButton href={project.url} label={t.home.viewDemo} />
+        )}
+      </div>
     </div>
   );
 };

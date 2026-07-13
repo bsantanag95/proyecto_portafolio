@@ -23,6 +23,7 @@ export interface Project {
   database?: string | null;
   images: string[];
   github?: string;
+  url?: string;
   descriptionContent: {
     es: {
       sections: ContentSection[];

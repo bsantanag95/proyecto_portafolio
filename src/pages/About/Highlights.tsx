@@ -1,83 +1,116 @@
 import AnimatedSection from "../../components/Animations/AnimatedSection";
 import { useLanguage } from "../../hooks/useLanguage";
-import {
-  Star,
-  Zap,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  Sparkles,
-  Lightbulb,
-} from "lucide-react";
+import { Star } from "lucide-react";
+
+// Tags por índice — podés moverlos a tu archivo de traducciones si querés i18n
+const HIGHLIGHT_TAGS = [
+  "código",
+  "diseño",
+  "aprendizaje",
+  "mejora continua",
+  "responsabilidad",
+  "colaboración",
+];
+
+const HIGHLIGHT_TAGS_EN = [
+  "code",
+  "design",
+  "learning",
+  "continuous improvement",
+  "responsibility",
+  "collaboration",
+];
+
+// Determina si la card ocupa 2 columnas (índices 0 y 4)
+function isWide(index: number) {
+  return index === 0 || index === 4;
+}
 
 function Highlights() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  // Iconos para cada highlight
-  const highlightIcons = [
-    <Lightbulb className="h-5 w-5" />,
-    <Zap className="h-5 w-5" />,
-    <Target className="h-5 w-5" />,
-    <TrendingUp className="h-5 w-5" />,
-    <CheckCircle className="h-5 w-5" />,
-    <Sparkles className="h-5 w-5" />,
-  ];
+  const tags = language === "en" ? HIGHLIGHT_TAGS_EN : HIGHLIGHT_TAGS;
 
   return (
     <section
-      className="max-w-5xl space-y-10 mt-20"
+      className="max-w-5xl space-y-8 mt-20"
       aria-label={t.about.highlightsTitle}
     >
-      {/* Header estilizado */}
-      <div className="space-y-4">
-        <h2 className="text-2xl font-bold highlights-title theme-transition flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-linear-to-br highlights-icon-wrapper theme-transition flex items-center justify-center">
-            <Star size={18} className="highlights-icon" />
-          </div>
-
-          {t.about.highlightsTitle}
-        </h2>
-
-        <div className="h-px w-full bg-linear-to-r highlights-divider theme-transition" />
-
-        <p className="text-lg highlights-subtitle theme-transition">
+      {/* Header */}
+      <div className="space-y-3">
+        <p className="text-xs font-medium tracking-widest uppercase highlights-subtitle theme-transition">
           {t.about.highlightsSubtitle}
         </p>
+
+        <h2 className="text-2xl font-bold highlights-title theme-transition flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-linear-to-br highlights-icon-wrapper theme-transition flex items-center justify-center">
+            <Star size={16} className="highlights-icon" />
+          </div>
+          {t.about.highlightsTitle}
+        </h2>
       </div>
 
-      {/* Grid de highlights */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {/* Bento grid */}
+      <div
+        className="grid gap-2.5"
+        style={{
+          gridTemplateColumns: "repeat(3, 1fr)",
+        }}
+      >
         {t.about.highlights.map((item: string, index: number) => (
           <AnimatedSection key={item} delay={index * 0.05}>
-            <div className="group relative h-full">
-              {/* Tarjeta principal */}
-              <div className="h-full p-5 rounded-2xl bg-linear-to-br border highlight-card theme-transition hover:shadow-lg hover:-translate-y-0.5">
-                {/* Fondo decorativo en hover */}
-                <div className="absolute -inset-1 rounded-2xl bg-linear-to-r highlight-hover-bg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div
+              className="relative overflow-hidden rounded-xl border highlight-card theme-transition p-6 h-full"
+              style={{
+                gridColumn: isWide(index) ? "span 2" : "span 1",
+              }}
+            >
+              {/* Dot pattern decorativo — solo primera card */}
+              {index === 0 && (
+                <svg
+                  className="absolute top-0 right-0 opacity-20 pointer-events-none"
+                  width="88"
+                  height="88"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <pattern
+                      id="dots"
+                      x="0"
+                      y="0"
+                      width="8"
+                      height="8"
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <circle
+                        cx="1.5"
+                        cy="1.5"
+                        r="1.2"
+                        className="fill-current highlights-dot"
+                      />
+                    </pattern>
+                  </defs>
+                  <rect width="88" height="88" fill="url(#dots)" />
+                </svg>
+              )}
 
-                <div className="relative">
-                  {/* Icono */}
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br highlight-icon theme-transition transition-transform duration-300 group-hover:scale-110">
-                    {highlightIcons[index % highlightIcons.length]}
-                  </div>
+              {/* Tag */}
+              <span className="inline-block mb-3 px-2.5 py-0.5 rounded-full text-xs border highlight-tag theme-transition">
+                {tags[index] ?? ""}
+              </span>
 
-                  {/* Número decorativo */}
-                  <div className="absolute right-4 top-0 text-6xl font-black highlight-number theme-transition leading-none">
-                    {index + 1}
-                  </div>
+              {/* Texto */}
+              <p className="text-sm font-medium leading-relaxed highlight-card-text theme-transition relative z-10">
+                {item}
+              </p>
 
-                  {/* Texto */}
-                  <p className="text-base font-medium highlight-card-text theme-transition leading-relaxed">
-                    {item}
-                  </p>
-
-                  {/* Línea inferior */}
-                  <div className="mt-4 h-0.5 w-8 bg-linear-to-r highlight-bottom-line theme-transition transition-all duration-500 group-hover:w-full" />
-                </div>
-              </div>
-
-              {/* Glow */}
-              <div className="absolute -inset-1 rounded-2xl bg-linear-to-r highlight-glow blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10" />
+              {/* Número tipográfico de fondo */}
+              <span
+                className="absolute bottom-0 right-3 text-7xl font-bold leading-none select-none pointer-events-none highlight-number theme-transition"
+                aria-hidden="true"
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
             </div>
           </AnimatedSection>
         ))}

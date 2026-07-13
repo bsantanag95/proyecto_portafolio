@@ -67,6 +67,7 @@ export const projects: Project[] = [
       "/projects/gis/giscatalogo4.webp",
     ],
     github: "https://github.com/bsantanag95/gis_catalogo",
+    url: "",
     descriptionContent: gisCatalogoContent,
   },
 
@@ -95,6 +96,7 @@ export const projects: Project[] = [
       "/projects/pokedex/pokedex4.webp",
     ],
     github: "https://github.com/bsantanag95/react-api-pokemon",
+    url: "https://pokedex-besg.vercel.app",
     descriptionContent: pokedexContent,
   },
 
@@ -118,6 +120,7 @@ export const projects: Project[] = [
     category: "Web",
     images: ["/projects/portafolio/portafolio.webp"],
     github: "https://github.com/bsantanag95/proyecto_portafolio",
+    url: "",
     descriptionContent: portafolioContent,
   },
 ];

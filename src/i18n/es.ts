@@ -30,6 +30,7 @@ export const es = {
     cvDescription: "Descarga mi CV para conocer mi experiencia y habilidades.",
     downloadCv: "Descargar CV",
     viewGithub: "Ver GitHub",
+    viewDemo: "Ver Demo",
     viewDetails: "Ver Detalles",
     githubTitle: "Código del portafolio",
     githubDescription:

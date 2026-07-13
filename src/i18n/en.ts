@@ -31,6 +31,7 @@ export const en = {
       "Download my resume to learn more about my experience and skills.",
     downloadCv: "Download Resume",
     viewGithub: "View on GitHub",
+    viewDemo: "View Demo",
     viewDetails: "View Details",
     githubTitle: "Portfolio Source Code",
     githubDescription:
